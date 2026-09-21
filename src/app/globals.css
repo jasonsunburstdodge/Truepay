@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens
+ * -------------
+ * No existing TruePay design system was found in this repo (it was empty at
+ * project start — see README.md "Pre-build review"). These are the INITIAL
+ * brand tokens for the project, chosen to match the palette already implied
+ * by the brief's own reference CSS (gold accent on a warm off-white surface).
+ * Treat as a starting system pending confirmation against real TruePay brand
+ * guidelines — every new color/spacing value in this codebase should resolve
+ * back to one of these tokens rather than a hardcoded hex.
+ */
+:root {
+  --color-ink: #0f1a2e;
+  --color-navy: #142b52;
+  --color-navy-deep: #0a1730;
+  --color-paper: #fafaf8;
+  --color-surface: #f5f5f1;
+  --color-surface-alt: #eef1f6;
+  --color-border: #e4e4de;
+  --color-text: #1a1f2b;
+  --color-text-muted: #5b6270;
+  --color-cream: #f7f7f5;
+  --color-gold: #c9a227;
+  --color-gold-bright: #d4a017;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 14px;
+
+  --shadow-card: 0 8px 24px rgba(15, 26, 46, 0.08);
+  --shadow-card-hover: 0 12px 32px rgba(15, 26, 46, 0.14);
+}
+
+@theme inline {
+  --color-ink: var(--color-ink);
+  --color-navy: var(--color-navy);
+  --color-navy-deep: var(--color-navy-deep);
+  --color-paper: var(--color-paper);
+  --color-surface: var(--color-surface);
+  --color-surface-alt: var(--color-surface-alt);
+  --color-border: var(--color-border);
+  --color-text: var(--color-text);
+  --color-text-muted: var(--color-text-muted);
+  --color-cream: var(--color-cream);
+  --color-gold: var(--color-gold);
+  --color-gold-bright: var(--color-gold-bright);
+
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-inter);
+}
+
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-text);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-ink);
+}
+
+/* Sticky nav dropdown affordance (hover on desktop, handled via JS on mobile) */
+.nav-item.has-dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-card-hover);
+  min-width: 220px;
+  padding: 0.5rem 0;
+  z-index: 50;
+}
+
+.nav-item.has-dropdown:hover .dropdown-menu,
+.nav-item.has-dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu.open {
+  display: block;
+}
+
+@media (min-width: 1025px) {
+  .dropdown-menu.open {
+    display: none;
+  }
+  .nav-item.has-dropdown:hover .dropdown-menu,
+  .nav-item.has-dropdown:focus-within .dropdown-menu {
+    display: block;
+  }
+}
+
+/* Industries grid: 4-up desktop, 2-up tablet, horizontal swipe carousel on mobile */
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+@media (max-width: 1024px) {
+  .industry-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .industry-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+  }
+  .industry-card {
+    flex: 0 0 78%;
+    scroll-snap-align: start;
+  }
+}
+
+/* Count-up transition on the live calculator rate */
+.rate-value {
+  transition: opacity 0.15s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

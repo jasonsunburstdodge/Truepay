@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 260" role="img" aria-labelledby="coverage-map-title">
+  <title id="coverage-map-title">Stylized map of confirmed TruePay coverage states (not to scale)</title>
+  <rect width="640" height="260" fill="none" />
+
+  <!-- Secondary confirmed states -->
+  <g fill="#142b52">
+    <circle cx="60" cy="40" r="10" />
+    <text x="60" y="24" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#142b52">WA</text>
+
+    <circle cx="50" cy="160" r="10" />
+    <text x="50" y="144" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#142b52">CA</text>
+
+    <circle cx="340" cy="95" r="10" />
+    <text x="340" y="79" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#142b52">IL</text>
+
+    <circle cx="385" cy="60" r="10" />
+    <text x="385" y="44" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#142b52">MI</text>
+
+    <circle cx="405" cy="100" r="10" />
+    <text x="405" y="84" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#142b52">OH</text>
+
+    <circle cx="445" cy="80" r="10" />
+    <text x="445" y="64" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#142b52">PA</text>
+
+    <circle cx="478" cy="98" r="10" />
+    <text x="478" y="82" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#142b52">NJ</text>
+
+    <circle cx="465" cy="50" r="10" />
+    <text x="465" y="34" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#142b52">NY</text>
+
+    <circle cx="435" cy="150" r="10" />
+    <text x="435" y="134" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#142b52">NC</text>
+
+    <circle cx="425" cy="175" r="10" />
+    <text x="425" y="159" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#142b52">SC</text>
+
+    <circle cx="445" cy="225" r="10" />
+    <text x="445" y="209" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#142b52">FL</text>
+  </g>
+
+  <!-- Primary states: Texas and Oklahoma -->
+  <g fill="#c9a227">
+    <circle cx="270" cy="150" r="15" />
+    <text x="270" y="128" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="600" fill="#0f1a2e">OK</text>
+
+    <circle cx="260" cy="195" r="17" />
+    <text x="260" y="171" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="600" fill="#0f1a2e">TX</text>
+  </g>
+</svg>
