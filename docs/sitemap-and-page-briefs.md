@@ -1,6 +1,6 @@
 # TruePay sitemap and page build brief
 
-Prepared October 5, 2026. Updated October 5, 2026 after full review of the supplied Drive design PDF and receipt of two logo assets. Status: proposed architecture and content briefs, not implemented website pages.
+Prepared October 5, 2026. Updated October 5, 2026 after full review of the supplied Drive design PDF, receipt of two logo assets, and Jason's instruction to include industry and trust pages in the build. Status: proposed architecture and content briefs, not implemented website pages.
 
 ## Decisions that govern this plan
 
@@ -42,10 +42,10 @@ The eight industry categories are explicitly marked pending client sign-off in `
 
 ## Site structure and navigation
 
-Primary navigation: Solutions | Pricing | Customer Stories | Resources | About.
+Primary navigation: Solutions | Industries | Pricing | Customer Stories | Resources | About.
 Persistent action: Get my free statement review, with visible phone alternative.
 Utility navigation: Support | Contact.
-Homepage logo links home. Footer includes service areas, confirmed industries, policies and verified account links.
+Homepage logo links home. About navigation includes Our Team and the two leadership profiles; Customer Stories links to individual approved stories. Footer includes service areas, industry pages, policies and verified account links.
 
 | Section | Core routes | Conditional expansion |
 | --- | --- | --- |
@@ -53,15 +53,17 @@ Homepage logo links home. Footer includes service areas, confirmed industries, p
 | Solutions | /solutions/, /solutions/point-of-sale/, /solutions/terminals/, /solutions/mobile-payments/, /solutions/online-payments/ | /solutions/integrations/ and /solutions/billing-software/ after compatibility/program confirmation |
 | Pricing | /pricing/, /pricing/dual-pricing/ | Additional separately named programs only if they have distinct verified terms and buyer needs |
 | Review and calculator | /statement-review/, /effective-rate-calculator/ | /thank-you/ as a non-indexed confirmation only |
-| Trust and people | /customer-stories/, /about/ | /about/team/, individual case studies and two leadership profiles |
+| Trust and people | /customer-stories/, /about/, /about/team/, /about/jonathan-wilson/, /about/shane-spears/; full case-study template included | Individual case-study URLs depend on actual merchant identity and approved evidence |
 | Help | /support/, /contact/ | Verified external merchant login link; no invented portal |
 | Resources | /resources/ plus three initial guides described below | Additional evidence-backed articles based on questions and search data |
 | Service areas | /service-areas/ | Oklahoma, Texas and Arkansas pages when genuinely distinct local evidence exists |
-| Industries | No unverified industry landing pages at initial launch | /industries/ and eight industry pages after confirmation and useful original content |
+| Industries | /industries/ plus restaurants, retail, salons-spas, medical-dental, home-services, auto-services, professional-services and nonprofits pages | No industry page is deferred from build scope; unsupported claims/asset gaps are resolved per page |
 | Policies | /privacy-policy/, /terms/ | Program terms linked from the relevant pages as current approved material |
 | Partner / recruiting | No additional core route | /referrals/, /careers/ and verified training/merchant-account destinations; PDF content available but business workflows need confirmation |
 
-Suggested launch set: 21 public page routes including three educational guides and two policies. Add the non-indexed thank-you route only when the conversion workflow exists. This is a practical content scope, not a claim that Google requires a page count.
+Committed build set: 33 named public page routes: the original 21, an industry hub plus eight industry pages, and three additional trust pages (team and two leadership profiles). A reusable full merchant case-study template is also included; real merchant URLs are added when identities and evidence are available. Add the non-indexed thank-you route when the conversion workflow exists. This is a practical content scope, not a claim that Google requires a page count.
+
+Jason has explicitly included all industry and trust pages in the build. Build their layouts, routes, navigation, metadata and source-grounded draft content with the rest of the site. Missing evidence limits the affected statement or public publication readiness; it does not remove the page from build scope. Put draft gaps in internal notes, not in customer-facing copy.
 
 Every indexed page gets a unique page title, descriptive H1, useful introductory answer, content structured around the customer's decision, relevant proof, contextual internal links, appropriate metadata and a next step. Where useful, include a small set of substantive questions on that page instead of building a duplicate FAQ site.
 
@@ -277,30 +279,34 @@ Search intents below are hypotheses for architecture. I do not have Search Conso
 **Need:** Current approved policy/terms, legal entity, vendors and actual data practices.
 **Next step:** Contact/privacy route. These are not lead-generation pages; do not force a sales CTA into them.
 
-## Conditional expansion: page-specific requirements
+## Additional committed industry and trust page briefs
 
-Do not add these to navigation or the XML sitemap until they have useful approved content. Templates can be designed in advance, but avoid publishing placeholders.
+### 22–24. Team and leadership profiles — included in the build
 
-### Trust and compatibility
+Build /about/team/, /about/jonathan-wilson/ and /about/shane-spears/ alongside the original About, Customer Stories and Support pages. Extend the existing design with actual people and specific responsibilities. Keep leadership biographies relevant to the merchant's decision.
 
-| Proposed page | Contents and search role | Have | Need / publish condition |
+| Proposed page | Contents and search role | Have | Need / claim readiness |
 | --- | --- | --- | --- |
-| /solutions/integrations/ | Compatibility by named POS/accounting/ecommerce platform; supported function and limitation; confirmation process; CTA: check my setup | Public references; PDF pages 1 and 12–13 add QuickBooks/gateway/billing-tool directions | Current verified matrix, version support, costs and setup ownership; no “works with everything” promise |
-| /solutions/billing-software/ | Invoice-to-payment-to-reconciliation workflow; Biller Genie/MantaPay comparison; supported QuickBooks versions; who it fits; costs and limitations; CTA: review my billing workflow | PDF page 13 supplies two named products and a four-step MantaPay workflow | Current TruePay relationships, actual QuickBooks compatibility, fees, implementation, approved logos; verify vendor statistics and under-15-minute claim before use |
 | /about/team/ | Actual people, role, problems each helps solve, real photos and support/contact links; CTA: reach the right person | PDF page 4 provides six names/roles and short role descriptions | Current roster/title reconciliation against page 7, approved bios and real headshots; initials and broken photo placeholders are not asset files |
 | /about/jonathan-wilson/ | Approved career/founding history, actual payment expertise, merchant-help examples and authored resources | Public biography | Approved bio/title, photo and verifiable experience details |
 | /about/shane-spears/ | Operations expertise, onboarding/support role, real workflow examples and reviewed resources | Public biography; PDF calls him COO on pages 4 and 7 | Reconcile COO against live site's Operations Director wording; photo, role scope and approved expertise details |
 | /customer-stories/{merchant-slug}/ | Merchant identity/location; before; intervention; after; timeframe; source evidence; qualifications; owner quote/photo; CTA: review my business | Published anecdotes | One separately approved evidence package for each story; do not choose a real merchant slug before identity/permission |
-| /thank-you/ | Truthful submission confirmation, what happens next, support fallback | Form success state; PDF has proposed one-business-day response copy | Working delivery and approved next-step/response standard; noindex; excluded from XML sitemap; no sensitive data in URL |
-| /referrals/ | Eligibility, qualification event, reward/conditions/timing, simple interest form and communication choices; CTA: ask about referrals | PDF page 8 supplies referral story, form and up-to-$1,000 reward language | Current reward schedule/conditions, payout trigger, referral handling, CRM route and approved consent; qualify the headline |
-| /careers/ | Confirmed openings, role requirements, location/work arrangement, realistic process and application route | PDF page 9 supplies sales/customer-service role categories and interest form | Current openings, requirements, recruiting owner, privacy/retention and application delivery |
-| Training/account destinations | Utility links to actual training or merchant systems; separate audiences from acquisition | PDF pages 7 and 19 show training and login layouts | Real URLs, account ownership/access design and training content; mockups do not supply videos or authentication |
+
+**Team page:** Working headline: “Know who is helping your business.” Show approved names, roles, real portraits and the problems each person helps solve. Include a short account/support handoff explanation and links to About, Support and Contact. PDF roster differences stay in internal reconciliation notes until confirmed. CTA: Talk to the right person.
+
+**Jonathan profile:** Working headline: “Meet Jonathan Wilson.” Explain the verified founder/industry history, reason for starting TruePay, what the handshake means for merchants and actual areas of expertise. Link reviewed/authored educational material only when that involvement is real. CTA: Talk about your business.
+
+**Shane profile:** Working headline: “Meet Shane Spears.” Explain confirmed operational responsibilities, setup and support involvement, industry experience and how merchants benefit. Resolve current title before publication. CTA: Review your payment setup.
+
+**Customer trust system:** The original /about/, /customer-stories/ and /support/ pages remain in scope. Customer Stories includes a full case-study page template and routes for each actual approved merchant: identity/business/location; original problem; TruePay intervention; outcome/timeframe; evidence/conditions; authentic quote/photo; relevant solution and review links. The template is part of the build even before every story is sourced. No fabricated merchant URLs or results.
 
 M. Holt is a candidate interview, not yet a case study. The published review reports a very large fee change but does not supply enough context to confidently turn it into a recurring annual savings promise.
 
-### Industry pages
+### 25–33. Industry hub and eight industry pages — included in the build
 
-Start with two industries selected with the client, rather than assuming all eight are equally important. Each page needs different workflows, actual supported solutions, relevant experience, a specific example and questions that matter to that merchant. Use the established design, not eight redesigns.
+Build the industry hub and all eight pages. Prioritize the strongest available evidence first while completing the whole set. Each page needs distinct workflows, actual supported solutions, useful selection guidance and questions that matter to that merchant. Add a verified customer example where available; do not invent one where it is missing. Use the established GitHub design throughout.
+
+Each industry page uses: customer problem/outcome hero; typical payment workflow; verified relevant solution options; pricing-model fit and tradeoffs; setup/support process; authentic relevant proof when available; practical questions; links to solution/pricing/tool pages; statement-review and phone actions. Assign a unique title, H1 and metadata to the specific industry intent. These are included build deliverables; existing have/need rows below still govern claim accuracy.
 
 | Proposed page | What it should contain | Have | Need |
 | --- | --- | --- | --- |
@@ -313,6 +319,21 @@ Start with two industries selected with the client, rather than assuming all eig
 | /industries/auto-services/ | Repair-shop checkout, high-ticket processing, reconciliation and relevant POS integration; CTA: review shop setup | Proposed category and generic shop review | Actual auto customer, transaction constraints and integrations; no financing claim without proof |
 | /industries/professional-services/ | Invoice payment, recurring billing, reporting/accounting integration, ACH only if confirmed; CTA: review billing workflow | Proposed copy, public references and PDF page 13 billing workflows | Exact integrations, ACH/billing terms and service-business evidence |
 | /industries/nonprofits/ | Donations, recurring giving, receipts/reporting and fundraising workflow; CTA: review donation setup | Proposed category only | Verified donation platforms, nonprofit pricing eligibility and real nonprofit experience |
+
+## Other expansion and utility pages
+
+These remain separate from the now-committed industry and trust pages. Add published pages to navigation/XML sitemap when ready; do not publish empty placeholders.
+
+### Compatibility, billing, partner and utility routes
+
+| Proposed page | Contents and search role | Have | Need / publish condition |
+| --- | --- | --- | --- |
+| /solutions/integrations/ | Compatibility by named POS/accounting/ecommerce platform; supported function and limitation; confirmation process; CTA: check my setup | Public references; PDF pages 1 and 12–13 add QuickBooks/gateway/billing-tool directions | Current verified matrix, version support, costs and setup ownership; no “works with everything” promise |
+| /solutions/billing-software/ | Invoice-to-payment-to-reconciliation workflow; Biller Genie/MantaPay comparison; supported QuickBooks versions; who it fits; costs and limitations; CTA: review my billing workflow | PDF page 13 supplies two named products and a four-step MantaPay workflow | Current TruePay relationships, actual QuickBooks compatibility, fees, implementation, approved logos; verify vendor statistics and under-15-minute claim before use |
+| /thank-you/ | Truthful submission confirmation, what happens next, support fallback | Form success state; PDF has proposed one-business-day response copy | Working delivery and approved next-step/response standard; noindex; excluded from XML sitemap; no sensitive data in URL |
+| /referrals/ | Eligibility, qualification event, reward/conditions/timing, simple interest form and communication choices; CTA: ask about referrals | PDF page 8 supplies referral story, form and up-to-$1,000 reward language | Current reward schedule/conditions, payout trigger, referral handling, CRM route and approved consent; qualify the headline |
+| /careers/ | Confirmed openings, role requirements, location/work arrangement, realistic process and application route | PDF page 9 supplies sales/customer-service role categories and interest form | Current openings, requirements, recruiting owner, privacy/retention and application delivery |
+| Training/account destinations | Utility links to actual training or merchant systems; separate audiences from acquisition | PDF pages 7 and 19 show training and login layouts | Real URLs, account ownership/access design and training content; mockups do not supply videos or authentication |
 
 ### Regional pages
 
@@ -377,7 +398,7 @@ The following is a build specification, not a completed SEO audit or a guarantee
 
 | Owner | Required input | Why it matters |
 | --- | --- | --- |
-| Jason / client leadership | Top two industries, regional priority confirmation, final messaging/offer decisions | Determines early page priority and proof collection |
+| Jason / client leadership | All eight industry pages and trust pages are included; choose drafting priorities, confirm regional priorities and final messaging/offer wording | Determines drafting order and proof collection without excluding requested pages |
 | Leadership / marketing | Logo raster assets supplied; optional vector master. Confirm the PDF roster/bios/titles; supply headshots, real support/merchant photos/video and permissions | Completes human credibility inside the chosen GitHub design |
 | Operations | Confirm PDF contact hours/follow-up copy, six-step POS process and review deliverable; supply actual support text route/escalation, turnaround and accountable owner | Content/process outlines now exist; confirmation makes the promises operational |
 | Finance / program owner | Complete current pricing, plan eligibility, processor-markup/rate-lock scope, terminal/TrueCare conditions | Defines actual value and prevents contradictory offers |
@@ -434,15 +455,15 @@ This is the same named design PDF previously inspected in part. The new review s
 
 **Still absent:** Original people/merchant/device media and testimonial videos; evidence-backed case studies; signed/current fee and guarantee terms; complete compatibility matrix; actual secure intake/CRM delivery and review staffing; portal/training destinations; complete approved policies; production/search/analytics access.
 
-The 21-page core count remains unchanged. Billing software and a team page are now explicitly source-backed conditional additions; referrals/careers/training/account routes are documented for preservation and prioritization. All retain the GitHub design system.
+The committed build now has 33 named public routes: the original 21, nine industry routes and three additional trust routes. The full merchant case-study template is included as well; actual story URLs depend on merchant evidence. Billing software, integrations, regional and partner/utility additions retain their separate readiness requirements. All pages retain the GitHub design system.
 
 ## Build and review sequence
 
-1. Draft core copy and shared page templates in the existing GitHub visual system. Build reusable proof, question, comparison and CTA modules.
+1. Draft all committed pages and shared templates in the existing GitHub visual system, including the industry hub/eight pages, team, leadership profiles and full case-study template. Build reusable proof, question, comparison and CTA modules.
 2. Confirm offers and operations; implement review/contact delivery, privacy, support routing and accurate program conditions.
-3. Complete the core solution, pricing, about, support, contact, calculator and resource pages. Publish stories only at their actual evidence level.
+3. Complete the 33 named routes: solutions, pricing, about/team/profiles, customer stories, all industries, support/contact, calculator, resources, service-area hub and policies. Use confirmed content and truthful evidence; track missing input internally for each affected page.
 4. Audit current URLs and search data; implement redirects, metadata, canonicals, robots and the generated XML sitemap; verify renderability and measurement.
-5. Add the first two supported industry pages, regional pages and full case studies as their original evidence arrives.
+5. Add original merchant evidence to the included industry/trust pages and publish full case studies as sourced. Develop optional regional, compatibility/billing and partner pages as their useful content and business workflows are ready.
 6. Verify responsive/accessibility behavior, forms end to end, structured data, indexing controls and performance before production publication.
 
 Drafting may proceed with marked internal gaps. Missing evidence blocks the affected public claim/page, not all independent work.
