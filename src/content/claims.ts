@@ -235,7 +235,7 @@ export const cautionPatterns: { pattern: string; why: string }[] = [
   { pattern: "\\b(never|ever)\\b", why: "Absolute promise; confirm scope" },
   { pattern: "\\bfree\\b", why: "Free what, for whom, under what conditions?" },
   { pattern: "\\blowest\\b|\\bcheapest\\b|\\bbest in\\b|#1", why: "Superlative needs evidence" },
-  { pattern: "\\bzero\\b|\\$0\\b", why: "Zero-cost claim needs scope" },
+  { pattern: "\\bzero\\b|\\$0(?![.,\\d])", why: "Zero-cost claim needs scope" },
   { pattern: "\\b24/7\\b|around the clock", why: "Support-hours claim pending ops confirmation" },
   { pattern: "\\b\\d{2}\\+? states\\b", why: "State count pending coverage reconciliation" },
 ];

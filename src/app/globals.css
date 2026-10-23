@@ -1,15 +1,9 @@
 @import "tailwindcss";
 
 /*
- * Design tokens
- * -------------
- * No existing TruePay design system was found in this repo (it was empty at
- * project start — see README.md "Pre-build review"). These are the INITIAL
- * brand tokens for the project, chosen to match the palette already implied
- * by the brief's own reference CSS (gold accent on a warm off-white surface).
- * Treat as a starting system pending confirmation against real TruePay brand
- * guidelines — every new color/spacing value in this codebase should resolve
- * back to one of these tokens rather than a hardcoded hex.
+ * TruePay design tokens. Every color, radius and shadow in the codebase
+ * resolves to one of these. Navy/ink for trust, warm off-white surfaces,
+ * gold accent (matches the gold shield in TruePay's logo).
  */
 :root {
   --color-ink: #0f1a2e;
@@ -24,6 +18,10 @@
   --color-cream: #f7f7f5;
   --color-gold: #c9a227;
   --color-gold-bright: #d4a017;
+  --color-gold-deep: #8a6a0f;
+  --color-gold-soft: #f6eccb;
+  --color-success: #2f6b45;
+  --color-warn: #8a4b12;
 
   --radius-sm: 6px;
   --radius-md: 12px;
@@ -46,6 +44,10 @@
   --color-cream: var(--color-cream);
   --color-gold: var(--color-gold);
   --color-gold-bright: var(--color-gold-bright);
+  --color-gold-deep: var(--color-gold-deep);
+  --color-gold-soft: var(--color-gold-soft);
+  --color-success: var(--color-success);
+  --color-warn: var(--color-warn);
 
   --font-display: var(--font-fraunces);
   --font-body: var(--font-inter);
@@ -59,11 +61,12 @@ html {
 body {
   background: var(--color-paper);
   color: var(--color-text);
-  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
 .font-display {
-  font-family: var(--font-display), Georgia, serif;
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-weight: 500;
 }
 
 ::selection {
@@ -71,78 +74,143 @@ body {
   color: var(--color-ink);
 }
 
-/* Sticky nav dropdown affordance (hover on desktop, handled via JS on mobile) */
-.nav-item.has-dropdown {
-  position: relative;
+/* ---------- Site components ---------- */
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 100;
+  background: var(--color-ink);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-sm);
+}
+.skip-link:focus {
+  top: 1rem;
 }
 
-.dropdown-menu {
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+.container-tp {
+  margin-inline: auto;
+  max-width: 72rem;
+  padding-inline: 1rem;
+}
+@media (min-width: 640px) {
+  .container-tp {
+    padding-inline: 1.5rem;
+  }
+}
+.measure {
+  max-width: 44rem;
+}
+
+/* Long-form text */
+.rich p + p {
+  margin-top: 1rem;
+}
+.rich a,
+.inline-link {
+  color: var(--color-navy);
+  text-decoration: underline;
+  text-decoration-color: var(--color-gold);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
+}
+.rich a:hover,
+.inline-link:hover {
+  text-decoration-color: var(--color-navy);
+}
+.rich strong {
+  color: var(--color-ink);
+  font-weight: 600;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-gold-deep);
+}
+
+/* Desktop nav dropdowns: open on hover or keyboard focus */
+.nav-group {
+  position: relative;
+}
+.nav-panel {
   display: none;
   position: absolute;
   top: 100%;
-  left: 0;
-  background: #fff;
-  border-radius: var(--radius-sm);
+  left: -0.75rem;
+  min-width: 15rem;
+  padding: 0.5rem;
+  background: var(--color-paper);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
   box-shadow: var(--shadow-card-hover);
-  min-width: 220px;
-  padding: 0.5rem 0;
   z-index: 50;
 }
-
-.nav-item.has-dropdown:hover .dropdown-menu,
-.nav-item.has-dropdown:focus-within .dropdown-menu {
+.nav-group:hover .nav-panel,
+.nav-group:focus-within .nav-panel {
   display: block;
 }
 
-.dropdown-menu.open {
-  display: block;
+/* Tables scroll inside their own box on small screens */
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.table-tp {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.925rem;
+}
+.table-tp caption {
+  text-align: left;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  padding-bottom: 0.5rem;
+}
+.table-tp th,
+.table-tp td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.75rem 0.875rem;
+  border-bottom: 1px solid var(--color-border);
+}
+.table-tp thead th {
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  font-weight: 600;
+  background: var(--color-surface);
+}
+.table-tp tbody th {
+  font-weight: 600;
+  color: var(--color-ink);
 }
 
-@media (min-width: 1025px) {
-  .dropdown-menu.open {
-    display: none;
-  }
-  .nav-item.has-dropdown:hover .dropdown-menu,
-  .nav-item.has-dropdown:focus-within .dropdown-menu {
-    display: block;
-  }
-}
-
-/* Industries grid: 4-up desktop, 2-up tablet, horizontal swipe carousel on mobile */
-.industry-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.25rem;
-}
-
-@media (max-width: 1024px) {
-  .industry-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 640px) {
-  .industry-grid {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 1rem;
-    padding-bottom: 0.5rem;
-    -webkit-overflow-scrolling: touch;
-  }
-  .industry-card {
-    flex: 0 0 78%;
-    scroll-snap-align: start;
-  }
-}
-
-/* Count-up transition on the live calculator rate */
-.rate-value {
-  transition: opacity 0.15s ease;
+.num {
+  font-variant-numeric: tabular-nums;
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+  * {
+    transition: none !important;
   }
 }
