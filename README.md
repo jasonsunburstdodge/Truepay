@@ -1,4 +1,7 @@
-# TruePay Homepage
+# TruePay website
+
+**Start here:** [`AGENTS.md`](AGENTS.md) (rules for builders) · [`docs/site-model.md`](docs/site-model.md) (the model) · [`docs/site-map.md`](docs/site-map.md) (every page and redirect) · [`docs/chatgpt-build-plan.md`](docs/chatgpt-build-plan.md) (phased build) · `npm run qa` (the review gate) · `npm run map` (regenerate the site map doc).
+
 
 Rebuild of the TruePay marketing homepage — payment processing, transparent
 pricing, and lead capture. Built with Next.js (App Router) + TypeScript +
