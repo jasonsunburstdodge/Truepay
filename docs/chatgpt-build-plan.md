@@ -34,9 +34,9 @@ PHASE 0 — Foundation and homepage.
 Goal: turn the existing homepage build into a site framework driven by src/content/*,
 with technical SEO, schema and the shared modules every later page uses.
 
-1. Fonts: replace next/font/google with next/font/local using @fontsource-variable/inter
-   and @fontsource-variable/fraunces (self-hosted; builds must not need Google Fonts).
-   Keep the same CSS variables (--font-inter, --font-fraunces).
+1. Design + fonts: implement docs/design-system.md (Jason's ChatGPT partner-page look)
+   as the tokens in src/app/globals.css. Remove Fraunces entirely. Self-host Inter with
+   next/font/local and @fontsource-variable/inter (builds must not need Google Fonts).
 2. Config: next.config.ts → trailingSlash: true; redirects() built from
    src/content/redirects.ts (permanent: true); headers() adds
    "X-Robots-Tag: noindex, nofollow" to every response when process.env.SITE_ENV !== "production".

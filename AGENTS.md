@@ -5,6 +5,7 @@ You are building gotruepay.com for TruePay, a payment processing company in Jose
 ## Read first, every session
 
 1. `docs/site-model.md`: positioning, voice, templates, E-E-A-T, SEO, AEO and GEO rules.
+   `docs/design-system.md`: the visual standard (tokens, type, components).
 2. `src/content/routes.ts`: the site map as code. Titles, descriptions, H1s, questions, CTAs, schema and required links.
 3. `src/content/claims.ts`: every promise and number you may use, and the banned ones.
 4. `src/content/entity.ts`: business facts, people and published reviews.
@@ -12,7 +13,7 @@ You are building gotruepay.com for TruePay, a payment processing company in Jose
 
 ## Non-negotiables
 
-- **Design.** Keep this repo's design system: tokens in `src/app/globals.css`, Fraunces display, Inter body, rounded cards, sticky header, mobile CTA bar. Do not copy the look of the WordPress dev site. Use sentence-case headings, never ALL CAPS.
+- **Design.** Follow `docs/design-system.md`: the look of Jason's ChatGPT partner-opportunities page. That means a navy header and gradient heroes with arcs, gold eyebrows, heavy tight Inter headlines (no serif, no Fraunces), white 24px-radius cards, navy and blue-gray bands, and big bold numbers. Do not copy the look of the WordPress dev site. Use sentence-case headings; uppercase only for small eyebrow labels.
 - **Metadata from the manifest.** Titles, descriptions, H1s, canonicals, breadcrumbs, nav, `sitemap.xml` and JSON-LD are generated from `routes.ts`. Don't hard-code a different title, description or H1. If you think one should change, edit `routes.ts` in its own commit and explain why in the PR.
 - **No invented facts.** No numbers, people, titles, reviews, certifications, partner names, hours or features that aren't in `entity.ts`, `claims.ts` or a source listed on the route. If something is missing, write around it or leave the module out. Never render placeholders, "TBD", lorem ipsum or "John Doe".
 - **Claims come from the register.** Render every promise or number from `claims.ts` and mark the element `data-claim="<id>"`. Never use a `banned` claim. Testimonials come only from `entity.testimonials`, verbatim.
