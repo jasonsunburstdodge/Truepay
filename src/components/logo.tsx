@@ -23,8 +23,7 @@ export function Logo() {
         />
       </svg>
       <span>
-        <strong>True</strong>
-        <span className="logo-pay">pay</span>
+        <strong>True</strong> <span className="logo-pay">pay</span>
       </span>
     </Link>
   );

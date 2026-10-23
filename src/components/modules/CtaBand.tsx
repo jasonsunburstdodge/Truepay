@@ -3,7 +3,7 @@ import { type CtaId } from "@/content/routes";
 import { isBuilt } from "@/lib/navigation";
 export function ctaDetails(id: CtaId) {
   const review = isBuilt("/statement-review/")
-    ? "/statement-review/"
+    ? "/statement-review/#request-review"
     : "/#review";
   const calculator = isBuilt("/effective-rate-calculator/")
     ? "/effective-rate-calculator/"
@@ -12,8 +12,8 @@ export function ctaDetails(id: CtaId) {
     "statement-review": [review, "Get my free statement review"],
     "talk-to-person": [entity.phone.href, `Call ${entity.phone.display}`],
     support: [
-      isBuilt("/support/") ? "/support/" : entity.phone.href,
-      "Get merchant support",
+      entity.phone.href,
+      `Call merchant support: ${entity.phone.display}`,
     ],
     calculator: [calculator, "Calculate my effective rate"],
     "partner-apply": [

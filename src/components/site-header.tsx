@@ -29,14 +29,14 @@ export function SiteHeader() {
         <Link
           className="button outline header-review"
           data-cta="statement-review"
-          href="/#review"
+          href="/statement-review/"
         >
           Get my free statement review
         </Link>
         <MobileMenu>
           {links}
           <a href={entity.phone.href}>Call {entity.phone.display}</a>
-          <Link href="/#review" data-cta="statement-review">
+          <Link href="/statement-review/" data-cta="statement-review">
             Get my free statement review
           </Link>
         </MobileMenu>

@@ -1,0 +1,20 @@
+{
+  "viewports": [
+    390,
+    1440
+  ],
+  "pages": [
+    "/",
+    "/statement-review/",
+    "/effective-rate-calculator/",
+    "/support/",
+    "/contact/",
+    "/thank-you/"
+  ],
+  "checks": "PASS: manifest/schema/SSR/noindex/contextual links/wordmark/review links/mobile keyboard/calculator/consent/honeypot/rate limit/webhook delivery and failure/missing webhook/thank-you receipt",
+  "successfulDeliveries": 4,
+  "webhookFailureStatus": 502,
+  "missingWebhookStatus": 503,
+  "rateLimitStatus": 429,
+  "runtimeErrors": []
+}

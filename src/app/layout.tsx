@@ -6,6 +6,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { MobileCtaBar } from "@/components/mobile-cta-bar";
 import { JsonLd } from "@/components/json-ld";
 import { organizationNode, websiteNode } from "@/lib/schema";
+import { Analytics } from "@/components/analytics";
 import "./globals.css";
 const inter = localFont({
   src: "../../node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2",
@@ -33,6 +34,7 @@ export default function RootLayout({
         </main>
         <SiteFooter />
         <MobileCtaBar />
+        <Analytics />
       </body>
     </html>
   );
