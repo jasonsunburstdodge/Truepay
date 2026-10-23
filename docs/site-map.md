@@ -56,7 +56,7 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/statement-review/` · Free statement review
 
-- **Template / status:** conversion · planned
+- **Template / status:** conversion · draft
 - **Title (54):** Free Credit Card Processing Statement Review | TruePay
 - **Description (153):** Send your latest processing statement. We'll explain every fee, find your effective rate and give you an honest recommendation, even if it's to stay put.
 - **H1:** Find out what you're really paying.
@@ -70,7 +70,7 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/effective-rate-calculator/` · Effective rate calculator
 
-- **Template / status:** tool · planned
+- **Template / status:** tool · draft
 - **Title (55):** Effective Rate Calculator for Card Processing | TruePay
 - **Description (138):** Enter one month of card sales and total processing fees to see your effective rate as a single percentage, plus what usually drives it up.
 - **H1:** What's your real processing rate?
@@ -83,7 +83,7 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/support/` · Support
 
-- **Template / status:** utility · planned
+- **Template / status:** utility · draft
 - **Title (45):** TruePay Merchant Support: Call, Text or Email
 - **Description (136):** Existing TruePay merchant? Reach a real, US-based person about equipment, deposits, billing or your account, and see what to have ready.
 - **H1:** Need help? Reach a real person.
@@ -97,7 +97,7 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/contact/` · Contact
 
-- **Template / status:** utility · planned
+- **Template / status:** utility · draft
 - **Title (30):** Contact TruePay | 888-792-0284
 - **Description (149):** Questions about switching, pricing or equipment? Call 888-792-0284, email or send a note, and a person from our Josephine, Texas team will follow up.
 - **H1:** Tell us what your business needs.
@@ -110,9 +110,9 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/thank-you/` · Thank you
 
-- **Template / status:** utility · planned · noindex
+- **Template / status:** utility · draft · noindex
 - **Title (30):** Thanks, We've Got It | TruePay
-- **Description (55):** Your request reached TruePay. Here's what happens next.
+- **Description (134):** Your request reached the TruePay team. Here's what happens next, what to have ready and where to find straight answers while you wait.
 - **H1:** Thanks. Here's what happens next.
 - **Intent:** Post-submission confirmation.
 - **CTA:** none · **Schema:** WebPage
@@ -124,7 +124,7 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/why-truepay/` · Why TruePay
 
-- **Template / status:** commitments · planned
+- **Template / status:** commitments · draft
 - **Title (52):** Why TruePay: Locked Rates, Real People, No Contracts
 - **Description (144):** What TruePay commits to in plain terms: a locked rate, month-to-month service, equipment coverage and people you can reach. Plus the fine print.
 - **H1:** Built on a handshake. Here it is in writing.
@@ -138,7 +138,7 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/pricing/` · Pricing
 
-- **Template / status:** pricing · planned
+- **Template / status:** pricing · draft
 - **Title (51):** Credit Card Processing Pricing, Explained | TruePay
 - **Description (130):** What really sets your processing rate, how flat-rate, tiered and cost-plus pricing compare, and the two ways to work with TruePay.
 - **H1:** Understand the cost before you choose.
@@ -151,7 +151,7 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/pricing/membership/` · Membership
 
-- **Template / status:** pricing · planned
+- **Template / status:** pricing · draft
 - **Title (47):** Membership: Cost-Plus Card Processing | TruePay
 - **Description (149):** TruePay Membership: interchange-plus pricing, a locked markup, month-to-month billing, an included terminal and Lifetime TrueCare equipment coverage.
 - **H1:** Membership: transparent pricing with your rate locked.
@@ -165,7 +165,7 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/pricing/dual-pricing/` · Dual pricing
 
-- **Template / status:** pricing · planned
+- **Template / status:** pricing · draft
 - **Title (51):** Dual Pricing Program for Small Businesses | TruePay
 - **Description (130):** How dual pricing works, what your customers see at checkout, who it fits and who it doesn't, and what setup with TruePay involves.
 - **H1:** Is dual pricing right for your business?
@@ -181,7 +181,7 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/solutions/` · Solutions
 
-- **Template / status:** hub · planned
+- **Template / status:** hub · draft
 - **Title (57):** Payment Processing Solutions for Small Business | TruePay
 - **Description (141):** Counter, table, field or online: find the terminal, POS or software that fits how you take payments, with setup and support from real people.
 - **H1:** Payments that fit the way you do business.
@@ -193,7 +193,7 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/solutions/point-of-sale/` · Point of sale
 
-- **Template / status:** solution · planned
+- **Template / status:** solution · draft
 - **Title (46):** POS Systems for Restaurants & Retail | TruePay
 - **Description (124):** Clover, SkyTab and other POS options for restaurants, bars and retail, set up, configured and supported by the TruePay team.
 - **H1:** Keep checkout moving with a POS that fits.
@@ -206,7 +206,7 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/solutions/terminals/` · Terminals
 
-- **Template / status:** solution · planned
+- **Template / status:** solution · draft
 - **Title (54):** Credit Card Terminals: Countertop & Wireless | TruePay
 - **Description (138):** Countertop and wireless card terminals that take chip, tap and mobile wallets, programmed before they ship and covered by TruePay support.
 - **H1:** Card terminals your team can use with confidence.
@@ -220,7 +220,7 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/solutions/mobile-payments/` · Mobile payments
 
-- **Template / status:** solution · planned
+- **Template / status:** solution · draft
 - **Title (39):** Mobile Credit Card Processing | TruePay
 - **Description (137):** Take card payments on the job site, at the curb or at events with portable terminals and apps, and know what to do when the signal drops.
 - **H1:** Take payment where the work gets done.
@@ -232,7 +232,7 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/solutions/online-payments/` · Online payments
 
-- **Template / status:** solution · planned
+- **Template / status:** solution · draft
 - **Title (46):** Online Payment Processing & Gateways | TruePay
 - **Description (134):** Accept payments on your website with a gateway that fits your platform, plus help with setup, reporting and QuickBooks reconciliation.
 - **H1:** Get paid online without the headaches.
@@ -244,7 +244,7 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/solutions/integrations/` · Keep your POS
 
-- **Template / status:** solution · planned
+- **Template / status:** solution · draft
 - **Title (51):** Keep Your POS, Lower Your Processing Cost | TruePay
 - **Description (140):** Happy with your current POS or software? In many cases TruePay can process for it, so you keep the system your team knows. See how to check.
 - **H1:** Keep the system you know. Change who processes it.
@@ -257,7 +257,7 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/solutions/billing-software/` · Billing software
 
-- **Template / status:** solution · planned
+- **Template / status:** solution · draft
 - **Title (48):** Invoicing & Recurring Billing Software | TruePay
 - **Description (142):** Send invoices, collect card and ACH payments and sync with QuickBooks, with billing tools TruePay sets up and supports for service businesses.
 - **H1:** Send the invoice. Get paid. Keep the books clean.
@@ -272,7 +272,7 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/about/` · About
 
-- **Template / status:** trust · planned
+- **Template / status:** trust · draft
 - **Title (50):** About TruePay: Texas Payment Processing Since 2011
 - **Description (137):** TruePay started in 2011 to fix what business owners hate about card processing. Meet the people, the handshake principle and how we work.
 - **H1:** Built on a handshake. Accountable to your business.
@@ -285,7 +285,7 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/about/team/` · Our team
 
-- **Template / status:** trust · planned
+- **Template / status:** trust · draft
 - **Title (49):** Meet the TruePay Team | Real People You Can Reach
 - **Description (138):** The people behind TruePay: who leads the company, who sets up your equipment, who answers when you call and how to reach the right person.
 - **H1:** Know who's helping your business.
@@ -298,7 +298,7 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/about/jon-wilson/` · Jon Wilson
 
-- **Template / status:** profile · planned
+- **Template / status:** profile · draft
 - **Title (36):** Jon Wilson, Founder & CEO of TruePay
 - **Description (143):** Jon Wilson founded TruePay in 2011 after years in payments. His background, why he started TruePay and the guides he has written for merchants.
 - **H1:** Jon Wilson
@@ -311,7 +311,7 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/about/shane-spears/` · Shane Spears
 
-- **Template / status:** profile · planned
+- **Template / status:** profile · draft
 - **Title (47):** Shane Spears, Chief Operating Officer | TruePay
 - **Description (129):** Shane Spears runs day-to-day operations at TruePay: onboarding, equipment and support. His background and how he helps merchants.
 - **H1:** Shane Spears
@@ -324,7 +324,7 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/customer-stories/` · Customer stories
 
-- **Template / status:** collection · planned
+- **Template / status:** collection · draft
 - **Title (34):** TruePay Reviews & Customer Stories
 - **Description (127):** What business owners say about working with TruePay, in their own words, with links to where each review was originally posted.
 - **H1:** Hear it from the business owners.
@@ -351,7 +351,7 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/service-areas/` · Service areas
 
-- **Template / status:** area · planned
+- **Template / status:** area · draft
 - **Title (51):** Where TruePay Serves Merchants | Texas & Nationwide
 - **Description (142):** Based in Josephine, Texas, TruePay serves businesses across the country. See where we have local representatives and how remote support works.
 - **H1:** Rooted in Texas. Serving businesses nationwide.
@@ -367,7 +367,7 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/resources/` · Resources
 
-- **Template / status:** hub · planned
+- **Template / status:** hub · draft
 - **Title (55):** Payment Processing Guides for Business Owners | TruePay
 - **Description (142):** Plain-English guides to processing statements, pricing models, dual pricing and switching processors, written by people who do this every day.
 - **H1:** Straight answers about payment processing.
@@ -379,7 +379,7 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/resources/how-to-read-your-processing-statement/` · Reading your statement
 
-- **Template / status:** guide · planned
+- **Template / status:** guide · draft
 - **Title (56):** How to Read a Credit Card Processing Statement | TruePay
 - **Description (141):** A line-by-line guide to your merchant statement: interchange, assessments, markup and monthly fees, and how to find your real effective rate.
 - **H1:** How to read your credit card processing statement
@@ -392,7 +392,7 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/resources/flat-rate-vs-tiered-vs-interchange-plus/` · Pricing models compared
 
-- **Template / status:** guide · planned
+- **Template / status:** guide · draft
 - **Title (59):** Flat Rate vs. Tiered vs. Interchange-Plus Pricing | TruePay
 - **Description (134):** How the three common card-processing pricing models work, what each costs at different sales volumes and which one fits your business.
 - **H1:** Flat rate, tiered or interchange-plus: which costs less?
@@ -405,7 +405,7 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/resources/dual-pricing-vs-surcharging-vs-cash-discount/` · Dual pricing vs. surcharging
 
-- **Template / status:** guide · planned
+- **Template / status:** guide · draft
 - **Title (56):** Dual Pricing vs. Surcharging vs. Cash Discount | TruePay
 - **Description (143):** Three ways to pass card costs to customers, side by side: how each works, debit card rules, signage and receipts, and which fits your checkout.
 - **H1:** Dual pricing, surcharging and cash discounts: what's the difference?
@@ -418,7 +418,7 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/resources/why-credit-card-processing-fees-go-up/` · Why fees go up
 
-- **Template / status:** guide · planned
+- **Template / status:** guide · draft
 - **Title (55):** Why Did My Credit Card Processing Fees Go Up? | TruePay
 - **Description (145):** Card networks, processor markups and new monthly fees: the real reasons processing costs rise, how to spot them on your statement and what to do.
 - **H1:** Why did my credit card processing fees go up?
@@ -432,7 +432,7 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/resources/how-to-switch-payment-processors/` · Switching processors
 
-- **Template / status:** guide · planned
+- **Template / status:** guide · draft
 - **Title (49):** How to Switch Payment Processors Safely | TruePay
 - **Description (144):** What to check before you switch: contract and cancellation terms, equipment you own or lease, POS compatibility, timing and a day-one checklist.
 - **H1:** How to switch payment processors without the headaches
@@ -445,7 +445,7 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/resources/how-credit-card-processing-works/` · How processing works
 
-- **Template / status:** guide · planned
+- **Template / status:** guide · draft
 - **Title (56):** How Credit Card Processing Works, Step by Step | TruePay
 - **Description (140):** What happens between a customer's tap and your deposit: who's involved, who takes which fee and why your money takes a day or two to arrive.
 - **H1:** How credit card processing works
@@ -460,7 +460,7 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/industries/` · Industries
 
-- **Template / status:** hub · planned
+- **Template / status:** hub · draft
 - **Title (40):** Payment Processing by Industry | TruePay
 - **Description (137):** Restaurants, retail, salons, medical, home services and more: how payments work in your kind of business and what TruePay sets up for it.
 - **H1:** Payments built around how your business runs.
@@ -473,12 +473,12 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/industries/restaurants/` · Restaurants & bars
 
-- **Template / status:** industry · planned
+- **Template / status:** industry · draft
 - **Title (49):** Restaurant Credit Card Processing & POS | TruePay
 - **Description (137):** Payment processing for restaurants and bars: table-side and counter checkout, tips, dual pricing and support when Friday night gets busy.
 - **H1:** Payments that keep up with a full dining room.
 - **Intent:** restaurant credit card processing; restaurant POS; dual pricing restaurant
-- **Questions to answer:** “How do payments typically work for restaurants & bars?” · “Which equipment or software fits?” · “Is dual pricing or membership the better fit?” · “What does setup and support look like?”
+- **Questions to answer:** “How do restaurants handle tips on card payments?” · “Can my servers take payment at the table?” · “Does dual pricing work for restaurants?” · “What happens if my POS goes down during a rush?”
 - **CTA:** statement-review + talk-to-person · **Schema:** WebPage, Service, BreadcrumbList
 - **Must link to:** `/solutions/point-of-sale/`, `/pricing/dual-pricing/`, `/statement-review/`
 - **Content sources:** gh:industries.ts; pdf:p10 (restaurant/retail use cases)
@@ -486,12 +486,12 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/industries/retail/` · Retail
 
-- **Template / status:** industry · planned
+- **Template / status:** industry · draft
 - **Title (49):** Retail Payment Processing & POS Systems | TruePay
 - **Description (132):** Payment processing for retail stores: fast counter checkout, inventory-ready POS options and online and in-store sales in one place.
 - **H1:** Faster checkout for your store, online and off.
 - **Intent:** retail credit card processing; retail POS
-- **Questions to answer:** “How do payments typically work for retail?” · “Which equipment or software fits?” · “Is dual pricing or membership the better fit?” · “What does setup and support look like?”
+- **Questions to answer:** “What's the best way to take payments in a retail store?” · “Can my in-store and online sales run through one system?” · “Should a retail store use dual pricing?” · “What equipment does a small shop need?”
 - **CTA:** statement-review + talk-to-person · **Schema:** WebPage, Service, BreadcrumbList
 - **Must link to:** `/solutions/point-of-sale/`, `/solutions/online-payments/`, `/statement-review/`
 - **Content sources:** gh:industries.ts; pdf:p10 (restaurant/retail use cases)
@@ -499,12 +499,12 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/industries/salons-spas/` · Salons & spas
 
-- **Template / status:** industry · planned
+- **Template / status:** industry · draft
 - **Title (40):** Salon & Spa Payment Processing | TruePay
 - **Description (133):** Payment processing for salons, barbershops and spas: tips, deposits, appointment payments and simple pricing your clients understand.
 - **H1:** Payments that fit the chair, the booking and the tip.
 - **Intent:** salon credit card processing; spa payment processing
-- **Questions to answer:** “How do payments typically work for salons & spas?” · “Which equipment or software fits?” · “Is dual pricing or membership the better fit?” · “What does setup and support look like?”
+- **Questions to answer:** “How do salons handle tips on card payments?” · “Can I take deposits to cut down on no-shows?” · “Will clients accept dual pricing at a salon?” · “What equipment does a salon need?”
 - **CTA:** statement-review + talk-to-person · **Schema:** WebPage, Service, BreadcrumbList
 - **Must link to:** `/solutions/terminals/`, `/pricing/dual-pricing/`, `/statement-review/`
 - **Content sources:** gh:industries.ts; pdf:p10 (restaurant/retail use cases)
@@ -512,12 +512,12 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/industries/medical-dental/` · Medical & dental
 
-- **Template / status:** industry · planned
+- **Template / status:** industry · draft
 - **Title (45):** Medical & Dental Payment Processing | TruePay
 - **Description (148):** Card processing for medical and dental practices: front-desk checkout, payment plans and billing, with costs you can explain to your office manager.
 - **H1:** Patient payments without the paperwork headaches.
 - **Intent:** medical credit card processing; dental office payment processing
-- **Questions to answer:** “How do payments typically work for medical & dental?” · “Which equipment or software fits?” · “Is dual pricing or membership the better fit?” · “What does setup and support look like?”
+- **Questions to answer:** “How do medical and dental offices take patient payments?” · “Can patients pay their bills online?” · “Can we set up payment plans?” · “Is dual pricing a good idea for a medical practice?”
 - **CTA:** statement-review + talk-to-person · **Schema:** WebPage, Service, BreadcrumbList
 - **Must link to:** `/solutions/billing-software/`, `/pricing/membership/`, `/statement-review/`
 - **Content sources:** gh:industries.ts; pdf:p10 (restaurant/retail use cases)
@@ -525,12 +525,12 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/industries/home-services/` · Home services
 
-- **Template / status:** industry · planned
+- **Template / status:** industry · draft
 - **Title (50):** Payment Processing for Home Service Pros | TruePay
 - **Description (134):** Take payment on the job site for HVAC, plumbing, electrical and other home services, and stop chasing invoices after the truck leaves.
 - **H1:** Get paid before the truck leaves the driveway.
 - **Intent:** mobile payments for contractors; HVAC credit card processing
-- **Questions to answer:** “How do payments typically work for home services?” · “Which equipment or software fits?” · “Is dual pricing or membership the better fit?” · “What does setup and support look like?”
+- **Questions to answer:** “How do I take payment on a job site?” · “What if there's no cell signal at the job?” · “Can I send an invoice from the truck?” · “Does dual pricing work for contractors?”
 - **CTA:** statement-review + talk-to-person · **Schema:** WebPage, Service, BreadcrumbList
 - **Must link to:** `/solutions/mobile-payments/`, `/solutions/billing-software/`, `/statement-review/`
 - **Content sources:** gh:industries.ts; pdf:p10 (restaurant/retail use cases)
@@ -538,12 +538,12 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/industries/auto-services/` · Auto services
 
-- **Template / status:** industry · planned
+- **Template / status:** industry · draft
 - **Title (45):** Auto Repair Shop Payment Processing | TruePay
 - **Description (133):** Card processing for auto repair and service shops: high-ticket transactions, counter and bay checkout, and pricing that holds steady.
 - **H1:** Card processing built for the service counter.
 - **Intent:** auto repair credit card processing
-- **Questions to answer:** “How do payments typically work for auto services?” · “Which equipment or software fits?” · “Is dual pricing or membership the better fit?” · “What does setup and support look like?”
+- **Questions to answer:** “What's the best way to take payments at an auto repair shop?” · “How do large repair bills affect processing costs?” · “Should a repair shop use dual pricing?” · “Can my shop software work with TruePay?”
 - **CTA:** statement-review + talk-to-person · **Schema:** WebPage, Service, BreadcrumbList
 - **Must link to:** `/solutions/terminals/`, `/pricing/dual-pricing/`, `/statement-review/`
 - **Content sources:** gh:industries.ts; pdf:p10 (restaurant/retail use cases)
@@ -551,12 +551,12 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/industries/professional-services/` · Professional services
 
-- **Template / status:** industry · planned
+- **Template / status:** industry · draft
 - **Title (54):** Payment Processing for Professional Services | TruePay
 - **Description (129):** Invoice clients, take card and ACH payments and keep QuickBooks reconciled, for accountants, law firms, agencies and consultants.
 - **H1:** Send the invoice. Get paid faster.
 - **Intent:** accept credit card payments for services; invoice payments
-- **Questions to answer:** “How do payments typically work for professional services?” · “Which equipment or software fits?” · “Is dual pricing or membership the better fit?” · “What does setup and support look like?”
+- **Questions to answer:** “How can clients pay my invoices by card?” · “Can clients pay by bank transfer instead?” · “Can I bill a retainer automatically each month?” · “Will payments sync with QuickBooks?”
 - **CTA:** statement-review + talk-to-person · **Schema:** WebPage, Service, BreadcrumbList
 - **Must link to:** `/solutions/billing-software/`, `/solutions/online-payments/`, `/statement-review/`
 - **Content sources:** gh:industries.ts; pdf:p10 (restaurant/retail use cases)
@@ -564,12 +564,12 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/industries/nonprofits/` · Nonprofits
 
-- **Template / status:** industry · planned
+- **Template / status:** industry · draft
 - **Title (49):** Nonprofit Donation & Payment Processing | TruePay
 - **Description (135):** Take donations in person and online, set up recurring gifts and keep processing costs low so more of every dollar reaches your mission.
 - **H1:** More of every gift goes to the mission.
 - **Intent:** nonprofit credit card processing; donation processing
-- **Questions to answer:** “How do payments typically work for nonprofits?” · “Which equipment or software fits?” · “Is dual pricing or membership the better fit?” · “What does setup and support look like?”
+- **Questions to answer:** “How can our nonprofit accept donations by card?” · “Can donors give every month?” · “Can we take donations at events?” · “Is dual pricing appropriate for a nonprofit?”
 - **CTA:** statement-review + talk-to-person · **Schema:** WebPage, Service, BreadcrumbList
 - **Must link to:** `/solutions/online-payments/`, `/pricing/membership/`, `/statement-review/`
 - **Content sources:** gh:industries.ts; pdf:p10 (restaurant/retail use cases)
@@ -579,7 +579,7 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/partners/` · Partner program
 
-- **Template / status:** partner · planned
+- **Template / status:** partner · draft
 - **Title (56):** Payment Processing Partner & Sales Rep Program | TruePay
 - **Description (144):** Know business owners who'd value honest processing? Sell as a TruePay rep or refer as a partner and earn a share of residuals. See how it works.
 - **H1:** Your relationships can build recurring income.
@@ -593,7 +593,7 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/careers/` · Careers
 
-- **Template / status:** utility · planned
+- **Template / status:** utility · draft
 - **Title (18):** Careers at TruePay
 - **Description (141):** Sales and support roles at TruePay, a Texas payment processing company built on doing right by the customer. See open roles and how to apply.
 - **H1:** Do this work the right way, with us.
@@ -605,7 +605,7 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/privacy-policy/` · Privacy policy
 
-- **Template / status:** legal · planned
+- **Template / status:** legal · draft
 - **Title (24):** Privacy Policy | TruePay
 - **Description (124):** How TruePay collects, uses, stores and protects information submitted through this website, including processing statements.
 - **H1:** Privacy policy
@@ -617,7 +617,7 @@ Generated from `src/content/routes.ts` and `src/content/redirects.ts` by `npm ru
 
 ### `/terms/` · Terms of use
 
-- **Template / status:** legal · planned
+- **Template / status:** legal · draft
 - **Title (30):** Website Terms of Use | TruePay
 - **Description (132):** Terms for using the TruePay website and its calculators, including how illustrative figures and program descriptions should be read.
 - **H1:** Website terms of use

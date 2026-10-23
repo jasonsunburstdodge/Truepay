@@ -1,33 +1,73 @@
 import { NextResponse } from "next/server";
 
 /**
- * PLACEHOLDER lead intake endpoint.
+ * Lead intake for every site form (statement review, contact, partner, careers).
  *
- * This repo had no existing CRM/webhook integration to match when this
- * project was scaffolded (see README.md "Pre-build review" item 3) — there
- * was no prior form handler, HubSpot/Salesforce config, or hidden-field
- * convention to follow. This route exists so the "Get my free statement
- * review" form (src/components/lead-form.tsx) has somewhere real to POST
- * during development.
- *
- * Before launch, replace the body below with an actual integration (HubSpot
- * Forms API, Salesforce Web-to-Lead, a custom CRM webhook, etc.) and keep the
- * `selected_industry` field name so industry-tagged leads keep flowing
- * through once that integration is wired up.
+ * Delivers to LEAD_WEBHOOK_URL (CRM, Zapier/Make, or a custom endpoint) as JSON.
+ * If the webhook isn't configured or fails, responds with an error so the form
+ * shows the phone fallback. It never reports success for a lead that wasn't delivered.
  */
-export async function POST(request: Request) {
-  const data = await request.json().catch(() => null);
 
-  if (!data || typeof data.email !== "string" || !data.email) {
-    return NextResponse.json({ ok: false, error: "Email is required." }, { status: 400 });
+const FORM_TYPES = new Set(["statement-review", "contact", "partner", "careers"]);
+const MAX = 2000;
+
+// Best-effort, per-instance rate limit: 5 submissions per IP per 10 minutes.
+const hits = new Map<string, number[]>();
+function limited(ip: string) {
+  const now = Date.now();
+  const recent = (hits.get(ip) ?? []).filter((t) => now - t < 10 * 60_000);
+  recent.push(now);
+  hits.set(ip, recent);
+  return recent.length > 5;
+}
+
+const clean = (v: unknown) => (typeof v === "string" ? v.trim().slice(0, MAX) : "");
+
+export async function POST(request: Request) {
+  const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
+  if (limited(ip)) return NextResponse.json({ ok: false, error: "Too many submissions. Please call 888-792-0284." }, { status: 429 });
+
+  const body = (await request.json().catch(() => null)) as Record<string, unknown> | null;
+  if (!body) return NextResponse.json({ ok: false, error: "Invalid request." }, { status: 400 });
+
+  // Honeypot filled → silently accept and drop.
+  if (clean(body.website)) return NextResponse.json({ ok: true });
+
+  const lead = {
+    formType: clean(body.formType),
+    name: clean(body.name),
+    business: clean(body.business),
+    email: clean(body.email),
+    phone: clean(body.phone),
+    industry: clean(body.industry),
+    message: clean(body.message),
+    consent: body.consent === "yes",
+    page: clean(body.page),
+    utm: { source: clean(body.utm_source), medium: clean(body.utm_medium), campaign: clean(body.utm_campaign) },
+    submittedAt: new Date().toISOString(),
+  };
+
+  const errors: string[] = [];
+  if (!FORM_TYPES.has(lead.formType)) errors.push("formType");
+  if (!lead.name) errors.push("name");
+  if (!/^\S+@\S+\.\S+$/.test(lead.email)) errors.push("email");
+  if (lead.formType === "statement-review" && !lead.business) errors.push("business");
+  if (!lead.consent) errors.push("consent");
+  if (errors.length) return NextResponse.json({ ok: false, error: "Missing or invalid fields.", fields: errors }, { status: 400 });
+
+  const webhook = process.env.LEAD_WEBHOOK_URL;
+  if (!webhook) {
+    console.error("[lead] LEAD_WEBHOOK_URL is not set; lead not delivered", { formType: lead.formType, page: lead.page });
+    return NextResponse.json({ ok: false, error: "Form delivery is not configured." }, { status: 503 });
   }
 
-  console.log("[lead:placeholder]", {
-    businessName: data.businessName ?? null,
-    email: data.email,
-    phone: data.phone ?? null,
-    selected_industry: data.selected_industry ?? "not specified",
-  });
+  try {
+    const res = await fetch(webhook, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(lead) });
+    if (!res.ok) throw new Error(`Webhook responded ${res.status}`);
+  } catch (err) {
+    console.error("[lead] delivery failed", String(err));
+    return NextResponse.json({ ok: false, error: "Delivery failed." }, { status: 502 });
+  }
 
   return NextResponse.json({ ok: true });
 }

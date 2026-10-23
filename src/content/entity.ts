@@ -119,11 +119,12 @@ export type Testimonial = {
   status: "published" | "permissioned";
 };
 
-/** Only quotes already published on gotruepay.com. Never edit their wording. */
+/** Only quotes already published on gotruepay.com. Never edit their wording.
+ *  Add sourceUrl when the original Google/Facebook review link is known. */
 export const testimonials: Testimonial[] = [
-  { id: "r-moore", quote: "Best credit card system we've had at our shop...Period!", name: "R. Moore", status: "published", sourceUrl: "https://gotruepay.com/reviews/" },
-  { id: "e-springfield", quote: "I absolutely love this credit card system. Jon and Shane are awesome and are always there to answer questions and help with anything you may need!!!", name: "E. Springfield", status: "published", sourceUrl: "https://gotruepay.com/" },
-  { id: "a-monroe", quote: "We've been very pleased with Truepay! the service and the people! Jon and the crew are always very quick to check in and ensure we are doing well.", name: "A. Monroe", status: "published", sourceUrl: "https://gotruepay.com/" },
-  { id: "b-slavens", quote: "Wonderful solution for business owners. If you take credit cards, start saving some real money. Contact them today, great people.", name: "B. Slavens", status: "published", sourceUrl: "https://gotruepay.com/" },
-  { id: "m-holt", quote: "…our business went from paying in excess of $50,000.00 a year in credit card fees and since switching to TruePay our credit card fees are $420.00.", name: "M. Holt", status: "published", sourceUrl: "https://gotruepay.com/reviews/" },
+  { id: "r-moore", quote: "Best credit card system we've had at our shop...Period!", name: "R. Moore", status: "published" },
+  { id: "e-springfield", quote: "I absolutely love this credit card system. Jon and Shane are awesome and are always there to answer questions and help with anything you may need!!!", name: "E. Springfield", status: "published" },
+  { id: "a-monroe", quote: "We've been very pleased with Truepay! the service and the people! Jon and the crew are always very quick to check in and ensure we are doing well.", name: "A. Monroe", status: "published" },
+  { id: "b-slavens", quote: "Wonderful solution for business owners. If you take credit cards, start saving some real money. Contact them today, great people.", name: "B. Slavens", status: "published" },
+  { id: "m-holt", quote: "…our business went from paying in excess of $50,000.00 a year in credit card fees and since switching to TruePay our credit card fees are $420.00.", name: "M. Holt", status: "published" },
 ];

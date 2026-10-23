@@ -1,117 +1,138 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { INDUSTRY_STORAGE_KEY } from "@/components/industry-selection-context";
+import { useRouter } from "next/navigation";
+import { track } from "@/lib/analytics";
 
-type Status = "idle" | "submitting" | "success" | "error";
+type FormType = "statement-review" | "contact" | "partner" | "careers";
+type Status = "idle" | "submitting" | "error";
 
-export function LeadForm() {
+const INDUSTRIES = ["Restaurant or bar", "Retail store", "Salon or spa", "Medical or dental", "Home services", "Auto services", "Professional services", "Nonprofit", "Other"];
+
+const config: Record<FormType, { submit: string; event: "review_submit" | "contact_submit" | "partner_apply" | "careers_submit" }> = {
+  "statement-review": { submit: "Request my free statement review", event: "review_submit" },
+  contact: { submit: "Send my message", event: "contact_submit" },
+  partner: { submit: "Send my partner application", event: "partner_apply" },
+  careers: { submit: "Send my information", event: "careers_submit" },
+};
+
+export function LeadForm({ formType }: { formType: FormType }) {
   const [status, setStatus] = useState<Status>("idle");
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const router = useRouter();
+  const c = config[formType];
 
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const fd = new FormData(e.currentTarget);
+    const data = Object.fromEntries(fd.entries()) as Record<string, string>;
+    const next: Record<string, string> = {};
+    if (!data.name?.trim()) next.name = "Enter your name.";
+    if (!/^\S+@\S+\.\S+$/.test(data.email ?? "")) next.email = "Enter an email address like name@business.com.";
+    if (formType === "statement-review" && !data.business?.trim()) next.business = "Enter your business name.";
+    if (!data.consent) next.consent = "Please confirm we can contact you.";
+    setErrors(next);
+    if (Object.keys(next).length) return;
+
     setStatus("submitting");
-
-    const form = event.currentTarget;
-    const formData = new FormData(form);
-
-    // Tag the lead with whatever industry card the visitor clicked earlier in
-    // the session (brief task 9) — falls back to "not specified" so the field
-    // always reaches the backend rather than being silently dropped.
-    let selectedIndustry = "not specified";
     try {
-      selectedIndustry = sessionStorage.getItem(INDUSTRY_STORAGE_KEY) ?? "not specified";
-    } catch {
-      // sessionStorage unavailable — keep the fallback.
-    }
-
-    const payload = {
-      businessName: formData.get("business_name"),
-      email: formData.get("email"),
-      phone: formData.get("phone"),
-      selected_industry: selectedIndustry,
-    };
-
-    try {
-      const res = await fetch("/api/lead", {
+      const params = new URLSearchParams(window.location.search);
+      const res = await fetch("/api/lead/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: JSON.stringify({
+          ...data,
+          formType,
+          page: window.location.pathname,
+          utm_source: params.get("utm_source") ?? "",
+          utm_medium: params.get("utm_medium") ?? "",
+          utm_campaign: params.get("utm_campaign") ?? "",
+        }),
       });
-      if (!res.ok) throw new Error("Request failed");
-      setStatus("success");
-      form.reset();
+      if (!res.ok) throw new Error(String(res.status));
+      track(c.event);
+      router.push("/thank-you/");
     } catch {
       setStatus("error");
     }
   }
 
-  if (status === "success") {
-    return (
-      <div className="rounded-[var(--radius-lg)] border border-border bg-white p-8 text-center shadow-[var(--shadow-card)]">
-        <p className="font-display text-xl text-ink">You&apos;re all set.</p>
-        <p className="mt-2 text-sm text-text-muted">
-          A TruePay specialist will follow up with your free statement review shortly.
+  const input = "mt-1.5 w-full rounded-md border bg-paper px-3 py-2.5 text-text outline-none focus:border-navy";
+  const field = (name: string, label: string, type = "text", required = false, autoComplete?: string) => (
+    <div>
+      <label htmlFor={`${formType}-${name}`} className="text-sm font-semibold text-ink">
+        {label}
+        {!required && <span className="font-normal text-text-muted"> (optional)</span>}
+      </label>
+      <input
+        id={`${formType}-${name}`}
+        name={name}
+        type={type}
+        autoComplete={autoComplete}
+        aria-invalid={!!errors[name]}
+        aria-describedby={errors[name] ? `${formType}-${name}-err` : undefined}
+        className={`${input} ${errors[name] ? "border-warn" : "border-border"}`}
+      />
+      {errors[name] && (
+        <p id={`${formType}-${name}-err`} className="mt-1 text-sm text-warn">
+          {errors[name]}
         </p>
-      </div>
-    );
-  }
+      )}
+    </div>
+  );
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="rounded-[var(--radius-lg)] border border-border bg-white p-6 shadow-[var(--shadow-card)] sm:p-8"
-    >
-      <h2 className="font-display text-2xl text-ink">Get my free statement review</h2>
-      <p className="mt-1 text-sm text-text-muted">
-        Send us your latest statement and we&apos;ll show you exactly where your money is going.
-      </p>
-
-      <div className="mt-6 grid gap-4">
-        <label className="block">
-          <span className="text-sm font-medium text-text">Business name</span>
-          <input
-            name="business_name"
-            type="text"
-            required
-            className="mt-1.5 w-full rounded-md border border-border bg-paper px-3 py-2.5 text-text outline-none focus:border-navy"
-          />
+    <form noValidate onSubmit={onSubmit} className="relative grid gap-4 rounded-[var(--radius-lg)] border border-border bg-paper p-6 shadow-[var(--shadow-card)] sm:p-8">
+      <div className="grid gap-4 sm:grid-cols-2">
+        {field("name", "Your name", "text", true, "name")}
+        {field("business", "Business name", "text", formType === "statement-review", "organization")}
+        {field("email", "Email", "email", true, "email")}
+        {field("phone", "Phone", "tel", false, "tel")}
+      </div>
+      {(formType === "statement-review" || formType === "contact") && (
+        <div>
+          <label htmlFor={`${formType}-industry`} className="text-sm font-semibold text-ink">
+            Type of business <span className="font-normal text-text-muted">(optional)</span>
+          </label>
+          <select id={`${formType}-industry`} name="industry" className={`${input} border-border`} defaultValue="">
+            <option value="">Choose one</option>
+            {INDUSTRIES.map((i) => (
+              <option key={i}>{i}</option>
+            ))}
+          </select>
+        </div>
+      )}
+      <div>
+        <label htmlFor={`${formType}-message`} className="text-sm font-semibold text-ink">
+          {formType === "statement-review" ? "Anything we should know?" : formType === "partner" ? "Who do you serve, and how would you like to work with us?" : "How can we help?"}{" "}
+          <span className="font-normal text-text-muted">(optional)</span>
         </label>
-        <label className="block">
-          <span className="text-sm font-medium text-text">Email</span>
-          <input
-            name="email"
-            type="email"
-            required
-            className="mt-1.5 w-full rounded-md border border-border bg-paper px-3 py-2.5 text-text outline-none focus:border-navy"
-          />
-        </label>
-        <label className="block">
-          <span className="text-sm font-medium text-text">Phone</span>
-          <input
-            name="phone"
-            type="tel"
-            className="mt-1.5 w-full rounded-md border border-border bg-paper px-3 py-2.5 text-text outline-none focus:border-navy"
-          />
-        </label>
-
-        {/* Populated from sessionStorage on submit above — see brief task 9. */}
-        <input type="hidden" name="selected_industry" id="selected-industry-field" />
+        <textarea id={`${formType}-message`} name="message" rows={3} className={`${input} border-border`} />
       </div>
 
-      <button
-        type="submit"
-        disabled={status === "submitting"}
-        className="mt-6 w-full rounded-md bg-gold px-5 py-3 text-sm font-semibold text-ink transition-colors hover:bg-gold-bright disabled:opacity-60"
-      >
-        {status === "submitting" ? "Sending…" : "Get my free statement review"}
+      {/* Honeypot: hidden from people, tempting to bots. */}
+      <div aria-hidden="true" className="absolute -left-[9999px] h-px w-px overflow-hidden">
+        <label htmlFor={`${formType}-website`}>Website</label>
+        <input id={`${formType}-website`} name="website" tabIndex={-1} autoComplete="off" />
+      </div>
+
+      <div>
+        <label className="flex items-start gap-2.5 text-sm text-text">
+          <input type="checkbox" name="consent" value="yes" className="mt-1 h-4 w-4 accent-[var(--color-navy)]" />
+          <span>TruePay may contact me by phone, text or email about this request. Message and data rates may apply.</span>
+        </label>
+        {errors.consent && <p className="mt-1 text-sm text-warn">{errors.consent}</p>}
+      </div>
+
+      <button type="submit" disabled={status === "submitting"} className="rounded-md bg-gold px-5 py-3.5 font-semibold text-ink transition-colors hover:bg-gold-bright disabled:opacity-60">
+        {status === "submitting" ? "Sending…" : c.submit}
       </button>
 
-      {status === "error" ? (
-        <p className="mt-3 text-sm text-red-600">
-          Something went wrong — please try again or call us directly.
+      {status === "error" && (
+        <p role="alert" className="text-sm text-warn">
+          Your message didn&apos;t go through. Please call us at 888-792-0284 and we&apos;ll take care of it by phone.
         </p>
-      ) : null}
+      )}
     </form>
   );
 }

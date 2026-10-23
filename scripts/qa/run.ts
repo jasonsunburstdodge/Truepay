@@ -79,9 +79,12 @@ async function startServer() {
       finish();
     }
   }
+  const busy = await fetch(`http://localhost:${PORT}/`).then(() => true, () => false);
+  if (busy) throw new Error(`Port ${PORT} is already in use; stop the other server first`);
   console.log(`▶ next start -p ${PORT}`);
   server = spawn("npx", ["next", "start", "-p", String(PORT)], {
     stdio: "ignore",
+    detached: true,
     env: { ...process.env, SITE_ENV: PREVIEW ? "preview" : "production" },
   });
   BASE = `http://localhost:${PORT}`;
@@ -406,7 +409,13 @@ const getRouteStatus = (p: string) => routes.find((r) => r.path === p)?.status;
 
 // ───────────────────────── report ─────────────────────────
 function finish(): never {
-  server?.kill();
+  if (server?.pid) {
+    try {
+      process.kill(-server.pid, "SIGTERM");
+    } catch {
+      server.kill();
+    }
+  }
   const by = (l: Level) => findings.filter((f) => f.level === l);
   const fails = by("FAIL");
   const warns = by("WARN");
