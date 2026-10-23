@@ -2,9 +2,11 @@ import { getClaim } from "@/lib/claims";
 export function FitCheck({
   goodFit,
   notFit,
+  recommendation = true,
 }: {
   goodFit: string[];
   notFit: string[];
+  recommendation?: boolean;
 }) {
   return (
     <div className="grid two fit-grid">
@@ -19,9 +21,14 @@ export function FitCheck({
               <li key={item}>{item}</li>
             ))}
           </ul>
-          <p className="fit-recommendation" data-claim="honest-recommendation">
-            {getClaim("honest-recommendation").copy}
-          </p>
+          {recommendation && (
+            <p
+              className="fit-recommendation"
+              data-claim="honest-recommendation"
+            >
+              {getClaim("honest-recommendation").copy}
+            </p>
+          )}
         </article>
       ))}
     </div>

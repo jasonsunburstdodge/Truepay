@@ -189,6 +189,12 @@ export default function Home() {
         <div className="container">
           <p className="eyebrow">Find your fit</p>
           <h2>Is dual pricing right for you?</h2>
+          <p>
+            <a href="/pricing/dual-pricing/">
+              See how dual pricing works at checkout
+            </a>
+            .
+          </p>
           <p className="section-intro" data-claim="dual-pricing-cost">
             {getClaim("dual-pricing-cost").copy}
           </p>

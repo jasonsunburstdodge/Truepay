@@ -5,11 +5,13 @@ export function Commitment({
   title,
   covers,
   excludes,
+  expanded = false,
 }: {
   id: string;
   title: string;
   covers: string;
   excludes: string;
+  expanded?: boolean;
 }) {
   const claim = getClaim(id);
   return (
@@ -18,8 +20,8 @@ export function Commitment({
         ✓
       </span>
       <h3>{title}</h3>
-      <p>{claim.copy}</p>
-      <details>
+      <p data-claim-copy>{claim.copy}</p>
+      <details open={expanded}>
         <summary>What this covers</summary>
         <p>{covers}</p>
         <h4>What it doesn’t</h4>

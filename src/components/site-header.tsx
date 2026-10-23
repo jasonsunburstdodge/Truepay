@@ -8,12 +8,15 @@ export function SiteHeader() {
   const links = items.map((item) => (
     <div key={item.path}>
       <a href={item.path}>{item.label}</a>
-      {"children" in item &&
-        item.children?.map((child) => (
-          <a key={child.path} href={child.path}>
-            {child.label}
-          </a>
-        ))}
+      {"children" in item && !!item.children?.length && (
+        <div className="nav-children">
+          {item.children.map((child) => (
+            <a key={child.path} href={child.path}>
+              {child.label}
+            </a>
+          ))}
+        </div>
+      )}
     </div>
   ));
   return (
