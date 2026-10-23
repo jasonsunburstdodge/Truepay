@@ -131,7 +131,7 @@ export const routes: RouteSpec[] = [
     path: "/statement-review/",
     template: "conversion",
     phase: 1,
-    status: "planned",
+    status: "draft",
     label: "Free statement review",
     title: "Free Credit Card Processing Statement Review | TruePay",
     description:
@@ -157,7 +157,7 @@ export const routes: RouteSpec[] = [
     path: "/effective-rate-calculator/",
     template: "tool",
     phase: 1,
-    status: "planned",
+    status: "draft",
     label: "Effective rate calculator",
     title: "Effective Rate Calculator for Card Processing | TruePay",
     description:
@@ -168,7 +168,6 @@ export const routes: RouteSpec[] = [
       "What is an effective rate?",
       "Which fees should I include?",
       "Why is my effective rate higher than the rate I was quoted?",
-      "What is a typical effective rate?",
     ],
     primaryCta: "statement-review",
     schema: ["WebPage", "BreadcrumbList"],
@@ -181,7 +180,7 @@ export const routes: RouteSpec[] = [
     path: "/support/",
     template: "utility",
     phase: 1,
-    status: "planned",
+    status: "draft",
     label: "Support",
     title: "TruePay Merchant Support: Call, Text or Email",
     description:
@@ -201,7 +200,7 @@ export const routes: RouteSpec[] = [
     path: "/contact/",
     template: "utility",
     phase: 1,
-    status: "planned",
+    status: "draft",
     label: "Contact",
     title: "Contact TruePay | 888-792-0284",
     description:
@@ -221,7 +220,7 @@ export const routes: RouteSpec[] = [
     path: "/thank-you/",
     template: "utility",
     phase: 1,
-    status: "planned",
+    status: "draft",
     label: "Thank you",
     title: "Thanks, We've Got It | TruePay",
     description: "Your request reached TruePay. Here's what happens next.",
