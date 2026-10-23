@@ -1,37 +1,36 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import localFont from "next/font/local";
+import { SITE_URL } from "@/content/routes";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { MobileCtaBar } from "@/components/mobile-cta-bar";
+import { JsonLd } from "@/components/json-ld";
+import { organizationNode, websiteNode } from "@/lib/schema";
 import "./globals.css";
-
-const inter = Inter({
+const inter = localFont({
+  src: "../../node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2",
   variable: "--font-inter",
-  subsets: ["latin"],
   display: "swap",
+  weight: "100 900",
 });
-
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["500", "600"],
-});
-
 export const metadata: Metadata = {
-  title: "TruePay — Payments Without the Games.",
-  description:
-    "Transparent payment processing, rate protection, and month-to-month service. Real US-based support, nationwide, since 2011.",
+  metadataBase: new URL(SITE_URL),
+  robots: { index: false, follow: false },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${fraunces.variable} antialiased`}>
+      <body className={inter.variable}>
+        <a className="skip-link" href="#main-content">
+          Skip to content
+        </a>
+        <JsonLd nodes={[organizationNode(), websiteNode()]} />
         <SiteHeader />
-        <main className="pb-20 sm:pb-0">{children}</main>
+        <main id="main-content" tabIndex={-1}>
+          {children}
+        </main>
         <SiteFooter />
         <MobileCtaBar />
       </body>

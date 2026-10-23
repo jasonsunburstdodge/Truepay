@@ -1,43 +1,53 @@
-import { siteConfig } from "@/lib/site-config";
-
+import { entity } from "@/content/entity";
+import { getRoute } from "@/content/routes";
+import { navigation, utilityNavigation, isBuilt } from "@/lib/navigation";
+import { Logo } from "./logo";
 export function SiteFooter() {
+  const links = [
+    ...navigation(),
+    ...utilityNavigation(),
+    ...["/privacy-policy/", "/terms/"]
+      .filter(isBuilt)
+      .map((path) => getRoute(path)!),
+  ];
   return (
-    <footer className="border-t border-border bg-ink text-cream">
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-        <div className="grid gap-8 sm:grid-cols-3">
-          <div>
-            <p className="font-display text-lg font-semibold">
-              True<span className="text-gold">Pay</span>
-            </p>
-            <p className="mt-2 text-sm text-cream/70">
-              Payment processing built around your business — since {siteConfig.founded}.
-            </p>
-          </div>
-          <div className="text-sm text-cream/70">
-            <p className="font-semibold text-cream">Contact</p>
-            <p className="mt-2">
-              <a href={siteConfig.phoneHref} className="hover:text-gold">
-                {siteConfig.phone}
-              </a>
-            </p>
-            <p className="mt-1">
-              {siteConfig.address.street}
-              <br />
-              {siteConfig.address.city}, {siteConfig.address.state} {siteConfig.address.zip}
-            </p>
-          </div>
-          <div className="text-sm text-cream/70">
-            <p className="font-semibold text-cream">Coverage</p>
-            <p className="mt-2">{siteConfig.coverage.headline}</p>
-            <p className="mt-1">
-              Deep roots in {siteConfig.coverage.primaryStates.join(" and ")} since{" "}
-              {siteConfig.founded}.
-            </p>
-          </div>
+    <footer className="site-footer">
+      <div className="container footer-grid">
+        <div>
+          <Logo />
+          <p>{entity.descriptor}</p>
+          <address>
+            {entity.address.streetAddress}
+            <br />
+            {entity.address.addressLocality}, {entity.address.addressRegion}{" "}
+            {entity.address.postalCode}
+          </address>
+          <p>
+            <a href={entity.phone.href}>{entity.phone.display}</a>
+            <br />
+            <a href={`mailto:${entity.email}`}>{entity.email}</a>
+          </p>
         </div>
-        <p className="mt-10 border-t border-cream/10 pt-6 text-xs text-cream/50">
-          © {new Date().getFullYear()} TruePay. All rights reserved.
-        </p>
+        <nav aria-label="Footer navigation">
+          {links.map((link) => (
+            <a key={link.path} href={link.path}>
+              {link.label}
+            </a>
+          ))}
+        </nav>
+        <div>
+          <p className="eyebrow">Stay connected</p>
+          <ul className="link-list">
+            {entity.sameAs.map((url, i) => (
+              <li key={url}>
+                <a href={url}>{["Facebook", "Instagram", "X", "TikTok"][i]}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <div className="container copyright">
+        © {new Date().getFullYear()} {entity.name}
       </div>
     </footer>
   );
