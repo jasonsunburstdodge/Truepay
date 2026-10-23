@@ -37,7 +37,15 @@ export default async function Page({ params }: { params: Promise<{ slug: string[
   return (
     <>
       <JsonLd data={pageGraph(path, { article: content.guide, profileSlug: PROFILE_SLUGS[path] })} />
-      <PageHeader route={route} answer={content.answer} eyebrow={content.eyebrow} guide={content.guide} heroCtas={content.heroCtas ?? commercial} />
+      <PageHeader
+        route={route}
+        answer={content.answer}
+        eyebrow={content.eyebrow}
+        guide={content.guide}
+        heroCtas={content.heroCtas ?? commercial}
+        buttons={content.heroButtons}
+        overlapBelow={content.blocks[0]?.type === "stats" && !!content.blocks[0].overlap}
+      />
       {content.blocks.map((b, i) => (
         <BlockView key={i} block={b} />
       ))}

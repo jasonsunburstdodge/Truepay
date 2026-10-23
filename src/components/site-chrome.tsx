@@ -12,7 +12,7 @@ export function JsonLd({ data }: { data: object }) {
 export function ConceptRibbon() {
   if (!showConceptRibbon) return null;
   return (
-    <div className="bg-ink text-center text-xs text-cream/80">
+    <div className="bg-navy-night text-center text-xs text-mist">
       <p className="container-tp py-1.5">Concept preview for TruePay review. Draft content; not the live site.</p>
     </div>
   );
@@ -30,10 +30,10 @@ export function SiteFooter() {
   const legal = ["/privacy-policy/", "/terms/"].map(link).filter((l) => l !== undefined);
   const help = ["/support/", "/contact/", "/statement-review/", "/effective-rate-calculator/"].map(link).filter((l) => l !== undefined);
   return (
-    <footer className="bg-ink text-cream">
+    <footer className="bg-navy-night text-cream">
       <div className="container-tp grid gap-10 py-14 lg:grid-cols-[1.3fr_2fr]">
         <div className="max-w-sm">
-          <Logo tone="light" />
+          <Logo />
           <p className="mt-4 text-sm leading-relaxed text-cream/75">{entity.oneLiner}</p>
           <address className="mt-5 text-sm not-italic leading-relaxed text-cream/75">
             {entity.address.streetAddress}
@@ -65,7 +65,7 @@ export function SiteFooter() {
         <nav aria-label="Footer" className="grid grid-cols-2 gap-8 sm:grid-cols-3">
           {[...groups, { label: "Help", path: "/support/", children: help }].map((g) => (
             <div key={g.label}>
-              <p className="text-sm font-semibold text-cream">{g.label}</p>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">{g.label}</p>
               <ul className="mt-3 grid gap-2 text-sm text-cream/70">
                 {g.label !== "Help" && (
                   <li>
@@ -108,11 +108,11 @@ export function SiteFooter() {
 
 export function MobileCtaBar() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 flex border-t border-border bg-paper pb-[env(safe-area-inset-bottom)] shadow-[0_-4px_16px_rgba(15,26,46,0.08)] sm:hidden">
-      <Link href={ctas["statement-review"].href} className="flex flex-1 items-center justify-center bg-gold px-3 py-3.5 text-sm font-semibold text-ink">
+    <div className="fixed inset-x-0 bottom-0 z-40 flex bg-navy-deep pb-[env(safe-area-inset-bottom)] shadow-[0_-4px_16px_rgba(7,39,75,0.25)] sm:hidden">
+      <Link href={ctas["statement-review"].href} className="flex flex-1 items-center justify-center bg-gold px-3 py-3.5 text-sm font-bold text-navy-deep">
         Free statement review
       </Link>
-      <a href={entity.phone.href} className="flex flex-1 items-center justify-center px-3 py-3.5 text-sm font-semibold text-navy">
+      <a href={entity.phone.href} className="flex flex-1 items-center justify-center px-3 py-3.5 text-sm font-bold text-white">
         Call {entity.phone.display}
       </a>
     </div>

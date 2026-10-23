@@ -39,14 +39,14 @@ export function RateCalculator() {
 
   const field = (id: string, label: string, help: string, value: string, set: (v: string) => void, error?: string) => (
     <div>
-      <label htmlFor={id} className="text-sm font-semibold text-ink">
+      <label htmlFor={id} className="text-[1.02rem] font-bold text-ink">
         {label}
       </label>
-      <p id={`${id}-help`} className="text-xs text-text-muted">
+      <p id={`${id}-help`} className="text-sm text-slate">
         {help}
       </p>
-      <div className={`mt-1.5 flex items-center rounded-md border bg-paper px-3 focus-within:border-navy ${error ? "border-warn" : "border-border"}`}>
-        <span className="text-text-muted" aria-hidden="true">
+      <div className={`mt-2 flex items-center rounded-[var(--radius-md)] border-2 bg-paper px-4 focus-within:border-navy ${error ? "border-warn" : "border-border"}`}>
+        <span className="text-2xl text-slate" aria-hidden="true">
           $
         </span>
         <input
@@ -57,7 +57,7 @@ export function RateCalculator() {
           onBlur={onBlur}
           aria-invalid={!!error}
           aria-describedby={`${id}-help${error ? ` ${id}-err` : ""}`}
-          className="num w-full bg-transparent py-3 pl-1.5 text-lg text-text outline-none"
+          className="num w-full bg-transparent py-3.5 pl-2 text-3xl font-extrabold tracking-[-0.04em] text-ink outline-none"
         />
       </div>
       {error && (
@@ -69,22 +69,24 @@ export function RateCalculator() {
   );
 
   return (
-    <div className="rounded-[var(--radius-lg)] border border-border bg-paper p-6 shadow-[var(--shadow-card)] sm:p-8">
-      <p className="mb-5 text-sm text-text-muted">Filled in with example numbers. Replace them with the totals from one month of your statement.</p>
+    <div className="rounded-[var(--radius-lg)] bg-paper p-6 shadow-[var(--shadow-card)] sm:p-10">
+      <p className="eyebrow">Effective rate calculator</p>
+      <h2 className="font-display mt-3 text-[1.9rem] text-ink sm:text-[2.4rem]">See what you&apos;re really paying.</h2>
+      <p className="mb-6 mt-3 text-[1.02rem] text-text-muted">Filled in with example numbers. Replace them with the totals from one month of your statement.</p>
       <div className="grid gap-6 sm:grid-cols-2">
         {field("calc-sales", "Card sales for one month", "Total card volume on your statement", sales, setSales, salesError)}
         {field("calc-fees", "Total processing fees, same month", "Every fee on the statement, added together", fees, setFees, feesError)}
       </div>
-      <div className="mt-6 grid gap-1 rounded-md bg-navy px-6 py-6 text-center" aria-live="polite">
-        <p className="text-xs font-semibold uppercase tracking-wider text-white/65">Your effective rate</p>
-        <p className="num font-display text-5xl text-white">{rate === null ? "–" : `${rate.toFixed(2)}%`}</p>
+      <div className="mt-7 grid gap-2 rounded-[var(--radius-md)] bg-navy px-7 py-7" aria-live="polite">
+        <p className="text-[1rem] text-mist">Your effective rate</p>
+        <p className="num text-6xl font-extrabold leading-none tracking-[-0.05em] text-white">{rate === null ? "–" : `${rate.toFixed(2)}%`}</p>
         {rate !== null && s.value !== null && f.value !== null && (
-          <p className="num text-sm text-white/70">
+          <p className="num text-[0.95rem] text-mist">
             {money(f.value)} in fees ÷ {money(s.value)} in card sales
           </p>
         )}
       </div>
-      <p className="mt-4 text-sm text-text-muted">
+      <p className="mt-5 text-[0.95rem] leading-relaxed text-text-muted">
         This is your own math from your own statement, not an estimate of what you would pay with TruePay. Want to know what&apos;s driving it?{" "}
         <Link href="/statement-review/#review-form" className="inline-link font-semibold">
           Get a free statement review

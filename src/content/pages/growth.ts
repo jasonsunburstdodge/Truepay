@@ -2,12 +2,36 @@ import type { PageContent } from "./types";
 
 export const partners: PageContent = {
   path: "/partners/",
-  eyebrow: "Partner program",
-  answer:
-    "If business owners trust you, there's a place for you at TruePay. {{claim:partner-split}} Sell directly as a rep or simply make introductions as a referral partner, and earn recurring residuals for as long as your merchants process with us.",
+  eyebrow: "TruePay partner opportunities",
+  answer: "If business owners trust you, there's a place for you at TruePay. Sell directly as a rep or make introductions as a referral partner, and earn residuals every month your merchants keep processing.",
+  heroButtons: [
+    { label: "Estimate residuals", href: "#estimator", cta: "partner-apply" },
+    { label: "Explore both paths", href: "#paths" },
+  ],
   blocks: [
     {
+      type: "stats",
+      overlap: true,
+      eyebrow: "Two ways to work together",
+      heading: "Choose the role that fits your relationships.",
+      rows: [
+        { label: "Sales reps", value: "50%", claim: "partner-split" },
+        { label: "Referral partners", value: "20%", claim: "partner-split" },
+      ],
+      note: "Percentages are shares of TruePay's applicable profit from referred merchant processing, subject to the written agreement.",
+    },
+    {
+      type: "darkProse",
+      eyebrow: "Find your fit",
+      heading: "Know the owners. Make the connection.",
+      paras: [
+        "We're looking for people who already serve local businesses and value long-term relationships. Restaurant and retail suppliers, POS and software resellers, bookkeepers and accountants, business consultants, insurance agents: anyone owners call for advice.",
+        "You don't need payments experience to refer. Reps get training, pricing help and our team on calls. Either way, our Texas team sets up and supports your merchants, so your reputation is in good hands.",
+      ],
+    },
+    {
       type: "table",
+      id: "paths",
       heading: "What's the difference between a rep and a referral partner?",
       caption: "Two ways to work with TruePay",
       columns: ["", "Sales rep", "Referral partner"],
@@ -17,7 +41,7 @@ export const partners: PageContent = {
         ["Who it suits", "People who want to build a book of merchants", "People who already serve business owners and want to recommend someone they trust"],
         ["Support", "Training, pricing help and our team on calls", "We handle the sale, setup and support"],
       ],
-      note: "Shares are of TruePay's applicable profit from referred merchants' processing, under a written partner agreement.",
+      note: "{{claim:partner-split|Shares are of TruePay's applicable profit from referred merchants' processing, under a written partner agreement.}}",
     },
     {
       type: "qa",
@@ -25,7 +49,7 @@ export const partners: PageContent = {
         {
           q: "How are residuals calculated?",
           a: [
-            "Each month, TruePay earns a profit on a merchant's processing after interchange and costs. Your share of that profit is your residual. It recurs every month the merchant keeps processing, and grows as you add merchants. The estimator below shows how the math works with your own assumptions.",
+            "Each month, TruePay earns a profit on a merchant's processing after interchange and costs. Your share of that profit is your residual. It recurs every month the merchant keeps processing and grows as you add merchants. The estimator below shows the math with your own numbers.",
           ],
         },
       ],
@@ -36,14 +60,12 @@ export const partners: PageContent = {
       items: [
         {
           q: "Who is a good fit?",
-          a: [
-            "People who already serve local businesses and value long-term relationships: restaurant and retail suppliers, POS and software resellers, bookkeepers and accountants, business consultants, insurance agents and anyone owners call for advice. You don't need payments experience to refer. Reps get trained.",
-          ],
+          a: ["People who already serve local businesses and value long-term relationships. If owners already ask you who they should trust, you're a good fit to refer. If you want to build your own book of merchants, the rep path is for you."],
         },
         {
           q: "What training and support do partners get?",
           a: [
-            "Reps get sales training through [TruePay Training](https://truepaytraining.com/) and help from our team on pricing and proposals. Referral partners just make the introduction. Either way, our [Texas team](/about/team/) sets up and supports your merchants, so your reputation is in good hands. [Why merchants choose TruePay →](/why-truepay/)",
+            "Reps get sales training through [TruePay Training](https://truepaytraining.com/) and help from our team on pricing and proposals. Referral partners just make the introduction. Our [Texas team](/about/team/) sets up and supports every merchant. [Why merchants choose TruePay →](/why-truepay/)",
           ],
         },
       ],
@@ -52,7 +74,7 @@ export const partners: PageContent = {
       type: "leadForm",
       formType: "partner",
       id: "apply",
-      heading: "Apply to partner with TruePay",
+      heading: "Connect with us",
       text: "Tell us who you serve and how you'd like to work together. We'll set up a call to walk through the agreement. Looking for a staff role instead? See [careers](/careers/).",
     },
   ],

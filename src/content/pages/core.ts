@@ -119,7 +119,6 @@ export const home: PageContent = {
     },
     {
       type: "prose",
-      heading: "What's your real processing rate?",
       paras: [
         "Your effective rate is your total processing fees divided by your total card sales for the same month. It's the one number that tells you what processing actually costs, whatever your statement calls it. Try it with the totals from your last statement, or use the [full calculator with explanations](/effective-rate-calculator/).",
       ],

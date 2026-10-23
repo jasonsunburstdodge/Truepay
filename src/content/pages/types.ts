@@ -19,7 +19,7 @@ export type Block =
   | { type: "cards"; heading?: string; intro?: Rich; cards: Item[]; columns?: 2 | 3 | 4; id?: string }
   | { type: "fit"; heading: string; intro?: Rich; good: Item[]; notFit: Item[]; closing?: Rich }
   | { type: "commitments"; heading: string; intro?: Rich; id?: string; items: { claim: string; title: string; covers: Rich; doesNot: Rich }[] }
-  | { type: "table"; heading?: string; intro?: Rich; caption: string; columns: string[]; rows: Rich[][]; note?: Rich; rowHeaders?: boolean }
+  | { type: "table"; id?: string; heading?: string; intro?: Rich; caption: string; columns: string[]; rows: Rich[][]; note?: Rich; rowHeaders?: boolean }
   | { type: "qa"; heading?: string; items: { q: string; a: Rich[] }[] }
   | { type: "quotes"; heading?: string; intro?: Rich; ids: string[] }
   | { type: "people"; heading?: string; intro?: Rich; slugs: string[] }
@@ -31,7 +31,11 @@ export type Block =
   | { type: "contactCard" }
   | { type: "diagram"; kind: "payment-flow" | "statement" | "dual-pricing-checkout"; caption: Rich }
   | { type: "coverage" }
-  | { type: "storyIndex" };
+  | { type: "storyIndex" }
+  /** White card of label/value rows, like "Sales reps 50%". overlap pulls it up into the hero above. */
+  | { type: "stats"; eyebrow?: string; heading: string; rows: { label: string; value: string; claim?: string }[]; note?: Rich; id?: string; overlap?: boolean }
+  /** Navy band with a gold eyebrow, white heading and text. */
+  | { type: "darkProse"; eyebrow?: string; heading: string; paras: Rich[]; id?: string };
 
 export type GuideMeta = { author: string; reviewer?: string; published: string; modified: string };
 
@@ -43,5 +47,7 @@ export type PageContent = {
   guide?: GuideMeta;
   /** Show CTA buttons in the page header (default true for commercial pages). */
   heroCtas?: boolean;
+  /** Custom header buttons instead of the route's CTAs (first is primary). */
+  heroButtons?: { label: string; href: string; cta?: string }[];
   blocks: Block[];
 };

@@ -1,46 +1,57 @@
 @import "tailwindcss";
 
 /*
- * TruePay design tokens. Every color, radius and shadow in the codebase
- * resolves to one of these. Navy/ink for trust, warm off-white surfaces,
- * gold accent (matches the gold shield in TruePay's logo).
+ * TruePay design tokens, matched to Jason's ChatGPT build: deep navy header and
+ * gradient hero, gold accents, cool blue-gray sections, white rounded cards and
+ * heavy, tightly tracked sans headlines. Every color resolves to one of these.
  */
 :root {
-  --color-ink: #0f1a2e;
-  --color-navy: #142b52;
-  --color-navy-deep: #0a1730;
-  --color-paper: #fafaf8;
-  --color-surface: #f5f5f1;
-  --color-surface-alt: #eef1f6;
-  --color-border: #e4e4de;
-  --color-text: #1a1f2b;
-  --color-text-muted: #5b6270;
-  --color-cream: #f7f7f5;
-  --color-gold: #c9a227;
-  --color-gold-bright: #d4a017;
-  --color-gold-deep: #8a6a0f;
-  --color-gold-soft: #f6eccb;
+  --color-ink: #0c2b4f;
+  --color-navy: #092f59;
+  --color-navy-deep: #07274b;
+  --color-navy-night: #042243;
+  --color-hero-from: #0b3360;
+  --color-hero-via: #134171;
+  --color-hero-to: #082d54;
+  --color-page: #f4f7fa;
+  --color-paper: #ffffff;
+  --color-surface: #e3eaf1;
+  --color-surface-alt: #f1f5f9;
+  --color-border: #d5dfe9;
+  --color-text: #23395a;
+  --color-text-muted: #5a6e87;
+  --color-slate: #4a6382;
+  --color-mist: #c6d3e2;
+  --color-cream: #eef3f8;
+  --color-gold: #e4b661;
+  --color-gold-bright: #edc57b;
+  --color-gold-deep: #8f6a1c;
+  --color-gold-soft: #f8edd5;
   --color-success: #2f6b45;
   --color-warn: #8a4b12;
 
-  --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 14px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
 
-  --shadow-card: 0 8px 24px rgba(15, 26, 46, 0.08);
-  --shadow-card-hover: 0 12px 32px rgba(15, 26, 46, 0.14);
+  --shadow-card: 0 10px 30px rgba(7, 39, 75, 0.08);
+  --shadow-card-hover: 0 16px 40px rgba(7, 39, 75, 0.14);
 }
 
 @theme inline {
   --color-ink: var(--color-ink);
   --color-navy: var(--color-navy);
   --color-navy-deep: var(--color-navy-deep);
+  --color-navy-night: var(--color-navy-night);
+  --color-page: var(--color-page);
   --color-paper: var(--color-paper);
   --color-surface: var(--color-surface);
   --color-surface-alt: var(--color-surface-alt);
   --color-border: var(--color-border);
   --color-text: var(--color-text);
   --color-text-muted: var(--color-text-muted);
+  --color-slate: var(--color-slate);
+  --color-mist: var(--color-mist);
   --color-cream: var(--color-cream);
   --color-gold: var(--color-gold);
   --color-gold-bright: var(--color-gold-bright);
@@ -48,9 +59,6 @@
   --color-gold-soft: var(--color-gold-soft);
   --color-success: var(--color-success);
   --color-warn: var(--color-warn);
-
-  --font-display: var(--font-fraunces);
-  --font-body: var(--font-inter);
 }
 
 html {
@@ -59,14 +67,62 @@ html {
 }
 
 body {
-  background: var(--color-paper);
+  background: var(--color-page);
   color: var(--color-text);
   font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
+/* Headlines: heavy, tightly tracked sans (the signature of the ChatGPT build). */
 .font-display {
-  font-family: var(--font-fraunces), Georgia, serif;
-  font-weight: 500;
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+.display-xl {
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+}
+
+/* Gradient hero with the concentric arcs */
+.hero-navy {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 90% at 85% 15%, var(--color-hero-via) 0%, transparent 60%),
+    linear-gradient(180deg, var(--color-hero-from) 0%, var(--color-hero-to) 100%);
+  color: #fff;
+}
+.hero-arcs {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.hero-arcs span {
+  position: absolute;
+  border-radius: 9999px;
+  border: 1.5px solid rgba(255, 255, 255, 0.07);
+}
+.hero-arcs span:nth-child(1) {
+  width: 1100px;
+  height: 1100px;
+  left: -380px;
+  top: -260px;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+.hero-arcs span:nth-child(2) {
+  width: 1400px;
+  height: 1400px;
+  right: -900px;
+  bottom: -1100px;
+  background: rgba(255, 255, 255, 0.025);
+}
+.hero-arcs span:nth-child(3) {
+  width: 1800px;
+  height: 1800px;
+  right: -1100px;
+  bottom: -1450px;
+  background: rgba(255, 255, 255, 0.02);
 }
 
 ::selection {
@@ -116,6 +172,7 @@ body {
 .rich a,
 .inline-link {
   color: var(--color-navy);
+  font-weight: 600;
   text-decoration: underline;
   text-decoration-color: var(--color-gold);
   text-underline-offset: 3px;
@@ -137,11 +194,14 @@ h3 {
 }
 
 .eyebrow {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.16em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--color-gold-deep);
+  color: var(--color-slate);
+}
+.eyebrow-gold {
+  color: var(--color-gold);
 }
 
 /* Desktop nav dropdowns: open on hover or keyboard focus */
@@ -213,4 +273,15 @@ h3 {
   * {
     transition: none !important;
   }
+}
+
+/* Links and rich text on navy */
+.on-dark .inline-link,
+.on-dark.rich a,
+.on-dark .rich a {
+  color: #fff;
+  text-decoration-color: var(--color-gold);
+}
+.on-dark .rich strong {
+  color: #fff;
 }

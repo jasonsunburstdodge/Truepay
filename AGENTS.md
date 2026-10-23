@@ -12,7 +12,7 @@ You are building gotruepay.com for TruePay, a payment processing company in Jose
 
 ## Non-negotiables
 
-- **Design.** Keep this repo's design system: tokens in `src/app/globals.css`, Fraunces display, Inter body, rounded cards, sticky header, mobile CTA bar. Do not copy the look of the WordPress dev site. Use sentence-case headings, never ALL CAPS.
+- **Design.** Keep this repo's design system, which matches Jason's ChatGPT build: tokens in `src/app/globals.css`, heavy tight Inter headlines (`.font-display`), navy gradient heroes with arcs (`.hero-navy` + `HeroArcs`), gold eyebrows, white rounded cards, navy and blue-gray section bands, sticky navy header, mobile CTA bar. Do not copy the look of the WordPress dev site. Use sentence-case headings, never ALL CAPS (small eyebrow labels excepted).
 - **Metadata from the manifest.** Titles, descriptions, H1s, canonicals, breadcrumbs, nav, `sitemap.xml` and JSON-LD are generated from `routes.ts`. Don't hard-code a different title, description or H1. If you think one should change, edit `routes.ts` in its own commit and explain why in the PR.
 - **No invented facts.** No numbers, people, titles, reviews, certifications, partner names, hours or features that aren't in `entity.ts`, `claims.ts` or a source listed on the route. If something is missing, write around it or leave the module out. Never render placeholders, "TBD", lorem ipsum or "John Doe".
 - **Claims come from the register.** Render every promise or number from `claims.ts` and mark the element `data-claim="<id>"`. Never use a `banned` claim. Testimonials come only from `entity.testimonials`, verbatim.

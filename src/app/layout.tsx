@@ -14,25 +14,18 @@ const inter = localFont({
   display: "swap",
 });
 
-const fraunces = localFont({
-  src: "../../node_modules/@fontsource-variable/fraunces/files/fraunces-latin-wght-normal.woff2",
-  variable: "--font-fraunces",
-  weight: "100 900",
-  display: "swap",
-});
-
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   applicationName: "TruePay",
   icons: { icon: "/icon.svg" },
 };
 
-export const viewport: Viewport = { themeColor: "#142b52" };
+export const viewport: Viewport = { themeColor: "#07274b" };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${fraunces.variable} antialiased`}>
+      <body className={`${inter.variable} antialiased`}>
         <a href="#main" className="skip-link">
           Skip to content
         </a>

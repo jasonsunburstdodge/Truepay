@@ -57,10 +57,10 @@ export function LeadForm({ formType }: { formType: FormType }) {
     }
   }
 
-  const input = "mt-1.5 w-full rounded-md border bg-paper px-3 py-2.5 text-text outline-none focus:border-navy";
+  const input = "mt-1.5 w-full rounded-[var(--radius-sm)] border-2 bg-paper px-3.5 py-3 text-[1.02rem] text-ink outline-none focus:border-navy";
   const field = (name: string, label: string, type = "text", required = false, autoComplete?: string) => (
     <div>
-      <label htmlFor={`${formType}-${name}`} className="text-sm font-semibold text-ink">
+      <label htmlFor={`${formType}-${name}`} className="text-[0.95rem] font-bold text-ink">
         {label}
         {!required && <span className="font-normal text-text-muted"> (optional)</span>}
       </label>
@@ -82,7 +82,7 @@ export function LeadForm({ formType }: { formType: FormType }) {
   );
 
   return (
-    <form noValidate onSubmit={onSubmit} className="relative grid gap-4 rounded-[var(--radius-lg)] border border-border bg-paper p-6 shadow-[var(--shadow-card)] sm:p-8">
+    <form noValidate onSubmit={onSubmit} className="relative grid gap-5 rounded-[var(--radius-lg)] bg-paper p-6 shadow-[0_30px_70px_rgba(0,0,0,0.3)] sm:p-9">
       <div className="grid gap-4 sm:grid-cols-2">
         {field("name", "Your name", "text", true, "name")}
         {field("business", "Business name", "text", formType === "statement-review", "organization")}
@@ -91,7 +91,7 @@ export function LeadForm({ formType }: { formType: FormType }) {
       </div>
       {(formType === "statement-review" || formType === "contact") && (
         <div>
-          <label htmlFor={`${formType}-industry`} className="text-sm font-semibold text-ink">
+          <label htmlFor={`${formType}-industry`} className="text-[0.95rem] font-bold text-ink">
             Type of business <span className="font-normal text-text-muted">(optional)</span>
           </label>
           <select id={`${formType}-industry`} name="industry" className={`${input} border-border`} defaultValue="">
@@ -103,7 +103,7 @@ export function LeadForm({ formType }: { formType: FormType }) {
         </div>
       )}
       <div>
-        <label htmlFor={`${formType}-message`} className="text-sm font-semibold text-ink">
+        <label htmlFor={`${formType}-message`} className="text-[0.95rem] font-bold text-ink">
           {formType === "statement-review" ? "Anything we should know?" : formType === "partner" ? "Who do you serve, and how would you like to work with us?" : "How can we help?"}{" "}
           <span className="font-normal text-text-muted">(optional)</span>
         </label>
@@ -124,7 +124,7 @@ export function LeadForm({ formType }: { formType: FormType }) {
         {errors.consent && <p className="mt-1 text-sm text-warn">{errors.consent}</p>}
       </div>
 
-      <button type="submit" disabled={status === "submitting"} className="rounded-md bg-gold px-5 py-3.5 font-semibold text-ink transition-colors hover:bg-gold-bright disabled:opacity-60">
+      <button type="submit" disabled={status === "submitting"} className="rounded-[var(--radius-sm)] bg-gold px-6 py-4 text-[1.05rem] font-bold text-navy-deep transition-colors hover:bg-gold-bright disabled:opacity-60">
         {status === "submitting" ? "Sending…" : c.submit}
       </button>
 

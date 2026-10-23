@@ -16,7 +16,7 @@ When documents disagree, the higher item wins:
 6. **`docs/sitemap-and-page-briefs.md`** (October 5): detailed page briefs and the evidence/gap analysis. It is still useful for page content direction. Where its URLs or scope differ from `routes.ts`, `routes.ts` wins.
 7. **Content sources**: the WP Engine dev site (best long-form copy), the live gotruepay.com (published facts and reviews), the approved design PDF, and Jason's partner page draft. These are raw material. They do not override the rules here.
 
-**Design foundation:** the GitHub build (`src/app/globals.css`, `src/app/layout.tsx`, `src/components/*`). That means navy/ink, gold and warm off-white; Fraunces display with Inter body; rounded cards, restrained shadows, generous spacing, a sticky header and the mobile CTA bar. Do not import the dev site's visual style.
+**Design foundation:** Jason's ChatGPT build (the partner-opportunities page), implemented as tokens in `src/app/globals.css`. That means a deep navy header; a navy gradient hero with concentric arcs; gold, wide-tracked uppercase eyebrows; heavy, tightly tracked Inter headlines (no serif); light blue-gray sections; white cards with large rounded corners; gold primary buttons and outlined secondary buttons; and big bold numbers in label/value rows. Do not import the dev site's visual style.
 
 ## 2. Positioning
 
@@ -68,7 +68,7 @@ Every page answers its intent first, proves it second, and offers exactly one pr
 - Keep the brand lines "Payments without the games" and "Built on a handshake." Use them once per page at most.
 
 **Visual.**
-- Use the GitHub tokens only. Every color resolves to a `--color-*` token.
+- Use the tokens in `src/app/globals.css` only. Every color resolves to a `--color-*` token. Headlines use `.font-display` (Inter 800, tight tracking); heroes use `.hero-navy` with `<HeroArcs />`.
 - Show real people. Use TruePay team photos and permissioned merchant photos. No stock "handshake" or "smiling cashier" images. Until real photos arrive, use the token-based treatments already in the hero; do not use stock photography.
 - Prefer original diagrams (inline SVG with a text alternative): how a card payment flows, statement anatomy, the dual-pricing checkout.
 - Device images should be licensed manufacturer images or original photos, with explicit width and height.
