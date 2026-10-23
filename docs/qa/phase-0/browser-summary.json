@@ -1,0 +1,14 @@
+{
+  "viewports": [
+    390,
+    1440
+  ],
+  "checks": "PASS: SSR, schema, manifest H1, no overflow, keyboard menu, calculator, form failure, sticky bar, 404",
+  "lighthouse": {
+    "performance": 98,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 66
+  },
+  "seoDiagnosticExcludingRequiredNoindex": 100
+}

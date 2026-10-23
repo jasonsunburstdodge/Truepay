@@ -61,7 +61,7 @@ async function waitFor(url: string, ms = 60_000) {
   const start = Date.now();
   while (Date.now() - start < ms) {
     try {
-      const r = await fetch(url, { redirect: "manual" });
+      const r = await fetch(url, { redirect: "manual", signal: AbortSignal.timeout(2000) });
       if (r.status > 0) return;
     } catch {}
     await new Promise((r) => setTimeout(r, 500));
@@ -73,18 +73,18 @@ async function startServer() {
   if (BASE) return;
   if (!flag("no-build")) {
     console.log("▶ next build …");
-    const b = spawnSync("npx", ["next", "build"], { stdio: "inherit", env: { ...process.env, SITE_ENV: "production" } });
+    const b = spawnSync("npx", ["next", "build"], { stdio: "inherit", env: { ...process.env, SITE_ENV: PREVIEW ? "preview" : "production" } });
     if (b.status !== 0) {
       add("FAIL", "(site)", "build", "next build failed");
       finish();
     }
   }
   console.log(`▶ next start -p ${PORT}`);
-  server = spawn("npx", ["next", "start", "-p", String(PORT)], {
+  server = spawn(process.execPath, ["node_modules/next/dist/bin/next", "start", "-p", String(PORT), "-H", "127.0.0.1"], {
     stdio: "ignore",
     env: { ...process.env, SITE_ENV: PREVIEW ? "preview" : "production" },
   });
-  BASE = `http://localhost:${PORT}`;
+  BASE = `http://127.0.0.1:${PORT}`;
   await waitFor(BASE + "/");
 }
 
@@ -182,6 +182,7 @@ async function auditPage(route: RouteSpec) {
   const robotsMeta = ($('meta[name="robots"]').attr("content") ?? "").toLowerCase();
   const robotsHeader = (res.headers.get("x-robots-tag") ?? "").toLowerCase();
   const noindex = robotsMeta.includes("noindex") || robotsHeader.includes("noindex");
+  if (PREVIEW && !robotsHeader.includes("noindex")) add("FAIL", p, "robots", "Preview response must send X-Robots-Tag: noindex, nofollow");
   const shouldIndex = !PREVIEW && route.indexable && (route.status === "live" || route.status === "ready");
   if (shouldIndex && noindex) add("FAIL", p, "robots", "Indexable route is marked noindex");
   if (!shouldIndex && !noindex) add("FAIL", p, "robots", `Route is ${PREVIEW ? "on a preview deployment" : route.status + (route.indexable ? "" : " / non-indexable")} but has no noindex`);
