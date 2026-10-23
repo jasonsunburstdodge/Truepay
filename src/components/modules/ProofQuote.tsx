@@ -1,3 +1,4 @@
+import { isBuilt } from "@/lib/navigation";
 import { testimonials } from "@/content/entity";
 export function ProofQuote({ id }: { id: string }) {
   const quote = testimonials.find((q) => q.id === id);
@@ -14,8 +15,8 @@ export function ProofQuote({ id }: { id: string }) {
         <strong>{quote.name}</strong>
         {quote.business && <span> · {quote.business}</span>}
         {quote.city && <span> · {quote.city}</span>}
-        {quote.sourceUrl && (
-          <a href={quote.sourceUrl}>Read the published review</a>
+        {isBuilt("/customer-stories/") && (
+          <a href="/customer-stories/">Read customer stories</a>
         )}
       </figcaption>
       {id === "m-holt" && (

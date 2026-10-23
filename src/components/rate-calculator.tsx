@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { track } from "@/lib/analytics";
 import { useState } from "react";
 export function RateCalculator() {
   const [sales, setSales] = useState("25000");
@@ -10,7 +11,8 @@ export function RateCalculator() {
     Number.isFinite(Number(sales)) &&
     Number.isFinite(Number(fees)) &&
     Number(sales) > 0 &&
-    Number(fees) >= 0;
+    Number(fees) >= 0 &&
+    Number.isFinite((Number(fees) / Number(sales)) * 100);
   const rate = valid ? (Number(fees) / Number(sales)) * 100 : null;
   return (
     <div className="card calculator">
@@ -69,8 +71,18 @@ export function RateCalculator() {
         {((750 / 25000) * 100).toFixed(2)}%. This is arithmetic from your
         inputs, not a savings estimate or an industry average.
       </p>
+      <button
+        type="button"
+        className="button calculator-action"
+        onClick={() => {
+          if (valid) track("calculator_complete");
+        }}
+        disabled={!valid}
+      >
+        Calculate my effective rate
+      </button>
       <Link
-        href="/#review"
+        href="/statement-review/"
         data-cta="statement-review"
         className="button primary"
       >

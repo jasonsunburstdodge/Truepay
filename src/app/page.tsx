@@ -139,7 +139,8 @@ export default function Home() {
             <p>
               Call <a href={entity.phone.href}>{entity.phone.display}</a> or
               email <a href={`mailto:${entity.email}`}>{entity.email}</a> about
-              your equipment or account.
+              your equipment or account.{" "}
+              <a href="/support/">Get merchant support</a>.
             </p>
           </QuestionSection>
           <div className="grid two">
@@ -214,6 +215,11 @@ export default function Home() {
             card sales, multiplied by 100.
           </p>
           <RateCalculator />
+          <p className="calculator-page-link">
+            <a href="/effective-rate-calculator/">
+              Open the effective rate calculator
+            </a>
+          </p>
         </div>
       </section>
       <section className="container section">
@@ -261,6 +267,9 @@ export default function Home() {
         </div>
       </section>
       <div className="container">
+        <p className="contact-page-link">
+          <a href="/contact/">Talk with TruePay about pricing or equipment</a>
+        </p>
         <RelatedLinks route={route} />
       </div>
     </>

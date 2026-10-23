@@ -6,7 +6,7 @@ export function MobileCtaBar() {
       <Link
         className="button primary"
         data-cta="statement-review"
-        href="/#review"
+        href="/statement-review/"
       >
         Free statement review
       </Link>

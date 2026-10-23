@@ -1,0 +1,15 @@
+{
+  "formType": "review",
+  "name": "QA Merchant",
+  "business": "QA Example Business",
+  "email": "qa@example.com",
+  "phone": "555-010-1234",
+  "industry": "Retail",
+  "message": "Please explain my processing statement.",
+  "pagePath": "/statement-review/",
+  "utm": {
+    "utm_source": "qa",
+    "utm_campaign": "phase-1"
+  },
+  "consent": true
+}
