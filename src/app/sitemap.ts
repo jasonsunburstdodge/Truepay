@@ -7,6 +7,10 @@ const contentModified: Record<string, string> = {
   "/effective-rate-calculator/": "2026-10-23",
   "/support/": "2026-10-23",
   "/contact/": "2026-10-23",
+  "/why-truepay/": "2026-10-23",
+  "/pricing/": "2026-10-23",
+  "/pricing/membership/": "2026-10-23",
+  "/pricing/dual-pricing/": "2026-10-23",
   "/thank-you/": "2026-10-23",
 };
 export default function sitemap(): MetadataRoute.Sitemap {

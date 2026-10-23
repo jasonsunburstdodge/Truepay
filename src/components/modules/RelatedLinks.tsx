@@ -6,10 +6,13 @@ export function RelatedLinks({ route }: { route: RouteSpec }) {
   return (
     <aside className="related">
       <h2>Keep exploring</h2>
-      <ul>
+      <ul className="related-grid">
         {links.map((link) => (
           <li key={link.path}>
-            <a href={link.path}>{link.label}</a>
+            <a className="card related-card" href={link.path}>
+              <span>{link.label}</span>
+              <span aria-hidden="true">↗</span>
+            </a>
           </li>
         ))}
       </ul>

@@ -1,0 +1,432 @@
+{
+  "base": "http://127.0.0.1:4010",
+  "preview": false,
+  "findings": [
+    {
+      "level": "WARN",
+      "route": "/",
+      "check": "claims",
+      "message": "7× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/",
+      "check": "links",
+      "message": "Required contextual link to /solutions/ missing from <main>"
+    },
+    {
+      "level": "WARN",
+      "route": "/",
+      "check": "links",
+      "message": "Required contextual link to /industries/ missing from <main>"
+    },
+    {
+      "level": "WARN",
+      "route": "/",
+      "check": "links",
+      "message": "Required contextual link to /customer-stories/ missing from <main>"
+    },
+    {
+      "level": "WARN",
+      "route": "/",
+      "check": "links",
+      "message": "Required contextual link to /about/team/ missing from <main>"
+    },
+    {
+      "level": "WARN",
+      "route": "/statement-review/",
+      "check": "claims",
+      "message": "5× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "INFO",
+      "route": "/statement-review/",
+      "check": "claims",
+      "message": "Expected claim \"review-turnaround\" not marked on page"
+    },
+    {
+      "level": "WARN",
+      "route": "/statement-review/",
+      "check": "links",
+      "message": "Required contextual link to /resources/how-to-read-your-processing-statement/ missing from <main>"
+    },
+    {
+      "level": "WARN",
+      "route": "/statement-review/",
+      "check": "links",
+      "message": "Required contextual link to /about/team/ missing from <main>"
+    },
+    {
+      "level": "WARN",
+      "route": "/effective-rate-calculator/",
+      "check": "claims",
+      "message": "5× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/effective-rate-calculator/",
+      "check": "links",
+      "message": "Required contextual link to /resources/how-to-read-your-processing-statement/ missing from <main>"
+    },
+    {
+      "level": "WARN",
+      "route": "/effective-rate-calculator/",
+      "check": "links",
+      "message": "Required contextual link to /resources/why-credit-card-processing-fees-go-up/ missing from <main>"
+    },
+    {
+      "level": "WARN",
+      "route": "/support/",
+      "check": "claims",
+      "message": "2× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "INFO",
+      "route": "/support/",
+      "check": "claims",
+      "message": "Expected claim \"support-hours\" not marked on page"
+    },
+    {
+      "level": "INFO",
+      "route": "/support/",
+      "check": "claims",
+      "message": "Expected claim \"text-line\" not marked on page"
+    },
+    {
+      "level": "WARN",
+      "route": "/support/",
+      "check": "links",
+      "message": "Required contextual link to /about/team/ missing from <main>"
+    },
+    {
+      "level": "WARN",
+      "route": "/contact/",
+      "check": "claims",
+      "message": "4× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/thank-you/",
+      "check": "description",
+      "message": "55 chars (aim 110–160)"
+    },
+    {
+      "level": "WARN",
+      "route": "/thank-you/",
+      "check": "claims",
+      "message": "2× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/thank-you/",
+      "check": "links",
+      "message": "Required contextual link to /resources/ missing from <main>"
+    },
+    {
+      "level": "WARN",
+      "route": "/why-truepay/",
+      "check": "claims",
+      "message": "4× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/why-truepay/",
+      "check": "links",
+      "message": "Required contextual link to /about/ missing from <main>"
+    },
+    {
+      "level": "WARN",
+      "route": "/why-truepay/",
+      "check": "links",
+      "message": "Required contextual link to /resources/why-credit-card-processing-fees-go-up/ missing from <main>"
+    },
+    {
+      "level": "WARN",
+      "route": "/why-truepay/",
+      "check": "links",
+      "message": "Required contextual link to /customer-stories/ missing from <main>"
+    },
+    {
+      "level": "WARN",
+      "route": "/pricing/",
+      "check": "claims",
+      "message": "4× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/pricing/",
+      "check": "links",
+      "message": "Required contextual link to /resources/flat-rate-vs-tiered-vs-interchange-plus/ missing from <main>"
+    },
+    {
+      "level": "WARN",
+      "route": "/pricing/membership/",
+      "check": "claims",
+      "message": "4× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/pricing/membership/",
+      "check": "links",
+      "message": "Required contextual link to /solutions/terminals/ missing from <main>"
+    },
+    {
+      "level": "WARN",
+      "route": "/pricing/dual-pricing/",
+      "check": "claims",
+      "message": "4× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/pricing/dual-pricing/",
+      "check": "links",
+      "message": "Required contextual link to /resources/dual-pricing-vs-surcharging-vs-cash-discount/ missing from <main>"
+    },
+    {
+      "level": "WARN",
+      "route": "/pricing/dual-pricing/",
+      "check": "links",
+      "message": "Required contextual link to /industries/restaurants/ missing from <main>"
+    },
+    {
+      "level": "INFO",
+      "route": "/about-us/",
+      "check": "redirects",
+      "message": "Destination /about/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/company/",
+      "check": "redirects",
+      "message": "Destination /about/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/reviews/",
+      "check": "redirects",
+      "message": "Destination /customer-stories/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/coast-to-coast-customer-network/",
+      "check": "redirects",
+      "message": "Destination /service-areas/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/referral/",
+      "check": "redirects",
+      "message": "Destination /partners/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/affiliate-program/",
+      "check": "redirects",
+      "message": "Destination /partners/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/employment-opportunity/",
+      "check": "redirects",
+      "message": "Destination /careers/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/employment-opportunity-backup/",
+      "check": "redirects",
+      "message": "Destination /careers/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/blog/",
+      "check": "redirects",
+      "message": "Destination /resources/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/category/truepay/",
+      "check": "redirects",
+      "message": "Destination /resources/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/equipment/",
+      "check": "redirects",
+      "message": "Destination /solutions/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/point-of-sale/",
+      "check": "redirects",
+      "message": "Destination /solutions/point-of-sale/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/pos-system/",
+      "check": "redirects",
+      "message": "Destination /solutions/point-of-sale/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/skytab-mobile/",
+      "check": "redirects",
+      "message": "Destination /solutions/point-of-sale/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/skytab-glass/",
+      "check": "redirects",
+      "message": "Destination /solutions/point-of-sale/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/paradise-pos/",
+      "check": "redirects",
+      "message": "Destination /solutions/point-of-sale/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/mobile-bytes/",
+      "check": "redirects",
+      "message": "Destination /solutions/point-of-sale/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/rckt-mobile-pos/",
+      "check": "redirects",
+      "message": "Destination /solutions/mobile-payments/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/terminals/",
+      "check": "redirects",
+      "message": "Destination /solutions/terminals/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/valor/",
+      "check": "redirects",
+      "message": "Destination /solutions/terminals/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/vl-100/",
+      "check": "redirects",
+      "message": "Destination /solutions/terminals/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/vl-110/",
+      "check": "redirects",
+      "message": "Destination /solutions/terminals/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/vl-500/",
+      "check": "redirects",
+      "message": "Destination /solutions/terminals/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/dejavoo-qd4/",
+      "check": "redirects",
+      "message": "Destination /solutions/terminals/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/clover-flex/",
+      "check": "redirects",
+      "message": "Destination /solutions/terminals/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/mini/",
+      "check": "redirects",
+      "message": "Destination /solutions/terminals/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/duo/",
+      "check": "redirects",
+      "message": "Destination /solutions/terminals/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/valor-pay-app/",
+      "check": "redirects",
+      "message": "Destination /solutions/mobile-payments/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/online-check-out/",
+      "check": "redirects",
+      "message": "Destination /solutions/online-payments/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/the-dual-pricing-advantage-how-it-benefits-both-businesses-and-consumers/",
+      "check": "redirects",
+      "message": "Destination /resources/dual-pricing-vs-surcharging-vs-cash-discount/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/discover-the-top-5-benefits-of-flat-rate-payment-processing/",
+      "check": "redirects",
+      "message": "Destination /resources/flat-rate-vs-tiered-vs-interchange-plus/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/the-anatomy-of-a-credit-card-payment-understanding-the-process/",
+      "check": "redirects",
+      "message": "Destination /resources/how-credit-card-processing-works/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/5-benefits-of-an-evm-compliant-chip-terminal/",
+      "check": "redirects",
+      "message": "Destination /solutions/terminals/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/the-evolution-of-pos-systems-from-cash-registers-to-smart-terminals/",
+      "check": "redirects",
+      "message": "Destination /solutions/point-of-sale/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/streamlining-transactions-for-smbs-a-closer-look-at-modern-pos-systems/",
+      "check": "redirects",
+      "message": "Destination /solutions/point-of-sale/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/the-future-of-payments-in-2026-what-merchants-really-need-to-know/",
+      "check": "redirects",
+      "message": "Destination /resources/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/careers/",
+      "check": "migration",
+      "message": "Existing live URL must keep working; got 404"
+    },
+    {
+      "level": "INFO",
+      "route": "/privacy-policy/",
+      "check": "migration",
+      "message": "Existing live URL must keep working; got 404"
+    },
+    {
+      "level": "INFO",
+      "route": "/resources/",
+      "check": "migration",
+      "message": "Existing live URL must keep working; got 404"
+    },
+    {
+      "level": "INFO",
+      "route": "/solutions/",
+      "check": "migration",
+      "message": "Existing live URL must keep working; got 404"
+    }
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "checks": "20 viewport/page checks, all built contextual links, question scale, white RelatedLinks cards, commitment scopes, checkout, navigation, no-JS SSR",
+  "records": [
+    {
+      "path": "/",
+      "width": 390,
+      "overflow": false,
+      "requiredLinks": [
+        "/why-truepay/",
+        "/pricing/",
+        "/pricing/dual-pricing/",
+        "/effective-rate-calculator/"
+      ],
+      "questionH2Sizes": [
+        32,
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "path": "/statement-review/",
+      "width": 390,
+      "overflow": false,
+      "requiredLinks": [
+        "/effective-rate-calculator/",
+        "/pricing/"
+      ],
+      "questionH2Sizes": [
+        32,
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "path": "/effective-rate-calculator/",
+      "width": 390,
+      "overflow": false,
+      "requiredLinks": [
+        "/statement-review/"
+      ],
+      "questionH2Sizes": [
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "path": "/support/",
+      "width": 390,
+      "overflow": false,
+      "requiredLinks": [
+        "/contact/"
+      ],
+      "questionH2Sizes": [
+        32,
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "path": "/contact/",
+      "width": 390,
+      "overflow": false,
+      "requiredLinks": [
+        "/support/",
+        "/statement-review/"
+      ],
+      "questionH2Sizes": [
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "path": "/thank-you/",
+      "width": 390,
+      "overflow": false,
+      "requiredLinks": [],
+      "questionH2Sizes": []
+    },
+    {
+      "path": "/why-truepay/",
+      "width": 390,
+      "overflow": false,
+      "requiredLinks": [
+        "/pricing/membership/"
+      ],
+      "questionH2Sizes": [
+        32,
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "path": "/pricing/",
+      "width": 390,
+      "overflow": false,
+      "requiredLinks": [
+        "/pricing/membership/",
+        "/pricing/dual-pricing/",
+        "/effective-rate-calculator/"
+      ],
+      "questionH2Sizes": [
+        32,
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "path": "/pricing/membership/",
+      "width": 390,
+      "overflow": false,
+      "requiredLinks": [
+        "/pricing/dual-pricing/",
+        "/why-truepay/"
+      ],
+      "questionH2Sizes": [
+        32,
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "path": "/pricing/dual-pricing/",
+      "width": 390,
+      "overflow": false,
+      "requiredLinks": [
+        "/pricing/membership/"
+      ],
+      "questionH2Sizes": [
+        32,
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "path": "/",
+      "width": 1440,
+      "overflow": false,
+      "requiredLinks": [
+        "/why-truepay/",
+        "/pricing/",
+        "/pricing/dual-pricing/",
+        "/effective-rate-calculator/"
+      ],
+      "questionH2Sizes": [
+        40,
+        40,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "/statement-review/",
+      "width": 1440,
+      "overflow": false,
+      "requiredLinks": [
+        "/effective-rate-calculator/",
+        "/pricing/"
+      ],
+      "questionH2Sizes": [
+        40,
+        40,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "/effective-rate-calculator/",
+      "width": 1440,
+      "overflow": false,
+      "requiredLinks": [
+        "/statement-review/"
+      ],
+      "questionH2Sizes": [
+        40,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "/support/",
+      "width": 1440,
+      "overflow": false,
+      "requiredLinks": [
+        "/contact/"
+      ],
+      "questionH2Sizes": [
+        40,
+        40,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "/contact/",
+      "width": 1440,
+      "overflow": false,
+      "requiredLinks": [
+        "/support/",
+        "/statement-review/"
+      ],
+      "questionH2Sizes": [
+        40,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "/thank-you/",
+      "width": 1440,
+      "overflow": false,
+      "requiredLinks": [],
+      "questionH2Sizes": []
+    },
+    {
+      "path": "/why-truepay/",
+      "width": 1440,
+      "overflow": false,
+      "requiredLinks": [
+        "/pricing/membership/"
+      ],
+      "questionH2Sizes": [
+        40,
+        40,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "/pricing/",
+      "width": 1440,
+      "overflow": false,
+      "requiredLinks": [
+        "/pricing/membership/",
+        "/pricing/dual-pricing/",
+        "/effective-rate-calculator/"
+      ],
+      "questionH2Sizes": [
+        40,
+        40,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "/pricing/membership/",
+      "width": 1440,
+      "overflow": false,
+      "requiredLinks": [
+        "/pricing/dual-pricing/",
+        "/why-truepay/"
+      ],
+      "questionH2Sizes": [
+        40,
+        40,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "/pricing/dual-pricing/",
+      "width": 1440,
+      "overflow": false,
+      "requiredLinks": [
+        "/pricing/membership/"
+      ],
+      "questionH2Sizes": [
+        40,
+        40,
+        40,
+        40
+      ]
+    }
+  ],
+  "errors": []
+}

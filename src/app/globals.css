@@ -569,16 +569,24 @@ details p:first-of-type {
   text-decoration: none;
   font-size: 13px;
 }
-.desktop-nav > div > a:not(:first-child) {
+.desktop-nav .nav-children {
   display: none;
+  position: absolute;
+  top: 100%;
+  left: -16px;
+  min-width: 210px;
+  padding: 14px;
+  background: var(--color-navy-deep);
+  border-radius: var(--radius-panel);
+  box-shadow: var(--shadow-card);
 }
-.desktop-nav > div:hover > a,
-.desktop-nav > div:focus-within > a {
+.desktop-nav > div:hover .nav-children,
+.desktop-nav > div:focus-within .nav-children {
   display: block;
 }
-.desktop-nav > div > a:not(:first-child) {
-  padding: 10px;
-  background: var(--color-navy-deep);
+.desktop-nav .nav-children a {
+  display: block;
+  padding: 12px;
 }
 .mobile-menu {
   display: none;
@@ -1062,5 +1070,106 @@ caption {
   }
   .desktop-nav {
     display: none;
+  }
+}
+
+/* Section questions stay distinct from the hero headline. */
+.question > h2,
+.related > h2 {
+  font-size: clamp(32px, 3vw, 40px);
+}
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+}
+.related-grid li {
+  margin: 0;
+}
+.related-card {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  font-weight: 800;
+  text-decoration: none;
+}
+.related-card:hover {
+  background: var(--color-surface-alt);
+}
+.related-card > span:last-child {
+  color: var(--color-slate);
+  font-size: 24px;
+}
+.scope-list {
+  margin: 0;
+}
+.scope-list > div {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.scope-list dt {
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--color-ink);
+  margin-bottom: 12px;
+}
+.scope-list dd {
+  margin: 0;
+}
+.scope-list p:last-child {
+  margin-bottom: 0;
+}
+.checkout-example {
+  margin-block: 40px;
+}
+.checkout-example .result-number {
+  display: block;
+  font-size: clamp(48px, 5vw, 64px);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+  margin-block: 16px;
+}
+.checkout-example .card {
+  background: var(--color-surface-alt);
+  box-shadow: none;
+}
+.checkout-example .card.card-price {
+  background: var(--color-navy);
+  color: var(--color-paper);
+}
+.checkout-example .card-price h4 {
+  color: var(--color-paper);
+}
+.checkout-example .receipt-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  border-top: 1px solid var(--color-border);
+  padding-top: 16px;
+}
+.commitment details[open] summary {
+  margin-bottom: 16px;
+}
+.commitment details h4 {
+  margin: 20px 0 12px;
+}
+.mobile-menu .nav-children {
+  padding-left: 16px;
+}
+
+/* White proof cards retain ink headings inside a navy hero. */
+.hero-gradient .card h2 {
+  color: var(--color-ink);
+  font-size: 32px;
+}
+@media (max-width: 700px) {
+  .table-scroll table {
+    min-width: 720px;
   }
 }
