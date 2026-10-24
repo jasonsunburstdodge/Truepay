@@ -941,7 +941,7 @@ export const routes: RouteSpec[] = [
     label: "Careers",
     title: "Careers at TruePay",
     description:
-      "Sales and support roles at TruePay, a Texas payment processing company built on doing right by the customer. See open roles and how to apply.",
+      "Interested in sales, onboarding or merchant support at TruePay? Share your background with the Josephine, Texas team or explore the partner program.",
     h1: "Do this work the right way, with us.",
     intent: "Jobs at TruePay.",
     questions: ["What roles are open?", "What is it like to work at TruePay?"],
