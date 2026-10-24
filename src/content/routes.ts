@@ -243,7 +243,7 @@ export const routes: RouteSpec[] = [
     label: "Support",
     title: "TruePay Merchant Support: Call, Text or Email",
     description:
-      "Existing TruePay merchant? Reach a real, US-based person about equipment, deposits, billing or your account, and see what to have ready.",
+      "Existing TruePay merchant? Reach a real, US-based person about equipment, deposits, billing or your account and see what to have ready.",
     h1: "Need help? Reach a real person.",
     intent: "Existing merchant needs help fast.",
     questions: ["How do I reach support?", "What hours is support available?", "What should I have ready?", "Where do I log in to my account?"],
@@ -263,7 +263,7 @@ export const routes: RouteSpec[] = [
     label: "Contact",
     title: "Contact TruePay | 888-792-0284",
     description:
-      "Questions about switching, pricing or equipment? Call 888-792-0284, email or send a note, and a person from our Josephine, Texas team will follow up.",
+      "Questions about switching, pricing or equipment? Call 888-792-0284, email or send a note and a person from our Josephine, Texas team will follow up.",
     h1: "Tell us what your business needs.",
     intent: "Contact sales or the company.",
     questions: ["Who will I talk to?", "What happens after I submit?", "Where is TruePay located?"],
@@ -329,7 +329,7 @@ export const routes: RouteSpec[] = [
     label: "Pricing",
     title: "Credit Card Processing Pricing, Explained | TruePay",
     description:
-      "What really sets your processing rate, how flat-rate, tiered and cost-plus pricing compare, and the two ways to work with TruePay.",
+      "What really sets your processing rate, how flat-rate, tiered and cost-plus pricing compare and the two ways to work with TruePay.",
     h1: "Understand the cost before you choose.",
     intent: "How much does credit card processing cost; what are TruePay's rates?",
     questions: [
@@ -376,7 +376,7 @@ export const routes: RouteSpec[] = [
     label: "Dual pricing",
     title: "Dual Pricing Program for Small Businesses | TruePay",
     description:
-      "How dual pricing works, what your customers see at checkout, who it fits and who it doesn't, and what setup with TruePay involves.",
+      "How dual pricing works, what your customers see at checkout, who it fits and who it doesn't and what setup with TruePay involves.",
     h1: "Is dual pricing right for your business?",
     intent: "Should I offer dual pricing / cash price vs card price? How does it work?",
     questions: [
@@ -466,7 +466,7 @@ export const routes: RouteSpec[] = [
     label: "Mobile payments",
     title: "Mobile Credit Card Processing | TruePay",
     description:
-      "Take card payments on the job site, at the curb or at events with portable terminals and apps, and know what to do when the signal drops.",
+      "Take card payments on the job site, at the curb or at events with portable terminals and apps and know what to do when the signal drops.",
     h1: "Take payment where the work gets done.",
     intent: "Accept credit cards on the go / in the field.",
     questions: ["Do I need a separate card reader?", "What happens without cell service?", "How do customers get a receipt?"],
@@ -714,7 +714,7 @@ export const routes: RouteSpec[] = [
     label: "Reading your statement",
     title: "How to Read a Credit Card Processing Statement | TruePay",
     description:
-      "A line-by-line guide to your merchant statement: interchange, assessments, markup and monthly fees, and how to find your real effective rate.",
+      "A line-by-line guide to your merchant statement: interchange, assessments, markup and monthly fees and how to find your real effective rate.",
     h1: "How to read your credit card processing statement",
     intent: "how to read a merchant processing statement; what are these fees",
     questions: [
@@ -753,8 +753,8 @@ export const routes: RouteSpec[] = [
     schema: ["Article", "BreadcrumbList"],
     indexable: true,
     links: ["/pricing/", "/effective-rate-calculator/", "/resources/how-to-read-your-processing-statement/", "/resources/why-credit-card-processing-fees-go-up/"],
-    sources: ["dev:/pricing/ (Model 01–03)", "live post: discover-the-top-5-benefits-of-flat-rate-payment-processing (replace)"],
-    notes: "Fair to flat rate where it genuinely fits (very low volume). Worked examples at 2–3 volume levels with stated assumptions.",
+    sources: ["dev:/pricing/ (Model 01-03)", "live post: discover-the-top-5-benefits-of-flat-rate-payment-processing (replace)"],
+    notes: "Fair to flat rate where it genuinely fits (very low volume). Worked examples at 2-3 volume levels with stated assumptions.",
   }),
   R({
     path: "/resources/dual-pricing-vs-surcharging-vs-cash-discount/",
@@ -765,7 +765,7 @@ export const routes: RouteSpec[] = [
     label: "Dual pricing vs. surcharging",
     title: "Dual Pricing vs. Surcharging vs. Cash Discount | TruePay",
     description:
-      "Three ways to pass card costs to customers, side by side: how each works, debit card rules, signage and receipts, and which fits your checkout.",
+      "Three ways to pass card costs to customers, side by side: how each works, debit card rules, signage and receipts and which fits your checkout.",
     h1: "Dual pricing, surcharging and cash discounts: what's the difference?",
     intent: "dual pricing vs surcharge; is cash discount legal; surcharge rules",
     questions: [
@@ -884,8 +884,8 @@ export const routes: RouteSpec[] = [
       ["retail", "Retail", "Retail Payment Processing & POS Systems | TruePay", "Payment processing for retail stores: fast counter checkout, inventory-ready POS options and online and in-store sales in one place.", "Faster checkout for your store, online and off.", "retail credit card processing; retail POS", ["/solutions/point-of-sale/", "/solutions/online-payments/"]],
       ["salons-spas", "Salons & spas", "Salon & Spa Payment Processing | TruePay", "Payment processing for salons, barbershops and spas: tips, deposits, appointment payments and simple pricing your clients understand.", "Payments that fit the chair, the booking and the tip.", "salon credit card processing; spa payment processing", ["/solutions/terminals/", "/pricing/dual-pricing/"]],
       ["medical-dental", "Medical & dental", "Medical & Dental Payment Processing | TruePay", "Card processing for medical and dental practices: front-desk checkout, payment plans and billing, with costs you can explain to your office manager.", "Patient payments without the paperwork headaches.", "medical credit card processing; dental office payment processing", ["/solutions/billing-software/", "/pricing/membership/"]],
-      ["home-services", "Home services", "Payment Processing for Home Service Pros | TruePay", "Take payment on the job site for HVAC, plumbing, electrical and other home services, and stop chasing invoices after the truck leaves.", "Get paid before the truck leaves the driveway.", "mobile payments for contractors; HVAC credit card processing", ["/solutions/mobile-payments/", "/solutions/billing-software/"]],
-      ["auto-services", "Auto services", "Auto Repair Shop Payment Processing | TruePay", "Card processing for auto repair and service shops: high-ticket transactions, counter and bay checkout, and pricing that holds steady.", "Card processing built for the service counter.", "auto repair credit card processing", ["/solutions/terminals/", "/pricing/dual-pricing/"]],
+      ["home-services", "Home services", "Payment Processing for Home Service Pros | TruePay", "Take payment on the job site for HVAC, plumbing, electrical and other home services and stop chasing invoices after the truck leaves.", "Get paid before the truck leaves the driveway.", "mobile payments for contractors; HVAC credit card processing", ["/solutions/mobile-payments/", "/solutions/billing-software/"]],
+      ["auto-services", "Auto services", "Auto Repair Shop Payment Processing | TruePay", "Card processing for auto repair and service shops: high-ticket transactions, counter and bay checkout and pricing that holds steady.", "Card processing built for the service counter.", "auto repair credit card processing", ["/solutions/terminals/", "/pricing/dual-pricing/"]],
       ["professional-services", "Professional services", "Payment Processing for Professional Services | TruePay", "Invoice clients, take card and ACH payments and keep QuickBooks reconciled, for accountants, law firms, agencies and consultants.", "Send the invoice. Get paid faster.", "accept credit card payments for services; invoice payments", ["/solutions/billing-software/", "/solutions/online-payments/"]],
       ["nonprofits", "Nonprofits", "Nonprofit Donation & Payment Processing | TruePay", "Take donations in person and online, set up recurring gifts and keep processing costs low so more of every dollar reaches your mission.", "More of every gift goes to the mission.", "nonprofit credit card processing; donation processing", ["/solutions/online-payments/", "/pricing/membership/"]],
     ] as const
@@ -908,7 +908,7 @@ export const routes: RouteSpec[] = [
       indexable: true,
       links: [...new Set([...links, ...(slug === "restaurants" ? ["/solutions/terminals/"] : slug === "salons-spas" || slug === "auto-services" ? ["/solutions/billing-software/"] : slug === "medical-dental" ? ["/solutions/online-payments/"] : slug === "nonprofits" ? ["/solutions/mobile-payments/"] : []), "/pricing/membership/", "/pricing/dual-pricing/", "/statement-review/", "/support/", "/why-truepay/"])],
       sources: ["gh:src/lib/industries.ts (proposed categories; not verified promises)", "gh:src/content/solutions.ts (approved product scope)", "pdf:p10-13 (setup, equipment and software)", ...(slug === "restaurants" ? ["https://www.skytab.com/restaurant-types/table-service-restaurants"] : slug === "retail" ? ["https://www.clover.com/pos-solutions/retail"] : slug === "salons-spas" ? ["https://www.clover.com/pos-solutions/salons"] : slug === "professional-services" ? ["https://helpcenter.billergenie.com/en_US/accounting-software/syncing-with-quickbooks-online", "https://www.authorize.net/resources/our-features/payment-methods.html"] : slug === "nonprofits" ? ["https://www.authorize.net/resources/our-features/recurring-payments.html"] : [])],
-      notes: "Each page: distinct workflow, verified solution options, pricing-model fit and tradeoffs, setup/support, real proof if it exists, 3–5 industry questions. No invented examples.",
+      notes: "Each page: distinct workflow, verified solution options, pricing-model fit and tradeoffs, setup/support, real proof if it exists, 3-5 industry questions. No invented examples.",
     }),
   ),
 

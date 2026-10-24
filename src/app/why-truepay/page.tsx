@@ -74,7 +74,7 @@ export default function WhyTruePay() {
           <p>
             The lock concerns TruePay’s own pricing. Card-network costs can
             still change. Review the exact rate-lock scope above, including
-            monthly fees, and ask for written exceptions before relying on it.
+            monthly fees and ask for written exceptions before relying on it.
           </p>
         </QuestionSection>
         <QuestionSection question={route.questions[1]}>

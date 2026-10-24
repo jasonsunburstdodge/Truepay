@@ -22,6 +22,7 @@ import * as cheerio from "cheerio";
 import { routes, SITE_URL, sitemapRoutes, breadcrumbTrail, type RouteSpec } from "../../src/content/routes";
 import { claims, bannedPatterns, cautionPatterns } from "../../src/content/claims";
 import { redirects, unchangedUrls } from "../../src/content/redirects";
+import { copyStyleViolations } from "./copy-style";
 import { entity } from "../../src/content/entity";
 
 type Level = "FAIL" | "WARN" | "INFO";
@@ -245,6 +246,8 @@ async function auditPage(route: RouteSpec) {
     if (letters.length > 12 && letters === letters.toUpperCase()) add("WARN", p, "voice", `ALL-CAPS heading reads as shouting: "${text.slice(0, 60)}"`);
     if (lvl <= 3 && /\buppercase\b/.test($(el).attr("class") ?? "")) add("WARN", p, "voice", `h${lvl} styled uppercase: "${text.slice(0, 60)}" (use sentence case; uppercase only for small eyebrow labels)`);
   });
+
+  for (const dash of copyStyleViolations(html)) add("FAIL", p, "copy-style", `AP style: long dash U+${dash.codePointAt(0)!.toString(16).toUpperCase()} in rendered main copy outside blockquotes`);
 
   // visible text
   $("script,style,noscript").remove();

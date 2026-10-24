@@ -13,6 +13,8 @@ You are building gotruepay.com for TruePay, a payment processing company in Jose
 
 ## Non-negotiables
 
+- **AP copy style, Phase 6 onward and existing copy.** No em dashes or en dashes in visible copy. Use a spaced hyphen for an interruption and unspaced hyphens for ranges, such as 2-4% and Monday-Friday. Write office hours as "Monday-Friday, 8 a.m. to 6 p.m. Central." With dates use Jan., Feb., Aug., Sept., Oct., Nov. and Dec.; spell out March, April, May, June and July. A date reads "Oct. 24, 2026" inside `<time datetime="2026-10-24">`. Omit the serial comma unless needed for clarity. Preserve code comments and verbatim customer quotes. The QA gate FAILs on long dashes in rendered `<main>` text outside blockquotes.
+
 - **Design.** Follow `docs/design-system.md`: the look of Jason's ChatGPT partner-opportunities page. That means a navy header and gradient heroes with arcs, gold eyebrows, heavy tight Inter headlines (no serif, no Fraunces), white 24px-radius cards, navy and blue-gray bands, and big bold numbers. Do not copy the look of the WordPress dev site. Use sentence-case headings; uppercase only for small eyebrow labels.
 - **Metadata from the manifest.** Titles, descriptions, H1s, canonicals, breadcrumbs, nav, `sitemap.xml` and JSON-LD are generated from `routes.ts`. Don't hard-code a different title, description or H1. If you think one should change, edit `routes.ts` in its own commit and explain why in the PR.
 - **No invented facts.** No numbers, people, titles, reviews, certifications, partner names, hours or features that aren't in `entity.ts`, `claims.ts` or a source listed on the route. If something is missing, write around it or leave the module out. Never render placeholders, "TBD", lorem ipsum or "John Doe".

@@ -1,7 +1,9 @@
 import { type Person } from "@/content/entity";
 const calendarDate = (value: string) => value.slice(0, 10);
 export function readableDate(value: string) {
-  return new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" }).format(new Date(`${calendarDate(value)}T12:00:00Z`));
+  const [year, month, day] = calendarDate(value).split("-");
+  const months = ["Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."];
+  return `${months[Number(month) - 1]} ${Number(day)}, ${year}`;
 }
 export function AuthorBox({ author, reviewer, reviewedAt, datePublished, dateModified }: {
   author: Person;

@@ -23,7 +23,7 @@ export default function Team() {
       <section className="container section">
         <QuestionSection question={route.questions[0]}>
           <p>
-            Jon leads the company, Shane oversees operations, and the team
+            Jon leads the company, Shane oversees operations and the team
             brings together support and business conversations. Here is what
             each person helps with.
           </p>

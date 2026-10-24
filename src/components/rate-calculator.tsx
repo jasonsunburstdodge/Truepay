@@ -62,7 +62,7 @@ export function RateCalculator() {
       <div className="result" aria-live="polite" aria-atomic="true">
         <p className="eyebrow">Your effective rate</p>
         <p className="big-number">
-          {rate === null ? "—" : `${rate.toFixed(2)}%`}
+          {rate === null ? "Not yet" : `${rate.toFixed(2)}%`}
         </p>
         <p>Total fees ÷ card sales × 100</p>
       </div>
