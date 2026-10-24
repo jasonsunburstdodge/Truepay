@@ -24,9 +24,8 @@ export default function About() {
         aside={<ProofQuote id="a-monroe" />}
       >
         <p>
-          Jon Wilson founded TruePay to give business owners a different
-          experience with payment processing. Meet the people behind the company
-          and the commitments they make.
+          Jon Wilson founded TruePay and serves as CEO. Tim Files is an owner
+          and investor, and Shane Spears oversees day-to-day operations.
         </p>
       </RouteHero>
       <section className="container section">
@@ -83,7 +82,7 @@ export default function About() {
             {shane.name} is {shane.jobTitle}.
           </p>
         </QuestionSection>
-        <div className="grid two">
+        <div className="grid two about-people">
           <PersonCard person={jon} />
           <PersonCard person={shane} />
         </div>

@@ -1,0 +1,65 @@
+[
+  {
+    "path": "/about/jon-wilson/",
+    "Person": {
+      "@type": "Person",
+      "@id": "https://gotruepay.com/about/jon-wilson/#person",
+      "name": "Jon Wilson",
+      "alternateName": "Jonathan Wilson",
+      "jobTitle": "Founder & Chief Executive Officer",
+      "description": "Jon founded TruePay in 2011 after watching business owners get burned by hidden fees, rate increases and processors who disappeared after the sale.",
+      "url": "https://gotruepay.com/about/jon-wilson/",
+      "worksFor": {
+        "@id": "https://gotruepay.com/#organization"
+      }
+    },
+    "ProfilePage": {
+      "@type": "ProfilePage",
+      "@id": "https://gotruepay.com/about/jon-wilson/#webpage",
+      "url": "https://gotruepay.com/about/jon-wilson/",
+      "name": "Jon Wilson, Founder & CEO of TruePay",
+      "description": "Jon Wilson founded TruePay in 2011 after years in payments. His background, why he started TruePay and the guides he has written for merchants.",
+      "isPartOf": {
+        "@id": "https://gotruepay.com/#website"
+      },
+      "about": {
+        "@id": "https://gotruepay.com/#organization"
+      },
+      "mainEntity": {
+        "@id": "https://gotruepay.com/about/jon-wilson/#person"
+      }
+    },
+    "checks": "PASS: parsed actual rendered JSON-LD, entity match, worksFor, profile mainEntity binding, no fabricated sameAs"
+  },
+  {
+    "path": "/about/shane-spears/",
+    "Person": {
+      "@type": "Person",
+      "@id": "https://gotruepay.com/about/shane-spears/#person",
+      "name": "Shane Spears",
+      "jobTitle": "Chief Operating Officer",
+      "description": "Shane oversees TruePay's day-to-day operations, from onboarding and equipment to support, so merchants get what they need fast.",
+      "url": "https://gotruepay.com/about/shane-spears/",
+      "worksFor": {
+        "@id": "https://gotruepay.com/#organization"
+      }
+    },
+    "ProfilePage": {
+      "@type": "ProfilePage",
+      "@id": "https://gotruepay.com/about/shane-spears/#webpage",
+      "url": "https://gotruepay.com/about/shane-spears/",
+      "name": "Shane Spears, Chief Operating Officer | TruePay",
+      "description": "Shane Spears runs day-to-day operations at TruePay: onboarding, equipment and support. His background and how he helps merchants.",
+      "isPartOf": {
+        "@id": "https://gotruepay.com/#website"
+      },
+      "about": {
+        "@id": "https://gotruepay.com/#organization"
+      },
+      "mainEntity": {
+        "@id": "https://gotruepay.com/about/shane-spears/#person"
+      }
+    },
+    "checks": "PASS: parsed actual rendered JSON-LD, entity match, worksFor, profile mainEntity binding, no fabricated sameAs"
+  }
+]
