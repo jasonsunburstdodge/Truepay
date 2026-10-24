@@ -25,7 +25,7 @@ function PaymentFlow() {
 }
 export default defineGuide({
   slug: "how-credit-card-processing-works", author: "shane-spears", reviewer: "jon-wilson",
-  answer: "A card payment starts with an approval request sent from your checkout through a processor and network to the bank that issued the card. After you capture the approved sale, the transaction is cleared and settled between financial institutions, then your provider funds your account under the timing and deductions in your agreement.",
+  answer: "Your checkout sends an approval request through a processor and network to the bank that issued your customer’s card. Once you capture the approved sale, financial institutions clear and settle it, then your provider funds your account under your agreement’s timing and deductions.",
   introduction: <PaymentFlow />,
   sources: [sources.treasuryFlow, sources.visaCapture, sources.visaFees],
   sections: [

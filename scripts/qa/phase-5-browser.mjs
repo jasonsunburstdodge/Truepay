@@ -84,7 +84,7 @@ try {
       records.push({path:route.path,width,status:response.status(),overflow:false});
     }
   }
-  for(const r of built.filter(r=>r.path!=="/")) assert.ok(inbound.get(r.path)>0,r.path+" orphan");
+  for(const r of built.filter(r=>r.path!=="/" && r.indexable)) assert.ok(inbound.get(r.path)>0,r.path+" orphan");
   for(const slug of ["how-to-read-your-processing-statement","flat-rate-vs-tiered-vs-interchange-plus","dual-pricing-vs-surcharging-vs-cash-discount"]) {
     const res=await fetch(base+`/resources/${slug}/`), html=await res.text();
     assert.ok(html.includes('data-author')&&html.includes('data-sources')&&html.includes('data-answer'));

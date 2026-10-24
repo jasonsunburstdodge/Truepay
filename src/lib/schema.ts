@@ -108,6 +108,7 @@ export function articleNode(
     mainEntityOfPage: { "@id": SITE_URL + route.path + "#webpage" },
     author: { "@id": personId(author) },
     publisher: { "@id": organizationId },
-    ...dates,
+    datePublished: dates.datePublished,
+    dateModified: dates.dateModified,
   };
 }

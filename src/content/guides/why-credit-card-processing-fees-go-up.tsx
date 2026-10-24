@@ -4,7 +4,7 @@ import { defineGuide, primarySources as sources } from "./model";
 const lock = claims.find((claim) => claim.id === "rate-lock")!;
 export default defineGuide({
   slug: "why-credit-card-processing-fees-go-up", author: "jon-wilson", reviewer: "shane-spears",
-  answer: "Your processing bill can rise because network costs change, your mix of cards and transactions changes, or your provider increases its markup or account charges. Compare the same fee lines across statements and your agreement, because a higher effective rate alone does not tell you who changed a price or why.",
+  answer: "Processing bills rise when network costs change, your transaction mix changes, or your provider increases its markup or account charges. Compare matching fee lines across statements and your agreement, because a higher effective rate alone does not show who changed a price.",
   sources: [sources.visaFees, sources.mastercardRates, sources.fed],
   sections: [
     { answer: "A higher bill can reflect more card sales, different transactions, changed network costs or increased provider charges. First separate a larger dollar total from a higher price for the same kind of payment.", detail: ["Put two statements side by side. Compare card sales, transaction count, average ticket, payment channel, card mix, monthly fees and refunds. If a fixed fee stays the same but sales fall, your effective rate can rise without a price change.", "Network qualification also matters. Mastercard lists criteria including merchant category, transaction data and time between authorization and clearing. Ask which changed conditions affected your bill, with examples from the relevant transactions."] },

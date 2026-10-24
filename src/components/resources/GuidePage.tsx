@@ -12,7 +12,7 @@ export function GuidePage({ guide }: { guide: Guide }) {
   const reviewer = people.find((p) => p.slug === guide.reviewer)!;
   const primaryIsTool = route.primaryCta === "statement-review" || route.primaryCta === "calculator";
   return <>
-    <JsonLd nodes={[webPageNode(route), personNode(author), ...(author.slug !== reviewer.slug ? [personNode(reviewer)] : []), articleNode(route, author, guide)]} />
+    <JsonLd nodes={[webPageNode(route), personNode(author), ...(author.slug !== reviewer.slug ? [personNode(reviewer)] : []), articleNode(route, author, { datePublished: guide.datePublished, dateModified: guide.dateModified })]} />
     <section className="hero-gradient route-hero guide-hero">
       <div className="container">
         <Breadcrumbs path={route.path} />

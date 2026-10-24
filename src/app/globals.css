@@ -1331,3 +1331,5 @@ caption {
   .guide-body { padding-top: 36px; }
   .guide-body .question { margin-bottom: 40px; }
 }
+
+.author-box time { white-space: nowrap; }
