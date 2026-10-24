@@ -33,6 +33,7 @@ function StatementExample() {
 }
 export default defineGuide({
   slug: "how-to-read-your-processing-statement", author: "jon-wilson", reviewer: "shane-spears",
+  hero: "Know what each fee is paying for. Start with the totals, then work through the details.",
   answer: "Read your processing statement by matching card sales, separating network costs from processor charges, then adding the fees for that billing period. Divide those fees by the same period’s card sales for your effective rate, and question anything that differs from your agreement.",
   introduction: <StatementExample />,
   sources: [sources.visaFees, sources.mastercardRates, sources.fed],

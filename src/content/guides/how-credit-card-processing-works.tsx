@@ -25,6 +25,7 @@ function PaymentFlow() {
 }
 export default defineGuide({
   slug: "how-credit-card-processing-works", author: "shane-spears", reviewer: "jon-wilson",
+  hero: "Follow the payment from your customer to your bank. Approval is the beginning of the journey.",
   answer: "Your checkout sends an approval request through a processor and network to the bank that issued your customer’s card. Once you capture the approved sale, financial institutions clear and settle it, then your provider funds your account under your agreement’s timing and deductions.",
   introduction: <PaymentFlow />,
   sources: [sources.treasuryFlow, sources.visaCapture, sources.visaFees],

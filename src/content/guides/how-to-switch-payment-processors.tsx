@@ -5,6 +5,7 @@ const term = claims.find((c) => c.id === "month-to-month")!;
 const training = claims.find((c) => c.id === "setup-training")!;
 export default defineGuide({
   slug: "how-to-switch-payment-processors", author: "shane-spears", reviewer: "jon-wilson",
+  hero: "Make the move with a clear handover plan. Start with your agreement, equipment and daily payment routine.",
   answer: "Before switching processors, check cancellation terms, equipment ownership, software connections and payments that still need to settle, refund or recur on your account. Test the new setup and deposit, then close the old service when you have a plan for its remaining responsibilities.",
   sources: [sources.authorizeProcessor, sources.visaCapture],
   sections: [

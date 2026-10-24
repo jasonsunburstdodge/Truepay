@@ -4,6 +4,7 @@ import { defineGuide, primarySources as sources } from "./model";
 const lock = claims.find((claim) => claim.id === "rate-lock")!;
 export default defineGuide({
   slug: "why-credit-card-processing-fees-go-up", author: "jon-wilson", reviewer: "shane-spears",
+  hero: "Find out what changed on your statement. Separate network costs from the charges your provider controls.",
   answer: "Processing bills rise when network costs change, your transaction mix changes, or your provider increases its markup or account charges. Compare matching fee lines across statements and your agreement, because a higher effective rate alone does not show who changed a price.",
   sources: [sources.visaFees, sources.mastercardRates, sources.fed],
   sections: [

@@ -2,6 +2,7 @@ import { ComparisonTable } from "@/components/modules";
 import { defineGuide, primarySources as sources } from "./model";
 export default defineGuide({
   slug: "dual-pricing-vs-surcharging-vs-cash-discount", author: "shane-spears", reviewer: "jon-wilson",
+  hero: "Similar labels can mean different checkouts. Understand the difference before choosing how to display your prices.",
   answer: "Dual pricing displays cash and card prices, cash discounts reduce a posted price, and surcharges add a charge for eligible credit-card payments. Compare what customers see, how debit is handled and what current network and state rules require, because the program’s name does not decide its treatment.",
   sources: [sources.visaSurcharge, sources.mastercardSurcharge, sources.newYork, sources.massachusetts],
   sections: [

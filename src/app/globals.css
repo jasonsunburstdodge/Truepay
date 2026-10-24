@@ -1333,3 +1333,6 @@ caption {
 }
 
 .author-box time { white-space: nowrap; }
+
+.guide-hero-summary { max-width: 680px; color: var(--color-mist); font-size: 19px; line-height: 1.6; margin: 28px 0; }
+.guide-body > .answer-first { margin-bottom: 40px; color: var(--color-ink); font-size: 19px; }

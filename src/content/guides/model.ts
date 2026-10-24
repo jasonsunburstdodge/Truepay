@@ -8,6 +8,8 @@ export type Guide = {
   description: string;
   author: "jon-wilson" | "shane-spears";
   reviewer: "jon-wilson" | "shane-spears";
+  reviewedAt?: string;
+  hero: string;
   datePublished: string;
   dateModified: string;
   sources: Source[];
@@ -23,7 +25,7 @@ export function defineGuide(input: Omit<Guide, "title" | "description" | "datePu
   const route = getRoute(`/resources/${input.slug}/`);
   if (!route || route.template !== "guide") throw new Error(`Unknown guide ${input.slug}`);
   if (input.sections.length !== route.questions.length) throw new Error(`Question mismatch: ${input.slug}`);
-  return { ...input, title: route.title, description: route.description, datePublished: "2026-10-24T00:00:00-05:00", dateModified: "2026-10-24T00:00:00-05:00" };
+  return { ...input, title: route.title, description: route.description, datePublished: "2026-10-24", dateModified: "2026-10-24" };
 }
 export const primarySources = {
   visaFees: { title: "Visa payment system: interchange, merchant discount and fees", url: "https://www.visa.com/en-us/support/business/regulation-fees", publisher: "Visa", accessed: "2026-10-24" },

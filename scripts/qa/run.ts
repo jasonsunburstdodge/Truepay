@@ -443,6 +443,8 @@ function finish(): never {
       const c = claims.find((c) => c.id === id)!;
       lines.push(`| ${id} | ${c.status} | ${[...set].join(", ")} | ${c.confirm ?? ""} |`);
     }
+    const guidePaths = pages.filter((page) => page.route.template === "guide").map((page) => page.route.path);
+    if (guidePaths.length) lines.push(`| E-E-A-T authorship | Owner sign-off required | ${guidePaths.join(", ")} | Named author must read and approve each guide; reviewer must actually review before reviewedAt is set or Reviewed by is shown. |`);
   }
 
   writeFileSync("qa-report.md", lines.join("\n") + "\n");

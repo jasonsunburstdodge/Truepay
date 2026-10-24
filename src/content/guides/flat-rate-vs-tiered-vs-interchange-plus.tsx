@@ -23,6 +23,7 @@ function CostExample() {
 }
 export default defineGuide({
   slug: "flat-rate-vs-tiered-vs-interchange-plus", author: "jon-wilson", reviewer: "shane-spears",
+  hero: "Compare the whole bill, not just the rate. The right pricing model depends on how you get paid.",
   answer: "Flat-rate pricing bundles charges, tiered pricing groups transactions into price bands, and interchange-plus separates underlying network costs from processor markup. Compare monthly totals at your sales volume and ticket size, because account fees and card mix can change which model costs less.",
   sources: [sources.visaFees, sources.mastercardRates, sources.fed],
   sections: [
