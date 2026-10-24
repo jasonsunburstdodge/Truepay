@@ -3,4 +3,5 @@ import retail from "./retail";
 import salons from "./salons-spas";
 import medical from "./medical-dental";
 import home from "./home-services";
-export const industryPages = [restaurants, retail, salons, medical, home];
+import auto from "./auto-services";
+export const industryPages = [restaurants, retail, salons, medical, home, auto];
