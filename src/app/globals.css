@@ -160,6 +160,8 @@ section[id] {
 }
 .band {
   background: var(--color-surface);
+  /* Muted #5a6e87 is 4.31:1 on this surface; slate keeps small text above 4.5:1 (axe, Phase 8). */
+  --color-text-muted: var(--color-slate);
 }
 .dark-band {
   background: var(--color-navy-night);
@@ -210,6 +212,10 @@ section[id] {
 .hero-proof > .eyebrow,
 .review-grid > div > .eyebrow {
   color: var(--color-gold);
+}
+/* Gold fails contrast on the light surface band; use slate there (axe, Phase 8). */
+.band .review-grid > div > .eyebrow {
+  color: var(--color-slate);
 }
 .hero {
   padding: 92px 0 136px;
