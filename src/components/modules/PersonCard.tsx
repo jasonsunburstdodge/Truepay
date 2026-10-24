@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { entity, type Person } from "@/content/entity";
 import { isBuilt } from "@/lib/navigation";
-export function PersonCard({ person }: { person: Person }) {
+export function PersonCard({ person, showContact = true }: { person: Person; showContact?: boolean }) {
   return (
     <article className="card person">
       {person.image && (
@@ -27,7 +27,7 @@ export function PersonCard({ person }: { person: Person }) {
           ))}
         </ul>
       )}
-      <a href={entity.phone.href}>Reach the team: {entity.phone.display}</a>
+      {showContact && <a href={entity.phone.href}>Reach the team: {entity.phone.display}</a>}
       {person.profilePath && isBuilt(person.profilePath) && (
         <a href={person.profilePath}>Meet {person.name}</a>
       )}

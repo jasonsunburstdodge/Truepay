@@ -22,15 +22,14 @@ export default function CustomerStories() {
       <section className="container section">
         <QuestionSection question={route.questions[0]}>
           <p>
-            These reviews were published on TruePay’s website. Each reflects one
-            customer’s experience.
+            These reviews were published on TruePay’s website. Read what business owners have to say about working with the team.
           </p>
         </QuestionSection>
         <p className="eyebrow">Service and relationships</p>
         <h2>People they can call.</h2>
         <div className="grid two">
-          <ProofQuote id="e-springfield" />
-          <ProofQuote id="a-monroe" />
+          <ProofQuote linkToStories={false} id="e-springfield" />
+          <ProofQuote linkToStories={false} id="a-monroe" />
         </div>
       </section>
       <section className="band section">
@@ -38,28 +37,20 @@ export default function CustomerStories() {
           <p className="eyebrow">Cost and value</p>
           <h2>One customer’s numbers, in context.</h2>
           <div className="grid two">
-            <ProofQuote id="m-holt" />
-            <ProofQuote id="b-slavens" />
+            <ProofQuote linkToStories={false} id="m-holt" />
+            <ProofQuote linkToStories={false} id="b-slavens" />
           </div>
-          <p className="contact-page-link">
-            These accounts do not establish a typical outcome or a promise of
-            savings. Compare your own processing statement and program terms.
-          </p>
         </div>
       </section>
       <section className="container section">
         <p className="eyebrow">Setup and systems</p>
         <h2>A system at the shop.</h2>
-        <ProofQuote id="r-moore" />
-        <p className="contact-page-link">
-          The published short quote describes the system. No separate setup
-          result is supplied in that review.
-        </p>
+        <ProofQuote linkToStories={false} id="r-moore" />
         <QuestionSection question={route.questions[1]}>
           <p>
-            The published reviews here do not identify each business or
-            industry. Tell TruePay about your business so you can discuss a
-            relevant setup and the evidence you would like to see.
+            Your business has its own way of getting paid, and we’d like to hear
+            about it. Give us a call to talk through your checkout, your
+            questions and whether TruePay could be a good fit.
           </p>
         </QuestionSection>
         <RelatedLinks route={route} />

@@ -30,9 +30,10 @@ export default function Team() {
         </QuestionSection>
         <div className="grid two team-grid">
           {people.map((person) => (
-            <PersonCard key={person.slug} person={person} />
+            <PersonCard key={person.slug} person={person} showContact={false} />
           ))}
         </div>
+        <p className="contact-page-link"><a href={entity.phone.href}>Reach the team: {entity.phone.display}</a></p>
       </section>
       <section className="band section">
         <div className="container">
