@@ -7,4 +7,5 @@ export const partnerProgram = {
   referralPercent: split.values!.referralPercent,
   defaultMarginPercent: estimate.values!.defaultMarginPercent,
   defaultAttritionPercent: estimate.values!.defaultAttritionPercent,
+  defaultVolume: estimate.values!.defaultVolume,
 };
