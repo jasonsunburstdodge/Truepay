@@ -20,11 +20,9 @@ export default function Support() {
         aside={<ProofQuote id="e-springfield" />}
       >
         <p>
-          For help with your TruePay equipment, deposits, billing or account,
-          call <a href={entity.phone.href}>{entity.phone.display}</a> or email{" "}
-          <a href={`mailto:${entity.email}`}>{entity.email}</a>. These are the
-          published contact channels. Have your business name and a description
-          of the problem ready so you can explain what happened.
+          Reach TruePay about your equipment, deposits, billing or account. Call{" "}
+          <a href={entity.phone.href}>{entity.phone.display}</a> or email{" "}
+          <a href={`mailto:${entity.email}`}>{entity.email}</a>.
         </p>
       </RouteHero>
       <section className="container section">
@@ -75,9 +73,7 @@ export default function Support() {
               <a href={portal}>Open the merchant portal</a>.
             </p>
           ) : (
-            <p>
-              Call the team for your account’s verified login address.
-            </p>
+            <p>Call the team for your account’s verified login address.</p>
           )}
         </QuestionSection>
         <p>

@@ -1,0 +1,197 @@
+[
+  {
+    "path": "/",
+    "id": "founded-2011",
+    "text": "Serving business owners since 2011."
+  },
+  {
+    "path": "/",
+    "id": "honest-recommendation",
+    "text": "We'll give you an honest answer, even if that means recommending you stay where you are."
+  },
+  {
+    "path": "/",
+    "id": "rate-lock",
+    "text": "We lock our rate. TruePay won't raise its markup for as long as you process with us."
+  },
+  {
+    "path": "/",
+    "id": "month-to-month",
+    "text": "Month-to-month service. No long-term contract."
+  },
+  {
+    "path": "/",
+    "id": "us-support",
+    "text": "Real, US-based people answer when you call. No call centers."
+  },
+  {
+    "path": "/",
+    "id": "founded-2011",
+    "text": "Jon founded TruePay in 2011 after watching business owners get burned by hidden fees, rate increases and processors who disappeared after the sale."
+  },
+  {
+    "path": "/",
+    "id": "dual-pricing-cost",
+    "text": "With dual pricing, customers who pay by card pay the card price, which can offset most of your processing cost. Some costs, such as monthly fees, can still apply."
+  },
+  {
+    "path": "/",
+    "id": "honest-recommendation",
+    "text": "We'll give you an honest answer, even if that means recommending you stay where you are."
+  },
+  {
+    "path": "/",
+    "id": "honest-recommendation",
+    "text": "We'll give you an honest answer, even if that means recommending you stay where you are."
+  },
+  {
+    "path": "/",
+    "id": "coverage",
+    "text": "Based in Josephine, Texas, serving businesses across the U.S."
+  },
+  {
+    "path": "/",
+    "id": "honest-recommendation",
+    "text": "We'll give you an honest answer, even if that means recommending you stay where you are."
+  },
+  {
+    "path": "/statement-review/",
+    "id": "honest-recommendation",
+    "text": "We'll give you an honest answer, even if that means recommending you stay where you are."
+  },
+  {
+    "path": "/statement-review/",
+    "id": "holt-quote",
+    "text": "…our business went from paying in excess of $50,000.00 a year in credit card fees and since switching to TruePay our credit card fees are $420.00. M. Holt One customer’s experience. Individual results vary."
+  },
+  {
+    "path": "/support/",
+    "id": "us-support",
+    "text": "Real, US-based people answer when you call. No call centers."
+  },
+  {
+    "path": "/contact/",
+    "id": "us-support",
+    "text": "Real, US-based people answer when you call. No call centers."
+  },
+  {
+    "path": "/contact/",
+    "id": "follow-up-time",
+    "text": "A real person will follow up within one business day."
+  },
+  {
+    "path": "/contact/",
+    "id": "office-hours",
+    "text": "Office hours: Monday–Friday, 8am–6pm Central."
+  },
+  {
+    "path": "/why-truepay/",
+    "id": "rate-lock",
+    "text": "We lock our rate. TruePay won't raise its markup for as long as you process with us."
+  },
+  {
+    "path": "/why-truepay/",
+    "id": "month-to-month",
+    "text": "Month-to-month service. No long-term contract."
+  },
+  {
+    "path": "/why-truepay/",
+    "id": "truecare",
+    "text": "Lifetime TrueCare coverage repairs or replaces covered equipment for as long as you're a customer."
+  },
+  {
+    "path": "/why-truepay/",
+    "id": "free-terminal",
+    "text": "A terminal is included with Membership."
+  },
+  {
+    "path": "/why-truepay/",
+    "id": "us-support",
+    "text": "Real, US-based people answer when you call. No call centers."
+  },
+  {
+    "path": "/why-truepay/",
+    "id": "no-hidden-fees",
+    "text": "Every fee is listed on your agreement and explained on your statement."
+  },
+  {
+    "path": "/why-truepay/",
+    "id": "honest-recommendation",
+    "text": "We'll give you an honest answer, even if that means recommending you stay where you are."
+  },
+  {
+    "path": "/why-truepay/",
+    "id": "honest-recommendation",
+    "text": "We'll give you an honest answer, even if that means recommending you stay where you are."
+  },
+  {
+    "path": "/why-truepay/",
+    "id": "honest-recommendation",
+    "text": "We'll give you an honest answer, even if that means recommending you stay where you are."
+  },
+  {
+    "path": "/pricing/",
+    "id": "rate-lock",
+    "text": "We lock our rate. TruePay won't raise its markup for as long as you process with us."
+  },
+  {
+    "path": "/pricing/",
+    "id": "cost-plus",
+    "text": "Membership uses interchange-plus pricing: the card network's cost plus a small, fixed TruePay markup, itemized line by line."
+  },
+  {
+    "path": "/pricing/membership/",
+    "id": "cost-plus",
+    "text": "Membership uses interchange-plus pricing: the card network's cost plus a small, fixed TruePay markup, itemized line by line."
+  },
+  {
+    "path": "/pricing/membership/",
+    "id": "rate-lock",
+    "text": "We lock our rate. TruePay won't raise its markup for as long as you process with us."
+  },
+  {
+    "path": "/pricing/membership/",
+    "id": "month-to-month",
+    "text": "Month-to-month service. No long-term contract."
+  },
+  {
+    "path": "/pricing/membership/",
+    "id": "truecare",
+    "text": "Lifetime TrueCare coverage repairs or replaces covered equipment for as long as you're a customer."
+  },
+  {
+    "path": "/pricing/membership/",
+    "id": "free-terminal",
+    "text": "A terminal is included with Membership."
+  },
+  {
+    "path": "/pricing/dual-pricing/",
+    "id": "dual-pricing-cost",
+    "text": "With dual pricing, customers who pay by card pay the card price, which can offset most of your processing cost. Some costs, such as monthly fees, can still apply."
+  },
+  {
+    "path": "/pricing/dual-pricing/",
+    "id": "dual-pricing-rules",
+    "text": "We set up dual pricing to follow card-network rules, including the signage, receipts and checkout display your customers see."
+  },
+  {
+    "path": "/solutions/",
+    "id": "setup-training",
+    "text": "We program your equipment, set it up and train your team."
+  },
+  {
+    "path": "/solutions/point-of-sale/",
+    "id": "setup-training",
+    "text": "We program your equipment, set it up and train your team."
+  },
+  {
+    "path": "/solutions/terminals/",
+    "id": "free-terminal",
+    "text": "A terminal is included with Membership."
+  },
+  {
+    "path": "/solutions/terminals/",
+    "id": "truecare",
+    "text": "Lifetime TrueCare coverage repairs or replaces covered equipment for as long as you're a customer."
+  }
+]

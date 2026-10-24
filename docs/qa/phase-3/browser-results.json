@@ -1,0 +1,734 @@
+{
+  "records": [
+    {
+      "path": "/",
+      "width": 390,
+      "overflow": false,
+      "hero": "TruePay helps business owners understand card processing costs from our home in Josephine, Texas. Serving business owners since 2011.",
+      "heroSentences": 2,
+      "requiredLinks": [
+        "/why-truepay/",
+        "/pricing/",
+        "/pricing/dual-pricing/",
+        "/solutions/",
+        "/effective-rate-calculator/"
+      ],
+      "questionSizes": [
+        32,
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "path": "/statement-review/",
+      "width": 390,
+      "overflow": false,
+      "hero": "A statement review explains your processing fees and effective rate. TruePay compares your options and helps you decide whether switching makes sense.",
+      "heroSentences": 2,
+      "requiredLinks": [
+        "/effective-rate-calculator/",
+        "/pricing/"
+      ],
+      "questionSizes": [
+        32,
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "path": "/effective-rate-calculator/",
+      "width": 390,
+      "overflow": false,
+      "hero": "Your effective rate is total processing fees divided by card sales, multiplied by 100. Use one month’s statement to see your starting point.",
+      "heroSentences": 2,
+      "requiredLinks": [
+        "/statement-review/"
+      ],
+      "questionSizes": [
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "path": "/support/",
+      "width": 390,
+      "overflow": false,
+      "hero": "Reach TruePay about your equipment, deposits, billing or account. Call 888-792-0284 or email support@gotruepay.com.",
+      "heroSentences": 2,
+      "requiredLinks": [
+        "/contact/"
+      ],
+      "questionSizes": [
+        32,
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "path": "/contact/",
+      "width": 390,
+      "overflow": false,
+      "hero": "Tell TruePay about pricing, equipment or switching processors. A person from our Josephine, Texas team can discuss what your business needs.",
+      "heroSentences": 2,
+      "requiredLinks": [
+        "/support/",
+        "/statement-review/"
+      ],
+      "questionSizes": [
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "path": "/thank-you/",
+      "width": 390,
+      "overflow": false,
+      "hero": "This page shows a confirmation after a contact request is delivered. If you haven’t submitted a request, start with a statement review or contact the team.",
+      "heroSentences": 2,
+      "requiredLinks": [],
+      "questionSizes": []
+    },
+    {
+      "path": "/why-truepay/",
+      "width": 390,
+      "overflow": false,
+      "hero": "TruePay’s rate lock covers its markup and monthly fees. Card-network costs can still change.",
+      "heroSentences": 2,
+      "requiredLinks": [
+        "/pricing/membership/"
+      ],
+      "questionSizes": [
+        32,
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "path": "/pricing/",
+      "width": 390,
+      "overflow": false,
+      "hero": "Your cost depends on how your business takes payments. Compare the pricing model and the whole bill before choosing.",
+      "heroSentences": 2,
+      "requiredLinks": [
+        "/pricing/membership/",
+        "/pricing/dual-pricing/",
+        "/effective-rate-calculator/"
+      ],
+      "questionSizes": [
+        32,
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "path": "/pricing/membership/",
+      "width": 390,
+      "overflow": false,
+      "hero": "Membership separates card-network costs from TruePay’s markup. See how the program works and what comes with it.",
+      "heroSentences": 2,
+      "requiredLinks": [
+        "/pricing/dual-pricing/",
+        "/why-truepay/",
+        "/solutions/terminals/"
+      ],
+      "questionSizes": [
+        32,
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "path": "/pricing/dual-pricing/",
+      "width": 390,
+      "overflow": false,
+      "hero": "Dual pricing shows a cash price and a card price before payment. See how checkout works and whether the approach fits your business.",
+      "heroSentences": 2,
+      "requiredLinks": [
+        "/pricing/membership/"
+      ],
+      "questionSizes": [
+        32,
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "path": "/solutions/",
+      "width": 390,
+      "overflow": false,
+      "hero": "Start with where and how your customers pay. Explore terminals, POS systems and software around the way your business works.",
+      "heroSentences": 2,
+      "requiredLinks": [
+        "/solutions/point-of-sale/",
+        "/solutions/terminals/",
+        "/solutions/mobile-payments/",
+        "/solutions/online-payments/",
+        "/solutions/integrations/",
+        "/solutions/billing-software/",
+        "/pricing/"
+      ],
+      "questionSizes": [
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "path": "/solutions/point-of-sale/",
+      "width": 390,
+      "overflow": false,
+      "hero": "Choose a POS around how your team takes orders and payments. TruePay helps you compare systems for your counter, tables and everyday workflow.",
+      "heroSentences": 2,
+      "requiredLinks": [
+        "/solutions/integrations/",
+        "/support/"
+      ],
+      "questionSizes": [
+        32,
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "path": "/solutions/terminals/",
+      "width": 390,
+      "overflow": false,
+      "hero": "Choose a countertop or handheld terminal around where your customers pay. Compare the connection, screen and receipt options that matter to your team.",
+      "heroSentences": 2,
+      "requiredLinks": [
+        "/pricing/membership/",
+        "/solutions/mobile-payments/",
+        "/why-truepay/"
+      ],
+      "questionSizes": [
+        32,
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "path": "/solutions/mobile-payments/",
+      "width": 390,
+      "overflow": false,
+      "hero": "Take payment where you meet your customer. Start with a portable terminal or app, then work through the connection and receipt you need.",
+      "heroSentences": 2,
+      "requiredLinks": [
+        "/solutions/terminals/"
+      ],
+      "questionSizes": [
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "path": "/solutions/online-payments/",
+      "width": 390,
+      "overflow": false,
+      "hero": "Connect online payments to the way your website sells. TruePay starts with your platform, then helps you explore a suitable gateway.",
+      "heroSentences": 2,
+      "requiredLinks": [
+        "/solutions/billing-software/",
+        "/pricing/"
+      ],
+      "questionSizes": [
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "path": "/solutions/integrations/",
+      "width": 390,
+      "overflow": false,
+      "hero": "You may be able to keep your current POS when changing processors. Share your system details so TruePay can check the connection first.",
+      "heroSentences": 2,
+      "requiredLinks": [
+        "/solutions/point-of-sale/"
+      ],
+      "questionSizes": [
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "path": "/solutions/billing-software/",
+      "width": 390,
+      "overflow": false,
+      "hero": "Keep your invoice and payment workflow connected. Explore Biller Genie or MantaPay around the way you use QuickBooks.",
+      "heroSentences": 2,
+      "requiredLinks": [
+        "/solutions/online-payments/"
+      ],
+      "questionSizes": [
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "path": "/",
+      "width": 1440,
+      "overflow": false,
+      "hero": "TruePay helps business owners understand card processing costs from our home in Josephine, Texas. Serving business owners since 2011.",
+      "heroSentences": 2,
+      "requiredLinks": [
+        "/why-truepay/",
+        "/pricing/",
+        "/pricing/dual-pricing/",
+        "/solutions/",
+        "/effective-rate-calculator/"
+      ],
+      "questionSizes": [
+        40,
+        40,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "/statement-review/",
+      "width": 1440,
+      "overflow": false,
+      "hero": "A statement review explains your processing fees and effective rate. TruePay compares your options and helps you decide whether switching makes sense.",
+      "heroSentences": 2,
+      "requiredLinks": [
+        "/effective-rate-calculator/",
+        "/pricing/"
+      ],
+      "questionSizes": [
+        40,
+        40,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "/effective-rate-calculator/",
+      "width": 1440,
+      "overflow": false,
+      "hero": "Your effective rate is total processing fees divided by card sales, multiplied by 100. Use one month’s statement to see your starting point.",
+      "heroSentences": 2,
+      "requiredLinks": [
+        "/statement-review/"
+      ],
+      "questionSizes": [
+        40,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "/support/",
+      "width": 1440,
+      "overflow": false,
+      "hero": "Reach TruePay about your equipment, deposits, billing or account. Call 888-792-0284 or email support@gotruepay.com.",
+      "heroSentences": 2,
+      "requiredLinks": [
+        "/contact/"
+      ],
+      "questionSizes": [
+        40,
+        40,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "/contact/",
+      "width": 1440,
+      "overflow": false,
+      "hero": "Tell TruePay about pricing, equipment or switching processors. A person from our Josephine, Texas team can discuss what your business needs.",
+      "heroSentences": 2,
+      "requiredLinks": [
+        "/support/",
+        "/statement-review/"
+      ],
+      "questionSizes": [
+        40,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "/thank-you/",
+      "width": 1440,
+      "overflow": false,
+      "hero": "This page shows a confirmation after a contact request is delivered. If you haven’t submitted a request, start with a statement review or contact the team.",
+      "heroSentences": 2,
+      "requiredLinks": [],
+      "questionSizes": []
+    },
+    {
+      "path": "/why-truepay/",
+      "width": 1440,
+      "overflow": false,
+      "hero": "TruePay’s rate lock covers its markup and monthly fees. Card-network costs can still change.",
+      "heroSentences": 2,
+      "requiredLinks": [
+        "/pricing/membership/"
+      ],
+      "questionSizes": [
+        40,
+        40,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "/pricing/",
+      "width": 1440,
+      "overflow": false,
+      "hero": "Your cost depends on how your business takes payments. Compare the pricing model and the whole bill before choosing.",
+      "heroSentences": 2,
+      "requiredLinks": [
+        "/pricing/membership/",
+        "/pricing/dual-pricing/",
+        "/effective-rate-calculator/"
+      ],
+      "questionSizes": [
+        40,
+        40,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "/pricing/membership/",
+      "width": 1440,
+      "overflow": false,
+      "hero": "Membership separates card-network costs from TruePay’s markup. See how the program works and what comes with it.",
+      "heroSentences": 2,
+      "requiredLinks": [
+        "/pricing/dual-pricing/",
+        "/why-truepay/",
+        "/solutions/terminals/"
+      ],
+      "questionSizes": [
+        40,
+        40,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "/pricing/dual-pricing/",
+      "width": 1440,
+      "overflow": false,
+      "hero": "Dual pricing shows a cash price and a card price before payment. See how checkout works and whether the approach fits your business.",
+      "heroSentences": 2,
+      "requiredLinks": [
+        "/pricing/membership/"
+      ],
+      "questionSizes": [
+        40,
+        40,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "/solutions/",
+      "width": 1440,
+      "overflow": false,
+      "hero": "Start with where and how your customers pay. Explore terminals, POS systems and software around the way your business works.",
+      "heroSentences": 2,
+      "requiredLinks": [
+        "/solutions/point-of-sale/",
+        "/solutions/terminals/",
+        "/solutions/mobile-payments/",
+        "/solutions/online-payments/",
+        "/solutions/integrations/",
+        "/solutions/billing-software/",
+        "/pricing/"
+      ],
+      "questionSizes": [
+        40,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "/solutions/point-of-sale/",
+      "width": 1440,
+      "overflow": false,
+      "hero": "Choose a POS around how your team takes orders and payments. TruePay helps you compare systems for your counter, tables and everyday workflow.",
+      "heroSentences": 2,
+      "requiredLinks": [
+        "/solutions/integrations/",
+        "/support/"
+      ],
+      "questionSizes": [
+        40,
+        40,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "/solutions/terminals/",
+      "width": 1440,
+      "overflow": false,
+      "hero": "Choose a countertop or handheld terminal around where your customers pay. Compare the connection, screen and receipt options that matter to your team.",
+      "heroSentences": 2,
+      "requiredLinks": [
+        "/pricing/membership/",
+        "/solutions/mobile-payments/",
+        "/why-truepay/"
+      ],
+      "questionSizes": [
+        40,
+        40,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "/solutions/mobile-payments/",
+      "width": 1440,
+      "overflow": false,
+      "hero": "Take payment where you meet your customer. Start with a portable terminal or app, then work through the connection and receipt you need.",
+      "heroSentences": 2,
+      "requiredLinks": [
+        "/solutions/terminals/"
+      ],
+      "questionSizes": [
+        40,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "/solutions/online-payments/",
+      "width": 1440,
+      "overflow": false,
+      "hero": "Connect online payments to the way your website sells. TruePay starts with your platform, then helps you explore a suitable gateway.",
+      "heroSentences": 2,
+      "requiredLinks": [
+        "/solutions/billing-software/",
+        "/pricing/"
+      ],
+      "questionSizes": [
+        40,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "/solutions/integrations/",
+      "width": 1440,
+      "overflow": false,
+      "hero": "You may be able to keep your current POS when changing processors. Share your system details so TruePay can check the connection first.",
+      "heroSentences": 2,
+      "requiredLinks": [
+        "/solutions/point-of-sale/"
+      ],
+      "questionSizes": [
+        40,
+        40,
+        40
+      ]
+    },
+    {
+      "path": "/solutions/billing-software/",
+      "width": 1440,
+      "overflow": false,
+      "hero": "Keep your invoice and payment workflow connected. Explore Biller Genie or MantaPay around the way you use QuickBooks.",
+      "heroSentences": 2,
+      "requiredLinks": [
+        "/solutions/online-payments/"
+      ],
+      "questionSizes": [
+        40,
+        40,
+        40
+      ]
+    }
+  ],
+  "redirectRecords": [
+    {
+      "source": "/equipment/",
+      "destination": "/solutions/",
+      "status": 308,
+      "destinationStatus": 200
+    },
+    {
+      "source": "/point-of-sale/",
+      "destination": "/solutions/point-of-sale/",
+      "status": 308,
+      "destinationStatus": 200
+    },
+    {
+      "source": "/pos-system/",
+      "destination": "/solutions/point-of-sale/",
+      "status": 308,
+      "destinationStatus": 200,
+      "product": "SkyTab"
+    },
+    {
+      "source": "/skytab-mobile/",
+      "destination": "/solutions/point-of-sale/",
+      "status": 308,
+      "destinationStatus": 200,
+      "product": "SkyTab Mobile"
+    },
+    {
+      "source": "/skytab-glass/",
+      "destination": "/solutions/point-of-sale/",
+      "status": 308,
+      "destinationStatus": 200,
+      "product": "SkyTab Glass"
+    },
+    {
+      "source": "/paradise-pos/",
+      "destination": "/solutions/point-of-sale/",
+      "status": 308,
+      "destinationStatus": 200,
+      "product": "Paradise POS"
+    },
+    {
+      "source": "/mobile-bytes/",
+      "destination": "/solutions/point-of-sale/",
+      "status": 308,
+      "destinationStatus": 200,
+      "product": "MobileBytes"
+    },
+    {
+      "source": "/rckt-mobile-pos/",
+      "destination": "/solutions/mobile-payments/",
+      "status": 308,
+      "destinationStatus": 200,
+      "product": "RCKT mobile POS"
+    },
+    {
+      "source": "/terminals/",
+      "destination": "/solutions/terminals/",
+      "status": 308,
+      "destinationStatus": 200
+    },
+    {
+      "source": "/valor/",
+      "destination": "/solutions/terminals/",
+      "status": 308,
+      "destinationStatus": 200
+    },
+    {
+      "source": "/vl-100/",
+      "destination": "/solutions/terminals/",
+      "status": 308,
+      "destinationStatus": 200,
+      "product": "VL100"
+    },
+    {
+      "source": "/vl-110/",
+      "destination": "/solutions/terminals/",
+      "status": 308,
+      "destinationStatus": 200,
+      "product": "VL110"
+    },
+    {
+      "source": "/vl-500/",
+      "destination": "/solutions/terminals/",
+      "status": 308,
+      "destinationStatus": 200,
+      "product": "VL500"
+    },
+    {
+      "source": "/dejavoo-qd4/",
+      "destination": "/solutions/terminals/",
+      "status": 308,
+      "destinationStatus": 200,
+      "product": "Dejavoo QD4"
+    },
+    {
+      "source": "/clover-flex/",
+      "destination": "/solutions/terminals/",
+      "status": 308,
+      "destinationStatus": 200,
+      "product": "Clover Flex"
+    },
+    {
+      "source": "/mini/",
+      "destination": "/solutions/terminals/",
+      "status": 308,
+      "destinationStatus": 200,
+      "product": "Clover Mini"
+    },
+    {
+      "source": "/duo/",
+      "destination": "/solutions/terminals/",
+      "status": 308,
+      "destinationStatus": 200,
+      "product": "Clover Station Duo"
+    },
+    {
+      "source": "/valor-pay-app/",
+      "destination": "/solutions/mobile-payments/",
+      "status": 308,
+      "destinationStatus": 200,
+      "product": "Valor Pay app"
+    },
+    {
+      "source": "/online-check-out/",
+      "destination": "/solutions/online-payments/",
+      "status": 308,
+      "destinationStatus": 200
+    },
+    {
+      "source": "/5-benefits-of-an-evm-compliant-chip-terminal/",
+      "destination": "/solutions/terminals/",
+      "status": 308,
+      "destinationStatus": 200
+    },
+    {
+      "source": "/the-evolution-of-pos-systems-from-cash-registers-to-smart-terminals/",
+      "destination": "/solutions/point-of-sale/",
+      "status": 308,
+      "destinationStatus": 200
+    },
+    {
+      "source": "/streamlining-transactions-for-smbs-a-closer-look-at-modern-pos-systems/",
+      "destination": "/solutions/point-of-sale/",
+      "status": 308,
+      "destinationStatus": 200
+    }
+  ],
+  "inbound": {
+    "/statement-review/": 11,
+    "tel:+18887920284": 16,
+    "/why-truepay/": 5,
+    "mailto:support@gotruepay.com": 3,
+    "/support/": 10,
+    "/solutions/terminals/": 4,
+    "/solutions/point-of-sale/": 4,
+    "/solutions/mobile-payments/": 3,
+    "/solutions/online-payments/": 3,
+    "/pricing/dual-pricing/": 3,
+    "/effective-rate-calculator/": 3,
+    "/contact/": 4,
+    "/pricing/": 6,
+    "/solutions/": 7,
+    "/": 16,
+    "": 1,
+    "/pricing/membership/": 4,
+    "/solutions/billing-software/": 2,
+    "/solutions/integrations/": 2,
+    "https://drive.google.com/file/d/1nnLhjNRNYlyB0YqmLF4b835Zm5clYwbr/view": 6,
+    "https://gotruepay.com/skytab-mobile/": 1,
+    "https://gotruepay.com/skytab-glass/": 1,
+    "https://gotruepay.com/valor-pay-app/": 1
+  },
+  "errors": []
+}

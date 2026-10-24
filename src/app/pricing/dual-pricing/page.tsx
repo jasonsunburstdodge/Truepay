@@ -23,11 +23,8 @@ export default function DualPricing() {
         aside={<ProofQuote id="r-moore" />}
       >
         <p>
-          Dual pricing shows customers a cash price and a card price before they
-          pay. It may fit a business that accepts both cash and cards and wants
-          to discuss how processing costs affect its margins. Compare the
-          customer experience, remaining costs and program requirements before
-          choosing it for your business.
+          Dual pricing shows a cash price and a card price before payment. See
+          how checkout works and whether the approach fits your business.
         </p>
       </RouteHero>
       <section className="container section">

@@ -11,6 +11,13 @@ const contentModified: Record<string, string> = {
   "/pricing/": "2026-10-23",
   "/pricing/membership/": "2026-10-23",
   "/pricing/dual-pricing/": "2026-10-23",
+  "/solutions/": "2026-10-24",
+  "/solutions/point-of-sale/": "2026-10-24",
+  "/solutions/terminals/": "2026-10-24",
+  "/solutions/mobile-payments/": "2026-10-24",
+  "/solutions/online-payments/": "2026-10-24",
+  "/solutions/integrations/": "2026-10-24",
+  "/solutions/billing-software/": "2026-10-24",
   "/thank-you/": "2026-10-23",
 };
 export default function sitemap(): MetadataRoute.Sitemap {

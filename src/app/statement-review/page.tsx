@@ -20,11 +20,9 @@ export default function StatementReview() {
         aside={<ProofQuote id="a-monroe" />}
       >
         <p>
-          A TruePay statement review explains your processing fees line by line,
-          calculates your effective rate and compares your options. You get an
-          honest recommendation about whether a change makes sense for your
-          business. Start with your contact details, then confirm how to share
-          your statement with the team.
+          A statement review explains your processing fees and effective rate.
+          TruePay compares your options and helps you decide whether switching
+          makes sense.
         </p>
       </RouteHero>
       <section className="container section">
