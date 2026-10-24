@@ -134,12 +134,6 @@ export function SolutionPage({ solution: s }: { solution: Solution }) {
         {route.questions.slice(1).map((q, i) => (
           <QuestionSection key={q} question={q}>
             <p>{s.questions[i + 1]}</p>
-            {s.path === "/solutions/point-of-sale/" && (
-              <p className="contact-page-link">
-                Looking for SkyTab Mobile or SkyTab Glass? Tell us which model
-                you use so we can talk through your setup.
-              </p>
-            )}
             {s.path === "/solutions/terminals/" && i === 0 && (
               <p data-claim="free-terminal">{getClaim("free-terminal").copy}</p>
             )}
