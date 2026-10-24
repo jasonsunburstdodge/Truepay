@@ -17,8 +17,8 @@ export default async function ThankYou() {
       >
         <p>
           {received
-            ? "Your contact request was delivered to TruePay. The team can use the details you provided to discuss what your business needs. This confirms your request only; no statement file was uploaded. If you need help with an existing account, contact merchant support directly."
-            : "This page shows a confirmation after a contact request is delivered. If you haven’t submitted a request, start with a statement review or contact the team. You can call TruePay directly if you would rather talk about your business."}
+            ? "Your contact request was delivered to TruePay. This confirms your request only; no processing statement was uploaded."
+            : "This page shows a confirmation after a contact request is delivered. If you haven’t submitted a request, start with a statement review or contact the team."}
         </p>
       </RouteHero>
       <section className="container section">

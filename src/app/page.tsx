@@ -29,13 +29,11 @@ export default function Home() {
             <h1>{route.h1}</h1>
             <AnswerFirst>
               <p>
-                TruePay is a payment processing company in Josephine, Texas, for
-                business owners who want to understand their costs.{" "}
+                TruePay helps business owners understand card processing costs
+                from our home in Josephine, Texas.{" "}
                 <span data-claim="founded-2011">
                   {getClaim("founded-2011").copy}
-                </span>{" "}
-                Your business deserves clear answers about pricing and
-                equipment, and people you can reach when you need help.
+                </span>
               </p>
             </AnswerFirst>
             <CtaButtons
@@ -111,24 +109,12 @@ export default function Home() {
             </p>
           </QuestionSection>
           <div className="grid three">
-            <Commitment
-              id="rate-lock"
-              title="A markup that stays put"
-              covers={getClaim("rate-lock").scope!}
-              excludes="The rate lock does not prevent card networks from changing interchange and assessments. Ask for the written terms before choosing."
-            />
+            <Commitment id="rate-lock" title="A markup that stays put" />
             <Commitment
               id="month-to-month"
               title="Room to make your own choice"
-              covers="Month-to-month processing service."
-              excludes="Confirm cancellation fees and equipment return requirements in your proposal."
             />
-            <Commitment
-              id="us-support"
-              title="People you can reach"
-              covers="Phone support from US-based people."
-              excludes="Ask the team which channels and hours apply to your account."
-            />
+            <Commitment id="us-support" title="People you can reach" />
           </div>
         </div>
       </section>
@@ -161,26 +147,33 @@ export default function Home() {
         <div className="grid four">
           {[
             [
+              "/solutions/terminals/",
               "At the counter",
               "Taking payments face to face? Start with your checkout needs.",
             ],
-            ["At the table", "Talk through the way your guests order and pay."],
             [
+              "/solutions/point-of-sale/",
+              "At the table",
+              "Talk through the way your guests order and pay.",
+            ],
+            [
+              "/solutions/mobile-payments/",
               "On the job",
               "Tell us where your work takes you and how you collect payment.",
             ],
             [
+              "/solutions/online-payments/",
               "Online or by invoice",
               "Start with your website, billing process and existing software.",
             ],
-          ].map(([title, body]) => (
+          ].map(([href, title, body]) => (
             <article className="card payment-card" key={title}>
               <span className="payment-icon" aria-hidden="true">
                 ↗
               </span>
               <h3>{title}</h3>
               <p>{body}</p>
-              <a href={entity.phone.href}>Discuss your setup</a>
+              <a href={href}>Explore {title.toLowerCase()}</a>
             </article>
           ))}
         </div>

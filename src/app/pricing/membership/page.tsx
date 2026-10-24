@@ -21,11 +21,8 @@ export default function Membership() {
         aside={<ProofQuote id="a-monroe" />}
       >
         <p>
-          TruePay Membership separates the card network’s cost from TruePay’s
-          markup so you can understand both parts of your processing bill.
-          Compare the full proposal, not just a transaction rate. Read the
-          rate-lock and equipment terms, then check your expected monthly cost
-          against your current statement before deciding.
+          Membership separates card-network costs from TruePay’s markup. See how
+          the program works and what comes with it.
         </p>
       </RouteHero>
       <section className="container section">
@@ -50,9 +47,12 @@ export default function Membership() {
           <p className="eyebrow">The program and its boundaries</p>
           <QuestionSection question={route.questions[1]}>
             <p>
-              Read these commitments alongside your written proposal. Confirm
-              terminal eligibility, ownership and the equipment coverage terms
-              before you choose.
+              Explore the commitments below and{" "}
+              <a href="/solutions/terminals/">
+                compare terminals for your checkout
+              </a>
+              . The details of each promise live together in the commitment
+              scope.
             </p>
             <div className="grid two">
               {commitments

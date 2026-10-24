@@ -20,11 +20,9 @@ export default function Contact() {
         aside={<ProofQuote id="a-monroe" />}
       >
         <p>
-          Call <a href={entity.phone.href}>{entity.phone.display}</a> or send a
-          question to TruePay about pricing, equipment or a new account. TruePay
-          is based in Josephine, Texas. If you already have an account and need
-          help, <a href="/support/">go directly to merchant support</a> so your
-          question starts in the right place.
+          Tell TruePay about pricing, equipment or switching processors. A
+          person from our Josephine, Texas team can discuss what your business
+          needs.
         </p>
       </RouteHero>
       <section className="container section">

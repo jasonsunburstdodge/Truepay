@@ -6,43 +6,42 @@ export const commitments = [
     covers:
       "TruePay's own markup and monthly fees, as described in the scope below.",
     excludes:
-      "The lock does not stop card networks from changing interchange or assessments. Ask for the written terms and any exceptions.",
+      "Card networks can still change interchange and assessments. Written rate-lock terms define any exceptions.",
   },
   {
     id: "month-to-month",
     title: "Room to choose each month",
     covers: "Month-to-month processing service.",
     excludes:
-      "This is not a statement that cancellation has no cost. Confirm cancellation fees and equipment return terms before signing.",
+      "Month-to-month service does not establish cancellation costs or equipment return terms.",
   },
   {
     id: "truecare",
-    title: "Coverage with a defined scope",
+    title: "Help with your equipment",
     covers:
       "Repair or replacement of covered equipment while you are a customer.",
     excludes:
-      "Do not assume damage, loss or every device is covered. Ask for the covered equipment, exclusions and replacement timing in writing.",
+      "Covered devices, damage, loss and replacement timing depend on the written equipment terms.",
   },
   {
     id: "free-terminal",
     title: "A terminal with Membership",
     covers: "A terminal included with the Membership program.",
     excludes:
-      "This does not specify a model or transfer ownership. Confirm eligibility, ownership and what must be returned if you leave.",
+      "The promise does not specify the model, eligibility, ownership or return requirements.",
   },
   {
     id: "us-support",
     title: "People you can reach",
     covers: "Phone support from US-based people.",
     excludes:
-      "This does not specify support hours, a text number or a response-time promise. Confirm the channels and hours for your account.",
+      "Support hours, channels and response times are separate details for your account.",
   },
   {
     id: "no-hidden-fees",
     title: "Fees you can account for",
     covers: "Fees disclosed in your agreement and explained on your statement.",
-    excludes:
-      "Clear disclosure does not mean there are no fees. Get the full schedule before comparing proposals.",
+    excludes: "Fees still apply. The full schedule belongs with your proposal.",
   },
   {
     id: "honest-recommendation",

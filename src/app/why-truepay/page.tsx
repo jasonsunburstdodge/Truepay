@@ -17,25 +17,19 @@ export default function WhyTruePay() {
     <>
       <RouteHero
         path={route.path}
-        eyebrow="Our commitments, with their limits"
+        eyebrow="People behind the promise"
         aside={
           <div className="card">
             <p className="eyebrow">Read before you choose</p>
-            <h2>Start with the scope.</h2>
-            <p>
-              A promise should tell you what it covers and what you still need
-              to ask.
-            </p>
+            <h2>Start with a conversation.</h2>
+            <p>Let’s talk through what matters to your business.</p>
             <a href="#fine-print">Read the commitment scope</a>
           </div>
         }
       >
         <p>
-          TruePay’s rate lock covers its own markup and monthly fees, not
-          changes in card-network interchange or assessments. Read each
-          commitment with its limits below. Ask for the written program terms,
-          cancellation conditions and equipment coverage before choosing a
-          processor. The details matter as much as the promise.
+          TruePay’s rate lock covers its markup and monthly fees. Card-network
+          costs can still change.
         </p>
       </RouteHero>
       <section className="band section">
@@ -44,7 +38,7 @@ export default function WhyTruePay() {
           <h2>Plain words. Clear boundaries.</h2>
           <div className="grid two">
             {commitments.map((c) => (
-              <Commitment key={c.id} {...c} expanded />
+              <Commitment key={c.id} {...c} />
             ))}
           </div>
         </div>
@@ -53,27 +47,29 @@ export default function WhyTruePay() {
         <p className="eyebrow">The fine print, in plain sight</p>
         <h2>Know what the promise covers.</h2>
         <p>
-          These are the commitment scopes and the questions to settle in your
-          written terms. The questions below are not confirmed benefits.
+          Ask us for the written terms. We’ll walk you through what each promise
+          covers and the details for your business.
         </p>
         <dl className="scope-list">
-          {commitments
-            .filter((c) => getClaim(c.id).scope)
-            .map((c) => (
-              <div key={c.id}>
-                <dt>{c.title}</dt>
-                <dd>
-                  <p>{getClaim(c.id).scope}</p>
-                  {c.id !== "rate-lock" && (
-                    <p className="note">
-                      Ask TruePay for the answer in your proposal before you
-                      sign.
-                    </p>
-                  )}
-                </dd>
-              </div>
-            ))}
+          {commitments.map((c) => (
+            <div key={c.id}>
+              <dt>{c.title}</dt>
+              <dd>
+                <p>
+                  <strong>What this covers:</strong> {c.covers}
+                </p>
+                <p>
+                  <strong>What it doesn’t:</strong> {c.excludes}
+                </p>
+                {getClaim(c.id).scope && <p>{getClaim(c.id).scope}</p>}
+              </dd>
+            </div>
+          ))}
         </dl>
+        <p>
+          The scope questions above are details to settle in your proposal, not
+          additional benefits.
+        </p>
         <QuestionSection question={route.questions[0]}>
           <p>
             The lock concerns TruePay’s own pricing. Card-network costs can

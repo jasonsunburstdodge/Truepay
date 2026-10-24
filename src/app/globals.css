@@ -1173,3 +1173,52 @@ caption {
     min-width: 720px;
   }
 }
+
+/* Solutions retain the partner-page card and section scales. */
+.section-heading {
+  font-size: clamp(28px, 3vw, 36px);
+}
+.solution-choice {
+  display: block;
+  text-decoration: none;
+}
+.solution-choice:hover {
+  background: var(--color-surface-alt);
+}
+.solution-choice > span:last-child {
+  font-weight: 700;
+  text-decoration: underline;
+}
+.back-to-hub {
+  margin-top: 28px;
+}
+.setup-steps {
+  list-style: none;
+  padding: 0;
+  margin-top: 32px;
+}
+.setup-steps li {
+  margin-bottom: 0;
+}
+.setup-steps .step-number {
+  display: block;
+  margin-bottom: 20px;
+}
+.availability-note {
+  font-weight: 700;
+}
+.table-hint {
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+[data-sources] table {
+  min-width: 780px;
+}
+[data-sources] th:first-child {
+  min-width: 145px;
+}
+@media (min-width: 1001px) {
+  .desktop-nav {
+    gap: 16px;
+  }
+}

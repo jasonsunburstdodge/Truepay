@@ -20,11 +20,8 @@ export default function Pricing() {
         aside={<ProofQuote id="r-moore" />}
       >
         <p>
-          TruePay’s pricing starts with how your business takes payments, the
-          cards your customers use and your processing statement. A single
-          advertised rate cannot explain your total cost. Compare the pricing
-          model, the processor’s markup and the full fee schedule before
-          deciding between Membership and dual pricing.
+          Your cost depends on how your business takes payments. Compare the
+          pricing model and the whole bill before choosing.
         </p>
       </RouteHero>
       <section className="container section">

@@ -10,11 +10,9 @@ export default function CalculatorPage() {
     <>
       <RouteHero path={route.path} eyebrow="Your numbers, in plain sight">
         <p>
-          Your effective rate is the total you paid in processing fees divided
-          by your card sales for the same period, multiplied by 100. It
-          expresses your processing cost as one percentage. Use your own
-          statement numbers below. The result is a calculation, not a quoted
-          TruePay rate or a savings promise.
+          Your effective rate is total processing fees divided by card sales,
+          multiplied by 100. Use one month’s statement to see your starting
+          point.
         </p>
       </RouteHero>
       <section className="band section">
