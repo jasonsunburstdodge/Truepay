@@ -96,7 +96,7 @@ export default function About() {
         <RelatedLinks route={route} />
       </section>
       <CtaBand
-        eyebrow="Start with a conversation"
+        eyebrow="Meet the team behind the fee explanation"
         title="Tell us what matters to your business."
         primary={route.primaryCta}
         secondary={route.secondaryCta}

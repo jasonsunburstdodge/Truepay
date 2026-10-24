@@ -22,7 +22,7 @@ import * as cheerio from "cheerio";
 import { routes, SITE_URL, sitemapRoutes, breadcrumbTrail, type RouteSpec } from "../../src/content/routes";
 import { claims, bannedPatterns, cautionPatterns } from "../../src/content/claims";
 import { redirects, unchangedUrls } from "../../src/content/redirects";
-import { bodySentences, duplicateSentences } from "./duplicate-copy";
+import { bodySentences, duplicateSentences, headingTexts } from "./duplicate-copy";
 import { copyStyleViolations } from "./copy-style";
 import { entity } from "../../src/content/entity";
 
@@ -120,7 +120,7 @@ const toPath = (href: string): string | null => {
 };
 
 // ───────────────────────── page audit ─────────────────────────
-type PageData = { route: RouteSpec; title: string; description: string; mainLinks: Set<string>; sentences: string[]; industrySentences: string[]; ctaHeadlines: string[] };
+type PageData = { route: RouteSpec; title: string; description: string; mainLinks: Set<string>; sentences: string[]; industrySentences: string[]; headings: string[]; ctaHeadlines: string[] };
 const pages: PageData[] = [];
 const claimUse = new Map<string, Set<string>>();
 
@@ -248,7 +248,7 @@ async function auditPage(route: RouteSpec) {
     if (lvl <= 3 && /\buppercase\b/.test($(el).attr("class") ?? "")) add("WARN", p, "voice", `h${lvl} styled uppercase: "${text.slice(0, 60)}" (use sentence case; uppercase only for small eyebrow labels)`);
   });
 
-  for (const dash of copyStyleViolations(html)) add("FAIL", p, "copy-style", `AP style: long dash U+${dash.codePointAt(0)!.toString(16).toUpperCase()} in rendered main copy outside blockquotes`);
+  for (const dash of copyStyleViolations(html)) add("FAIL", p, "copy-style", `AP style: prohibited punctuation U+${dash.codePointAt(0)!.toString(16).toUpperCase()} in rendered main copy outside blockquotes`);
 
   // visible text
   $("script,style,noscript").remove();
@@ -327,13 +327,14 @@ async function auditPage(route: RouteSpec) {
   });
   for (const l of route.links) if (!mainLinks.has(l)) add("WARN", p, "links", `Required contextual link to ${l} missing from <main>`);
 
-  pages.push({ route, title, description, mainLinks, sentences: bodySentences(html), industrySentences: route.template === "industry" ? bodySentences(html, 1) : [], ctaHeadlines: $doc("[data-cta-band] h2").map((_, node) => $doc(node).text().trim()).get() });
+  pages.push({ route, title, description, mainLinks, sentences: bodySentences(html), headings: headingTexts(html), industrySentences: route.template === "industry" ? bodySentences(html, 1) : [], ctaHeadlines: $doc("[data-cta-band] h2").map((_, node) => $doc(node).text().trim()).get() });
 }
 
 // ───────────────────────── site-level checks ─────────────────────────
 async function auditSite() {
   const duplicates = duplicateSentences(pages.map(p => ({path: p.route.path, sentences: p.sentences})));
   for (const duplicate of duplicates) add("FAIL", duplicate.paths[0], "duplicate-copy", `Body sentence over 8 words also appears on ${duplicate.paths.slice(1).join(", ")}: "${duplicate.sentence}"`);
+  for (const duplicate of duplicateSentences(pages.map(p => ({ path: p.route.path, sentences: p.headings })))) add("FAIL", duplicate.paths[0], "heading-originality", `H2 or eyebrow also appears on ${duplicate.paths.slice(1).join(", ")}: "${duplicate.sentence}"`);
   const industryPages = pages.filter(p => p.route.template === "industry");
   for (let i=0;i<industryPages.length;i++) for (let j=i+1;j<industryPages.length;j++) {
     const shared = industryPages[i].industrySentences.filter(s => industryPages[j].industrySentences.includes(s));

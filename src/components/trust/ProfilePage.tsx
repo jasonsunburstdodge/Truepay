@@ -17,7 +17,7 @@ export function ProfilePage({ slug }: { slug: string }) {
         person={person}
         aside={
           <div className="card profile-note">
-            <p className="eyebrow">Part of the TruePay team</p>
+            <p className="eyebrow">{jon ? "The founder behind the rate discussion" : "Operations behind the first payment"}</p>
             <h2>{jon ? "Ask about the markup on your statement." : "Discuss the equipment and onboarding handoff."}</h2>
             <p>{jon ? "Bring the fee lines you want Jon’s team to explain." : "Name the POS, terminal or gateway involved in your setup question."}</p>
             <a href={entity.phone.href}>{entity.phone.display}</a>
@@ -40,7 +40,7 @@ export function ProfilePage({ slug }: { slug: string }) {
         )}
       </RouteHero>
       <section className="container section">
-        <p className="eyebrow">Background</p>
+        <p className="eyebrow">{jon ? "Jon’s payments background" : "Shane’s operations background"}</p>
         <QuestionSection question={route.questions[0]}>
           <p>{jon ? "At TruePay, Jon’s merchant-pricing work includes processing statements, dual pricing and questions about rate increases." : "Shane’s TruePay responsibilities include onboarding, equipment and the coordination of merchant support."}</p>
           {jon && (
@@ -50,7 +50,7 @@ export function ProfilePage({ slug }: { slug: string }) {
           )}
         </QuestionSection>
         <div className="card profile-responsibilities">
-          <h2 className="section-heading">What I handle at TruePay</h2>
+          <h2 className="section-heading">{jon ? "Pricing questions Jon handles" : "Setup and support Shane oversees"}</h2>
           <ul>
             {person.expertise.map((topic) => (
               <li key={topic}>
@@ -87,7 +87,7 @@ export function ProfilePage({ slug }: { slug: string }) {
         <RelatedLinks route={route} />
       </section>
       <CtaBand
-        eyebrow="Talk about your business"
+        eyebrow={jon ? "Ask about your processing markup" : "Ask about your onboarding plan"}
         title={jon ? "Bring your statement’s markup questions to Jon’s team." : "Talk through your equipment handoff with Shane’s team."}
         primary={route.primaryCta}
         secondary="none"

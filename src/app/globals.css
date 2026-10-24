@@ -1351,3 +1351,5 @@ caption {
 .industry-questions [data-sources] { margin-top: 48px; }
 .industry-questions [data-sources] h2 { font-size: 32px; }
 @media(max-width:760px) { .industry-intro-grid { grid-template-columns: 1fr; gap: 24px; } }
+
+.person-role { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--color-slate); }

@@ -97,7 +97,7 @@ export const people: Person[] = [
     slug: "jon-wilson",
     name: "Jon Wilson",
     alternateName: "Jonathan Wilson",
-    jobTitle: "Founder & Chief Executive Officer",
+    jobTitle: "Founder and Chief Executive Officer",
     profilePath: "/about/jon-wilson/",
     bio: "Jon founded TruePay in 2011 after watching business owners get burned by hidden fees, rate increases and processors who disappeared after the sale.",
     expertise: [
@@ -128,7 +128,7 @@ export const people: Person[] = [
   {
     slug: "tim-files",
     name: "Tim Files",
-    jobTitle: "Owner & Investor",
+    jobTitle: "Owner and Investor",
     bio: "Tim brings strategic vision and a track record of building businesses the right way.",
     expertise: [],
     confirm: "Whether Tim should appear publicly.",

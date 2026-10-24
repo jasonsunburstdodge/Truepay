@@ -5,10 +5,10 @@ export type Source = {
   publisher?: string;
   accessed?: string;
 };
-export function Sources({ sources }: { sources: Source[] }) {
+export function Sources({ sources, title }: { sources: Source[]; title: string }) {
   return (
     <section data-sources>
-      <h2>Sources</h2>
+      <h2>{title}</h2>
       <ul>
         {sources.map((source) => (
           <li key={source.url}>

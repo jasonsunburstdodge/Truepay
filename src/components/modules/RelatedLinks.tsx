@@ -5,7 +5,7 @@ export function RelatedLinks({ route }: { route: RouteSpec }) {
   if (!links.length) return null;
   return (
     <aside className="related">
-      <h2>Keep exploring</h2>
+      <h2>{route.label}: related pages</h2>
       <ul className="related-grid">
         {links.map((link) => (
           <li key={link.path}>
