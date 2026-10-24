@@ -1,2 +1,3 @@
 import restaurants from "./restaurants";
-export const industryPages = [restaurants];
+import retail from "./retail";
+export const industryPages = [restaurants, retail];
