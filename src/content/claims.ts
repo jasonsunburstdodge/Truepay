@@ -216,6 +216,9 @@ export const claims: Claim[] = [
  * (Case-insensitive regex sources.)
  */
 export const bannedPatterns: { pattern: string; why: string }[] = [
+  { pattern: "\\b(?:seamless|elevate|unlock|empower|robust|leverage|streamline|tailored|navigate|journey)\\b", why: "Client banned generic filler" },
+  { pattern: "\\b(?:game[- ]changer|cutting[- ]edge|state[- ]of[- ]the[- ]art|peace of mind|hassle[- ]free|one[- ]stop|best[- ]in[- ]class|world[- ]class)\\b", why: "Client banned generic filler" },
+  { pattern: "take your business to the next level|in today['’]s fast[- ]paced world|look no further|we['’]ve got you covered|whether you['’]re (?:a|an) [^.?!]{1,100} or (?:a|an) ", why: "Client banned interchangeable marketing phrase" },
   { pattern: "lorem ipsum", why: "Placeholder copy" },
   { pattern: "john doe", why: "Placeholder testimonial" },
   { pattern: "\\bTODO\\b|\\bTBD\\b|NEEDS:", why: "Internal note leaked into page" },

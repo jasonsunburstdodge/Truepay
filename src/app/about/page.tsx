@@ -1,6 +1,5 @@
 import { getRoute } from "@/content/routes";
 import { entity, people } from "@/content/entity";
-import { getClaim } from "@/lib/claims";
 import { buildMetadata } from "@/lib/seo";
 import { RouteHero } from "@/components/modules/RouteHero";
 import {
@@ -31,7 +30,7 @@ export default function About() {
       <section className="container section">
         <p className="eyebrow">Our beginning</p>
         <QuestionSection question={route.questions[1]}>
-          <p data-claim="founded-2011">{jon.bio}</p>
+          <p data-claim="founded-2011">Jon founded TruePay in 2011 in response to the hidden fees and rate increases business owners described.</p>
           <p>
             He built TruePay around a simple idea: take care of people. The
             handshake principle means the conversation starts with what matters
@@ -71,7 +70,7 @@ export default function About() {
             <a href="/why-truepay/#fine-print">the details behind them</a>.
           </p>
           <p data-claim="honest-recommendation">
-            {getClaim("honest-recommendation").copy}
+            For Jon’s team, an honest recommendation can mean telling you that your present processing arrangement is worth keeping.
           </p>
         </div>
       </section>
@@ -83,8 +82,8 @@ export default function About() {
           </p>
         </QuestionSection>
         <div className="grid two about-people">
-          <PersonCard person={jon} />
-          <PersonCard person={shane} />
+          <PersonCard person={jon} showBio={false} />
+          <PersonCard person={shane} showBio={false} />
         </div>
         <QuestionSection question={route.questions[2]}>
           <p>

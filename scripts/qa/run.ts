@@ -22,6 +22,7 @@ import * as cheerio from "cheerio";
 import { routes, SITE_URL, sitemapRoutes, breadcrumbTrail, type RouteSpec } from "../../src/content/routes";
 import { claims, bannedPatterns, cautionPatterns } from "../../src/content/claims";
 import { redirects, unchangedUrls } from "../../src/content/redirects";
+import { bodySentences, duplicateSentences } from "./duplicate-copy";
 import { copyStyleViolations } from "./copy-style";
 import { entity } from "../../src/content/entity";
 
@@ -119,7 +120,7 @@ const toPath = (href: string): string | null => {
 };
 
 // ───────────────────────── page audit ─────────────────────────
-type PageData = { route: RouteSpec; title: string; description: string; mainLinks: Set<string> };
+type PageData = { route: RouteSpec; title: string; description: string; mainLinks: Set<string>; sentences: string[]; industrySentences: string[]; ctaHeadlines: string[] };
 const pages: PageData[] = [];
 const claimUse = new Map<string, Set<string>>();
 
@@ -326,11 +327,24 @@ async function auditPage(route: RouteSpec) {
   });
   for (const l of route.links) if (!mainLinks.has(l)) add("WARN", p, "links", `Required contextual link to ${l} missing from <main>`);
 
-  pages.push({ route, title, description, mainLinks });
+  pages.push({ route, title, description, mainLinks, sentences: bodySentences(html), industrySentences: route.template === "industry" ? bodySentences(html, 1) : [], ctaHeadlines: $doc("[data-cta-band] h2").map((_, node) => $doc(node).text().trim()).get() });
 }
 
 // ───────────────────────── site-level checks ─────────────────────────
 async function auditSite() {
+  const duplicates = duplicateSentences(pages.map(p => ({path: p.route.path, sentences: p.sentences})));
+  for (const duplicate of duplicates) add("FAIL", duplicate.paths[0], "duplicate-copy", `Body sentence over 8 words also appears on ${duplicate.paths.slice(1).join(", ")}: "${duplicate.sentence}"`);
+  const industryPages = pages.filter(p => p.route.template === "industry");
+  for (let i=0;i<industryPages.length;i++) for (let j=i+1;j<industryPages.length;j++) {
+    const shared = industryPages[i].industrySentences.filter(s => industryPages[j].industrySentences.includes(s));
+    if (shared.length > 1) add("FAIL", industryPages[i].route.path, "industry-originality", `Shares ${shared.length} body sentences with ${industryPages[j].route.path}`);
+  }
+  const ctaOwners = new Map<string,string>();
+  for (const page of pages) for (const headline of page.ctaHeadlines) {
+    if(ctaOwners.has(norm(headline)) && ctaOwners.get(norm(headline)) !== page.route.path) add("FAIL",page.route.path,"cta-originality",`CTA headline also appears on ${ctaOwners.get(norm(headline))}: "${headline}"`);
+    else ctaOwners.set(norm(headline),page.route.path);
+  }
+
   // all internal links resolve
   const linkTargets = new Set<string>();
   for (const pg of pages) pg.mainLinks.forEach((l) => { linkTargets.add(l); });

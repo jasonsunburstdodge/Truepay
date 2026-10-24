@@ -57,7 +57,7 @@ export default function Team() {
       </section>
       <CtaBand
         eyebrow="Bring your questions"
-        title="Let’s talk about your business."
+        title="Find the TruePay person for your pricing or setup question."
         primary={route.primaryCta}
         secondary="none"
       />

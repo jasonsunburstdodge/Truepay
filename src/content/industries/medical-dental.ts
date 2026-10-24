@@ -1,6 +1,6 @@
 import type { IndustryPageContent } from "./model";
 const medical: IndustryPageContent = {
- slug:"medical-dental",eyebrow:"For the payment side of the front desk",hero:"Make the patient’s checkout amount clear. Keep the payment record connected to the balance your office is collecting.",
+ slug:"medical-dental",eyebrow:"For the payment side of the front desk",hero:"Connect the payment taken at the front desk to the patient’s remaining balance. Start with your practice-management software.",
  answer:"A medical or dental office may collect a visit payment at checkout and bill a remaining patient balance later. Start with how those amounts are recorded in your practice software. TruePay can discuss a terminal, online payment connection or invoice workflow without assuming that a new processor replaces your practice-management system.",
  workflowTitle:"How payments work in a medical or dental office",
  workflow:[["Identify the amount due", "Confirm which visit payment or patient balance the front desk is collecting. Keep the reason for a charge distinct from the payment reference used for reconciliation."],["Record the collection", "Match the charged amount to the office’s billing record. Demonstrate a partial payment so staff can still identify the outstanding balance."],["Follow the later balance", "Show how a subsequent invoice reaches the patient and how its payment returns to the ledger. Avoid creating two collection routes for the same unpaid amount."]],

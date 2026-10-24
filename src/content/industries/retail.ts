@@ -1,6 +1,6 @@
 import type { IndustryPageContent } from "./model";
 const retail: IndustryPageContent = {
-  slug:"retail",eyebrow:"From the shelf to the receipt",hero:"Make the last step in the sale feel simple. Choose checkout around your products and the people selling them.",
+  slug:"retail",eyebrow:"From the shelf to the receipt",hero:"Connect the item on the shelf to its payment and return record. Start with your catalog and counter.",
   answer:"Retail checkout connects the item, its price and the payment record. A store with inventory and online orders may need a POS and website connection, while a small counter may only need a terminal. Compare sales, exchanges and refunds together so your staff can follow the same item after the customer leaves.",
   workflowTitle:"How payments work in a retail store",
   workflow:[["Find the item", "Start with your product catalog, variants and the price the customer saw. Show how staff handle a sale item or an item without a readable code."],["Complete the purchase", "Take the selected tender and provide a receipt that helps the customer and staff identify the purchase later."],["Handle the return", "Connect the original sale to its refund or exchange. Check how payment corrections and stock changes reach the records your manager relies on."]],

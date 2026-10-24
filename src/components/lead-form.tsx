@@ -7,8 +7,10 @@ import { readUtm } from "@/lib/utm";
 import { track } from "@/lib/analytics";
 export function LeadForm({
   formType = "review",
+  placement,
 }: {
   formType?: "review" | "contact";
+  placement?: "home";
 }) {
   const router = useRouter();
   const [status, setStatus] = useState<"idle" | "submitting" | "error">("idle");
@@ -109,7 +111,7 @@ export function LeadForm({
         >
           <p>
             {formType === "review"
-              ? "Request a conversation about your statement. This form sends contact details, not a statement file."
+              ? placement === "home" ? "Use this first contact to ask about your processing bill. Statement files and account numbers belong outside this form." : "Request a review of the fee lines on your statement. Send contact details here and arrange statement sharing with the team."
               : "Tell us what you’re trying to solve. Keep account numbers and financial details out of this form."}
           </p>
           <div hidden aria-hidden="true">
@@ -201,8 +203,7 @@ export function LeadForm({
           )}
           <p className="note">
             You can also call{" "}
-            <a href={entity.phone.href}>{entity.phone.display}</a> directly. A
-            confirmation appears only after your request is delivered.
+            <a href={entity.phone.href}>{entity.phone.display}</a> directly. {formType === "contact" ? "If your contact request does not go through, use the phone number for pricing or account questions." : placement === "home" ? "Call to arrange the statement conversation if you cannot send this first message." : "If the review request cannot be sent, call before sharing any statement file."}
           </p>
         </form>
       )}

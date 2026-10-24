@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { track } from "@/lib/analytics";
 import { useState } from "react";
-export function RateCalculator() {
+export function RateCalculator({ context }: { context?: "home" }) {
   const [sales, setSales] = useState("25000");
   const [fees, setFees] = useState("750");
   const valid =
@@ -50,8 +50,7 @@ export function RateCalculator() {
           </div>
         </label>
         <p id="calculator-note" className="note">
-          Use fees and card sales from the same month. Include all processing
-          fees shown on that statement.
+          {context === "home" ? "Start with one processing statement and enter its total card sales and fees together." : "Use fees and card sales from the same month. Include all processing fees shown on that statement."}
         </p>
         {!valid && (
           <p id="calculator-error" role="alert">
@@ -67,9 +66,7 @@ export function RateCalculator() {
         <p>Total fees ÷ card sales × 100</p>
       </div>
       <p className="note calculator-example">
-        Illustration: $750 in fees ÷ $25,000 in card sales × 100 ={" "}
-        {((750 / 25000) * 100).toFixed(2)}%. This is arithmetic from your
-        inputs, not a savings estimate or an industry average.
+        {context === "home" ? "The example inputs divide $750 of fees by $25,000 of card sales, giving a 3.00% effective rate. Replace both inputs with the matching totals on your statement." : `Illustration: $750 in fees ÷ $25,000 in card sales × 100 = ${((750 / 25000) * 100).toFixed(2)}%. This is arithmetic from your inputs, not a savings estimate or an industry average.`}
       </p>
       <button
         type="button"
