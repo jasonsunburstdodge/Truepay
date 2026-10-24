@@ -29,6 +29,8 @@ export type Claim = {
   /** Who must confirm, and what. */
   confirm?: string;
   source: string;
+  /** Machine-readable inputs for explicitly labeled illustrations. */
+  values?: Record<string, number>;
 };
 
 export const claims: Claim[] = [
@@ -182,6 +184,7 @@ export const claims: Claim[] = [
   },
   {
     id: "partner-split",
+    values: { salesRepPercent: 50, referralPercent: 20 },
     status: "pending",
     copy: "Sales reps earn 50% and referral partners earn 20% of TruePay's applicable profit on the merchants they bring in, under a written agreement.",
     confirm: "Jon: current splits and the definition of 'applicable profit'.",
@@ -189,6 +192,7 @@ export const claims: Claim[] = [
   },
   {
     id: "partner-estimator",
+    values: { defaultMarginPercent: 1, defaultAttritionPercent: 2 },
     status: "pending",
     copy: "Illustration only: volume × estimated TruePay profit margin × your share. Assumes accounts keep processing; real results vary and aren't guaranteed.",
     scope: "Margin assumption (1%-1.75% for dual pricing) must be confirmed; add an attrition input; lead with the single-account example.",

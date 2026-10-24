@@ -1,6 +1,7 @@
-export const formTypes = ["review", "contact"] as const;
+export const formTypes = ["review", "contact", "partner", "careers"] as const;
 export type Lead = {
   formType: (typeof formTypes)[number];
+  partnerPath?: "sales-rep" | "referral-partner" | "discuss";
   name: string;
   business: string;
   email: string;
@@ -38,7 +39,7 @@ export function validateLead(input: unknown): Lead | null {
   };
   try {
     const name = field("name", 120, true),
-      business = field("business", 160, true),
+      business = field("business", 160, data.formType === "review" || data.formType === "contact"),
       email = field("email", 254, true),
       phone = field("phone", 40),
       industry = field("industry", 100),
@@ -70,7 +71,13 @@ export function validateLead(input: unknown): Lead | null {
         utm[key] = value.trim();
       }
     }
+    let partnerPath: Lead["partnerPath"];
+    if (data.formType === "partner") {
+      if (!["sales-rep", "referral-partner", "discuss"].includes(String(data.partnerPath))) return null;
+      partnerPath = data.partnerPath as Lead["partnerPath"];
+    }
     return {
+      ...(partnerPath ? { partnerPath } : {}),
       formType: data.formType as Lead["formType"],
       name,
       business,

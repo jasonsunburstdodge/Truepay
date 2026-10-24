@@ -917,7 +917,7 @@ export const routes: RouteSpec[] = [
     path: "/partners/",
     template: "partner",
     phase: 7,
-    status: "planned",
+    status: "draft",
     label: "Partner program",
     title: "Payment Processing Partner and Sales Rep Program | TruePay",
     description:

@@ -1,6 +1,8 @@
 export type AnalyticsEvent =
   | "review_submit"
   | "contact_submit"
+  | "partner_apply"
+  | "careers_apply"
   | "call_click"
   | "text_click"
   | "calculator_complete";

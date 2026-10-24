@@ -130,3 +130,39 @@ test("lead API requires real webhook acknowledgement before issuing a receipt", 
     else process.env.LEAD_WEBHOOK_URL = webhook;
   }
 });
+
+test("partner and career interest use the existing validated pipeline without fabricated success", async () => {
+  const priorWebhook = process.env.LEAD_WEBHOOK_URL, priorFetch = globalThis.fetch;
+  try {
+    const partner = { ...fixture, formType: "partner", partnerPath: "referral-partner", business: "", pagePath: "/partners/" };
+    const careers = { ...fixture, formType: "careers", business: "", pagePath: "/careers/" };
+    assert.equal(validateLead(partner)?.partnerPath, "referral-partner");
+    assert.equal(validateLead(careers)?.formType, "careers");
+    assert.equal(validateLead({...partner,partnerPath:"unknown"}),null);
+    assert.equal(validateLead({...partner,consent:false}),null);
+    delete process.env.LEAD_WEBHOOK_URL;
+    for (const body of [partner, careers]) {
+      const response = await POST(request(body));
+      assert.equal(response.status,503);
+      assert.equal(response.headers.get("set-cookie"),null);
+    }
+    process.env.LEAD_WEBHOOK_URL = "https://webhook.example.test/intake";
+    let captured: Record<string, unknown> = {};
+    globalThis.fetch = async (_url, init) => {captured=JSON.parse(String(init?.body));return new Response(null,{status:204});};
+    for (const body of [partner,careers]) {
+      const response = await POST(request(body));
+      assert.equal(response.status,200);
+      assert.equal(captured.formType,body.formType);
+      assert.equal(captured.consent,true);
+      assert.ok(!("website" in captured));
+      assert.match(response.headers.get("set-cookie")!,new RegExp(`truepay-request-type=${body.formType}`));
+    }
+    globalThis.fetch = async () => new Response(null,{status:500});
+    const failure = await POST(request(partner));
+    assert.equal(failure.status,502);
+    assert.equal(failure.headers.get("set-cookie"),null);
+  } finally {
+    globalThis.fetch=priorFetch;
+    if(priorWebhook===undefined)delete process.env.LEAD_WEBHOOK_URL;else process.env.LEAD_WEBHOOK_URL=priorWebhook;
+  }
+});
