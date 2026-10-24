@@ -1,0 +1,422 @@
+[
+ {
+  "w": 390,
+  "p": "/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/statement-review/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/effective-rate-calculator/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/support/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/contact/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/why-truepay/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/pricing/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/pricing/membership/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/pricing/dual-pricing/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/solutions/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/solutions/point-of-sale/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/solutions/terminals/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/solutions/mobile-payments/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/solutions/online-payments/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/solutions/integrations/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/solutions/billing-software/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/about/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/about/team/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/about/jon-wilson/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/about/shane-spears/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/customer-stories/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/service-areas/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/resources/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/resources/how-to-read-your-processing-statement/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/resources/flat-rate-vs-tiered-vs-interchange-plus/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/resources/dual-pricing-vs-surcharging-vs-cash-discount/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/resources/why-credit-card-processing-fees-go-up/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/resources/how-to-switch-payment-processors/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/resources/how-credit-card-processing-works/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/industries/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/industries/restaurants/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/industries/retail/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/industries/salons-spas/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/industries/medical-dental/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/industries/home-services/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/industries/auto-services/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/industries/professional-services/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/industries/nonprofits/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/partners/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/careers/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/privacy-policy/",
+  "v": []
+ },
+ {
+  "w": 390,
+  "p": "/terms/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/statement-review/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/effective-rate-calculator/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/support/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/contact/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/why-truepay/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/pricing/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/pricing/membership/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/pricing/dual-pricing/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/solutions/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/solutions/point-of-sale/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/solutions/terminals/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/solutions/mobile-payments/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/solutions/online-payments/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/solutions/integrations/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/solutions/billing-software/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/about/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/about/team/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/about/jon-wilson/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/about/shane-spears/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/customer-stories/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/service-areas/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/resources/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/resources/how-to-read-your-processing-statement/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/resources/flat-rate-vs-tiered-vs-interchange-plus/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/resources/dual-pricing-vs-surcharging-vs-cash-discount/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/resources/why-credit-card-processing-fees-go-up/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/resources/how-to-switch-payment-processors/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/resources/how-credit-card-processing-works/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/industries/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/industries/restaurants/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/industries/retail/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/industries/salons-spas/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/industries/medical-dental/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/industries/home-services/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/industries/auto-services/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/industries/professional-services/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/industries/nonprofits/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/partners/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/careers/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/privacy-policy/",
+  "v": []
+ },
+ {
+  "w": 1440,
+  "p": "/terms/",
+  "v": []
+ }
+]
