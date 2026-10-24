@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-24",
+  "lint": {
+    "exitCode": 0,
+    "warnings": 0
+  },
+  "typecheck": {
+    "exitCode": 0
+  },
+  "foundation": {
+    "tests": 21,
+    "passed": 21,
+    "failed": 0
+  },
+  "productionQA": {
+    "fail": 0,
+    "warn": 48,
+    "info": 4,
+    "pages": 43
+  },
+  "previewQA": {
+    "fail": 0,
+    "warn": 48,
+    "info": 4,
+    "pages": 43
+  },
+  "browser": {
+    "routeViewportChecks": 86,
+    "newPageScreenshots": 8,
+    "reviewFixScreenshots": 2,
+    "runtimeErrors": 0,
+    "overflow": 0,
+    "duplicateLongBodySentences": 0,
+    "duplicateH2OrEyebrow": 0
+  }
+}
