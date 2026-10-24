@@ -7,6 +7,7 @@ export function PersonCard({ person }: { person: Person }) {
       {person.image && (
         <Image src={person.image} alt={person.name} width={240} height={240} />
       )}
+      {!person.image && <div className="person-rule" aria-hidden="true" />}
       <p className="eyebrow">{person.jobTitle}</p>
       <h3>{person.name}</h3>
       <p
@@ -16,6 +17,16 @@ export function PersonCard({ person }: { person: Person }) {
       >
         {person.bio}
       </p>
+      {person.expertise.length > 0 && (
+        <ul
+          className="person-topics"
+          aria-label={`What ${person.name} helps with`}
+        >
+          {person.expertise.map((topic) => (
+            <li key={topic}>{topic}</li>
+          ))}
+        </ul>
+      )}
       <a href={entity.phone.href}>Reach the team: {entity.phone.display}</a>
       {person.profilePath && isBuilt(person.profilePath) && (
         <a href={person.profilePath}>Meet {person.name}</a>

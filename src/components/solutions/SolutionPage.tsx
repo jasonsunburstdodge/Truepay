@@ -44,9 +44,6 @@ export function SolutionPage({ solution: s }: { solution: Solution }) {
         <div className="container">
           <p className="eyebrow">Compare your options</p>
           <h2>Start with what your team needs.</h2>
-          <p className="availability-note">
-            Ask us to confirm availability for your business.
-          </p>
           <p className="table-hint">
             Scroll across the table to compare every column.
           </p>
@@ -62,6 +59,12 @@ export function SolutionPage({ solution: s }: { solution: Solution }) {
               ])}
             />
           </div>
+          {s.path === "/solutions/point-of-sale/" && (
+            <p className="contact-page-link">
+              Looking for SkyTab Mobile or SkyTab Glass? Tell us which model you
+              use so we can talk through your setup.
+            </p>
+          )}
           {s.path === "/solutions/terminals/" && (
             <p className="contact-page-link">
               Looking for Clover Mini or Clover Station Duo?{" "}
@@ -71,8 +74,8 @@ export function SolutionPage({ solution: s }: { solution: Solution }) {
           )}
           {s.path === "/solutions/mobile-payments/" && (
             <p className="contact-page-link">
-              Already using RCKT mobile POS? Bring your device and current setup
-              details so we can discuss your next step.
+              Already using the Valor Pay app or RCKT mobile POS? Bring your
+              device and current setup details so we can discuss your next step.
             </p>
           )}
         </div>
@@ -113,6 +116,12 @@ export function SolutionPage({ solution: s }: { solution: Solution }) {
         {route.questions.slice(1).map((q, i) => (
           <QuestionSection key={q} question={q}>
             <p>{s.questions[i + 1]}</p>
+            {s.path === "/solutions/point-of-sale/" && (
+              <p className="contact-page-link">
+                Looking for SkyTab Mobile or SkyTab Glass? Tell us which model
+                you use so we can talk through your setup.
+              </p>
+            )}
             {s.path === "/solutions/terminals/" && i === 0 && (
               <p data-claim="free-terminal">{getClaim("free-terminal").copy}</p>
             )}

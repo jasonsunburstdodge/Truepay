@@ -1,6 +1,7 @@
+import type { Person } from "@/content/entity";
 import type { ReactNode } from "react";
 import { getRoute } from "@/content/routes";
-import { webPageNode, serviceNode } from "@/lib/schema";
+import { webPageNode, serviceNode, personNode } from "@/lib/schema";
 import { JsonLd } from "@/components/json-ld";
 import { AnswerFirst } from "./AnswerFirst";
 import { Breadcrumbs } from "./Breadcrumbs";
@@ -10,11 +11,13 @@ export function RouteHero({
   eyebrow,
   children,
   aside,
+  person,
 }: {
   path: string;
   eyebrow: string;
   children: ReactNode;
   aside?: ReactNode;
+  person?: Person;
 }) {
   const route = getRoute(path)!;
   return (
@@ -22,6 +25,7 @@ export function RouteHero({
       <JsonLd
         nodes={[
           webPageNode(route),
+          ...(person ? [personNode(person)] : []),
           ...(route.schema.includes("Service") ? [serviceNode(route)] : []),
         ]}
       />

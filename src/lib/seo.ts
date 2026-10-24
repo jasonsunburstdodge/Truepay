@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { getRoute, SITE_URL } from "@/content/routes";
+import { getRoute, SITE_URL, type RouteSpec } from "@/content/routes";
 export function buildMetadata(path: string): Metadata {
   const route = getRoute(path);
   if (!route) throw new Error(`Unknown route: ${path}`);
+  return buildRouteMetadata(route);
+}
+export function buildRouteMetadata(route: RouteSpec): Metadata {
   const index =
     process.env.SITE_ENV === "production" &&
     route.indexable &&

@@ -152,6 +152,8 @@ export type Testimonial = {
   city?: string;
   /** Original public location of the review. */
   sourceUrl?: string;
+  /** Verified historical publication, retained across the live URL migration. */
+  archivedSourceUrl?: string;
   /** published = on gotruepay.com today; permissioned = written OK with business identity. */
   status: "published" | "permissioned";
 };
@@ -162,6 +164,8 @@ export const testimonials: Testimonial[] = [
     id: "r-moore",
     quote: "Best credit card system we've had at our shop...Period!",
     name: "R. Moore",
+    archivedSourceUrl:
+      "https://web.archive.org/web/20260413133352/https://gotruepay.com/reviews/",
     status: "published",
     sourceUrl: "https://gotruepay.com/reviews/",
   },
@@ -170,6 +174,8 @@ export const testimonials: Testimonial[] = [
     quote:
       "I absolutely love this credit card system. Jon and Shane are awesome and are always there to answer questions and help with anything you may need!!!",
     name: "E. Springfield",
+    archivedSourceUrl:
+      "https://web.archive.org/web/20260413133352/https://gotruepay.com/reviews/",
     status: "published",
     sourceUrl: "https://gotruepay.com/",
   },
@@ -178,6 +184,8 @@ export const testimonials: Testimonial[] = [
     quote:
       "We've been very pleased with Truepay! the service and the people! Jon and the crew are always very quick to check in and ensure we are doing well.",
     name: "A. Monroe",
+    archivedSourceUrl:
+      "https://web.archive.org/web/20260413133352/https://gotruepay.com/reviews/",
     status: "published",
     sourceUrl: "https://gotruepay.com/",
   },
@@ -186,6 +194,8 @@ export const testimonials: Testimonial[] = [
     quote:
       "Wonderful solution for business owners. If you take credit cards, start saving some real money. Contact them today, great people.",
     name: "B. Slavens",
+    archivedSourceUrl:
+      "https://web.archive.org/web/20260413133352/https://gotruepay.com/reviews/",
     status: "published",
     sourceUrl: "https://gotruepay.com/",
   },
@@ -194,6 +204,8 @@ export const testimonials: Testimonial[] = [
     quote:
       "…our business went from paying in excess of $50,000.00 a year in credit card fees and since switching to TruePay our credit card fees are $420.00.",
     name: "M. Holt",
+    archivedSourceUrl:
+      "https://web.archive.org/web/20260413133352/https://gotruepay.com/reviews/",
     status: "published",
     sourceUrl: "https://gotruepay.com/reviews/",
   },
