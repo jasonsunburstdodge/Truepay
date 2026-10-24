@@ -1,0 +1,28 @@
+[
+  {
+    "path": "/about/jon-wilson/",
+    "validator": "Google Rich Results Test",
+    "mode": "CODE, smartphone",
+    "input": "jon-wilson-validator-input.html",
+    "resultUrl": "https://search.google.com/test/rich-results/result?id=ZnVdh5BCj1Cz0JMRjZm85w",
+    "profileResultUrl": "https://search.google.com/test/rich-results/result/r%2Fprofile-page?id=ZnVdh5BCj1Cz0JMRjZm85w",
+    "result": "4 valid items detected; Profile page: 1 valid item detected",
+    "person": "Jon Wilson",
+    "profileCriticalIssues": 0,
+    "profileNonCriticalIssues": 0,
+    "otherNonCriticalIssue": "Local businesses: Missing field image (optional). Existing Organization graph; no approved business image supplied. Logo remains registered."
+  },
+  {
+    "path": "/about/shane-spears/",
+    "validator": "Google Rich Results Test",
+    "mode": "CODE, smartphone",
+    "input": "shane-spears-validator-input.html",
+    "resultUrl": "https://search.google.com/test/rich-results/result?id=hUdMElTEGy8FEthe2fAm2w",
+    "profileResultUrl": "https://search.google.com/test/rich-results/result/r%2Fprofile-page?id=hUdMElTEGy8FEthe2fAm2w",
+    "result": "4 valid items detected; Profile page: 1 valid item detected",
+    "person": "Shane Spears",
+    "profileCriticalIssues": 0,
+    "profileNonCriticalIssues": 0,
+    "otherNonCriticalIssue": "Local businesses: Missing field image (optional). Existing Organization graph; no approved business image supplied. Logo remains registered."
+  }
+]

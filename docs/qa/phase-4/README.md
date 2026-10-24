@@ -9,6 +9,7 @@ The following checkpoints were pushed to `chatgpt/phase-4-trust` during implemen
 1. `40552e0817b678d670003582882b70208b27e8a6`: the three review fixes only. Removed the three circular spec rows, retained SkyTab Mobile/SkyTab Glass/Valor Pay app names without unverified specifications, kept availability text only in table captions and corrected practice.
 2. `b6d326d1f3f8ecc28d0673407c9f15c453bbc007`: seven Phase 4 planned → draft transitions, including the unpublished story template, plus verified archived testimonial source references. Titles/H1s/questions/CTAs/required links are unchanged.
 3. `9571792bfa5dff2a3f0589f7138266db4ff99cef`: trust-page and shared-module implementation, saved before final browser evidence.
+4. `0bc283ffebf64a81b77d13244452b784b5b52366`: final gates, responsive polish and twelve page screenshots.
 
 ## Built
 
@@ -42,7 +43,7 @@ Additional source pages inspected: dev `/our-story/`, dev `/our-team/`, live `/a
 - `npm run qa -- --phase 4`: **0 FAIL · 42 WARN · 17 INFO (23 pages)**. [Production report](qa-report.md).
 - `npm run qa -- --phase 4 --preview`: **0 FAIL · 42 WARN · 17 INFO (23 pages)**. [Preview report](qa-report-preview.md), including noindex headers/disallow-all robots.
 - `CHROME_PATH=/path/to/chromium node --import tsx scripts/qa/phase-4-browser.mjs`: PASS. [Browser evidence](browser-results.json) covers 46 page/viewport checks, 12 new-page screenshots, two rendered profile graphs, all built required contextual links, no orphans, two-sentence heroes, 32–40px question headings, verbatim/source-linked reviews, no-photo cards, illustrative coverage, trust redirects, unpublished-story 404s, no-JS content, static 2011 HTML and keyboard/mobile navigation. No viewport overflow or runtime errors.
-- [Person graph checks](person-schema-checks.json) verify the actual rendered JSON-LD against entity fields and graph bindings. Exact submitted profile JSON-LD and HTML validator inputs are included for reproduction. External Rich Results Test evidence is recorded alongside these files.
+- [Person graph checks](person-schema-checks.json) verify the actual rendered JSON-LD against entity fields and graph bindings. Exact submitted profile JSON-LD and HTML validator inputs are included for reproduction. [External Rich Results Test](schema-validation.md): both profiles valid, with no ProfilePage issues. The existing Organization graph has only an optional image warning, documented separately.
 - [Every WARN and disposition](warning-disposition.md); the complete TruePay sign-off table is in the QA report and PR.
 
 ## Remaining confirmation
