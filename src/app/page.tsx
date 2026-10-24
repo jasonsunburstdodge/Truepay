@@ -109,7 +109,7 @@ export default function Home() {
             </p>
           </QuestionSection>
           <div className="grid three">
-            <Commitment id="rate-lock" title="A markup that stays put" />
+            <Commitment context="home" id="rate-lock" title="A markup that stays put" />
             <Commitment
               id="month-to-month"
               title="Room to make your own choice"
@@ -131,7 +131,7 @@ export default function Home() {
           </QuestionSection>
           <div className="grid two">
             {people.slice(0, 2).map((person) => (
-              <PersonCard key={person.slug} person={person} />
+              <PersonCard key={person.slug} person={person} bio={person.slug === "jon-wilson" ? "Jon’s TruePay work focuses on the pricing, statement and dual-pricing questions behind your processing decision." : "Shane handles TruePay operations across onboarding, equipment and the support handoff after setup."} />
             ))}
           </div>
         </div>
@@ -189,7 +189,7 @@ export default function Home() {
             .
           </p>
           <p className="section-intro" data-claim="dual-pricing-cost">
-            {getClaim("dual-pricing-cost").copy}
+            Two displayed prices can offset part of card acceptance costs through the card price. Include any remaining monthly charges when comparing the program.
           </p>
           <FitCheck
             goodFit={[
@@ -213,7 +213,7 @@ export default function Home() {
             Your effective rate is your total processing fees divided by your
             card sales, multiplied by 100.
           </p>
-          <RateCalculator />
+          <RateCalculator context="home" />
           <p className="calculator-page-link">
             <a href="/effective-rate-calculator/">
               Open the effective rate calculator
@@ -232,13 +232,12 @@ export default function Home() {
       <section className="band section">
         <div className="container coverage">
           <p className="eyebrow">A Texas home base</p>
-          <h2>Let’s talk about your business.</h2>
+          <h2>Check service options for your payment location.</h2>
           <p className="section-intro" data-claim="coverage">
-            {getClaim("coverage").copy}
+            TruePay’s home base is Josephine, Texas, with business coverage across the U.S.
           </p>
           <p>
-            Tell us where you operate and what you need. We’ll discuss the
-            available options with you.
+            Name the state where your checkout or job sites operate so the team can discuss service options for that location.
           </p>
         </div>
       </section>
@@ -262,7 +261,7 @@ export default function Home() {
               out of this contact form.
             </p>
           </div>
-          <LeadForm />
+          <LeadForm placement="home" />
         </div>
       </section>
       <div className="container">

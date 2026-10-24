@@ -70,7 +70,7 @@ export function CtaBand({
   secondary?: CtaId;
 }) {
   return (
-    <section className="hero-gradient section">
+    <section className="hero-gradient section" data-cta-band>
       <div className="container">
         <p className="eyebrow">{eyebrow}</p>
         <h2>{title}</h2>

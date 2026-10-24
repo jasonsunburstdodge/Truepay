@@ -1,0 +1,474 @@
+{
+  "summary": "PASS: 78 page/viewport checks, 18 new-page screenshots + 2 guide screenshots, all required links, AP copy, truthful review/date display and originality gates",
+  "records": [
+    {
+      "path": "/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/statement-review/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/effective-rate-calculator/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/support/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/contact/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/thank-you/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/why-truepay/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/pricing/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/pricing/membership/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/pricing/dual-pricing/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/solutions/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/solutions/point-of-sale/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/solutions/terminals/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/solutions/mobile-payments/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/solutions/online-payments/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/solutions/integrations/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/solutions/billing-software/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/about/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/about/team/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/about/jon-wilson/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/about/shane-spears/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/customer-stories/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/service-areas/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/resources/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/resources/how-to-read-your-processing-statement/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/resources/flat-rate-vs-tiered-vs-interchange-plus/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/resources/dual-pricing-vs-surcharging-vs-cash-discount/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/resources/why-credit-card-processing-fees-go-up/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/resources/how-to-switch-payment-processors/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/resources/how-credit-card-processing-works/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/industries/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/industries/restaurants/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/industries/retail/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/industries/salons-spas/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/industries/medical-dental/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/industries/home-services/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/industries/auto-services/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/industries/professional-services/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/industries/nonprofits/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/statement-review/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/effective-rate-calculator/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/support/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/contact/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/thank-you/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/why-truepay/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/pricing/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/pricing/membership/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/pricing/dual-pricing/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/solutions/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/solutions/point-of-sale/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/solutions/terminals/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/solutions/mobile-payments/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/solutions/online-payments/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/solutions/integrations/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/solutions/billing-software/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/about/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/about/team/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/about/jon-wilson/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/about/shane-spears/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/customer-stories/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/service-areas/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/resources/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/resources/how-to-read-your-processing-statement/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/resources/flat-rate-vs-tiered-vs-interchange-plus/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/resources/dual-pricing-vs-surcharging-vs-cash-discount/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/resources/why-credit-card-processing-fees-go-up/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/resources/how-to-switch-payment-processors/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/resources/how-credit-card-processing-works/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/industries/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/industries/restaurants/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/industries/retail/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/industries/salons-spas/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/industries/medical-dental/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/industries/home-services/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/industries/auto-services/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/industries/professional-services/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "path": "/industries/nonprofits/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    }
+  ],
+  "errors": []
+}

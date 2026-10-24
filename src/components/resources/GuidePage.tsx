@@ -19,17 +19,17 @@ export function GuidePage({ guide }: { guide: Guide }) {
         <div className="route-hero-copy">
           <p className="eyebrow">Straight answers · A TruePay guide</p>
           <h1>{route.h1}</h1>
-          <AnswerFirst><p>{guide.answer}</p></AnswerFirst>
+          <p className="guide-hero-summary">{guide.hero}</p>
           <CtaButtons primary={route.primaryCta} secondary="none" />
         </div>
       </div>
     </section>
     <div className="container guide-shell">
       <div className="card guide-byline">
-        <AuthorBox author={author} reviewer={reviewer} reviewPending datePublished={guide.datePublished} dateModified={guide.dateModified} />
-        <p className="note">Draft guide · Review assigned by topic expertise.</p>
+        <AuthorBox author={author} reviewer={reviewer} reviewedAt={guide.reviewedAt} datePublished={guide.datePublished} dateModified={guide.dateModified} />
       </div>
       <article className="guide-body">
+        <AnswerFirst><p>{guide.answer}</p></AnswerFirst>
         {guide.introduction}
         {guide.sections.map((section, i) => <QuestionSection key={route.questions[i]} question={route.questions[i]}>
           <p className="guide-direct">{section.answer}</p>

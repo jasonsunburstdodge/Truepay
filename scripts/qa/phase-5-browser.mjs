@@ -28,11 +28,12 @@ try {
       await page.evaluate(()=>document.fonts.ready);
       assert.equal(await page.title(),route.title);
       assert.equal(await page.locator("h1").innerText(),route.h1);
-      assert.equal(await page.locator("h1 + [data-answer]").count(),1);
+      if (route.template !== "guide") assert.equal(await page.locator("h1 + [data-answer]").count(),1);
       assert.match(await page.locator('meta[name="robots"]').getAttribute("content"),/noindex/);
       assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,route.path+" overflow "+width);
       const answer=await page.locator("[data-answer]").innerText();
-      const sentences=[...new Intl.Segmenter("en-US",{granularity:"sentence"}).segment(answer)].filter(s=>s.segment.trim());
+      const heroCopy=route.template === "guide" ? await page.locator(".guide-hero-summary").innerText() : answer;
+      const sentences=[...new Intl.Segmenter("en-US",{granularity:"sentence"}).segment(heroCopy)].filter(s=>s.segment.trim());
       assert.equal(sentences.length,2,route.path+" hero sentences");
       const links=await page.locator("main a[href]").evaluateAll(a=>a.map(e=>e.getAttribute("href")));
       const paths=links.map(h=>h.split("#")[0]);
@@ -44,7 +45,8 @@ try {
         const guide=guides.find(g=>route.path===`/resources/${g.slug}/`);
         assert.ok(answer.split(/\s+/).length>=40&&answer.split(/\s+/).length<=80,route.path+" answer length");
         assert.equal(await page.locator("[data-author] a").innerText(),people.find(p=>p.slug===guide.author).name);
-        assert.match(await page.locator("[data-reviewed]").innerText(),/Review assigned to/);
+        assert.equal(await page.locator("[data-reviewed]").count(),guide.reviewedAt ? 1 : 0);
+        assert.doesNotMatch(await page.locator(".guide-byline").innerText(),/Review assigned|Draft guide/);
         assert.equal(await page.locator(".author-box time").count(),2);
         for (const q of route.questions) assert.equal(await page.getByRole("heading",{level:2,name:q,exact:true}).count(),1);
         const commercial=paths.filter(h=>h.startsWith("/pricing/")||h.startsWith("/solutions/")||h==="/why-truepay/");

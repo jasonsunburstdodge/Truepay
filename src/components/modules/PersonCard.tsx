@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { entity, type Person } from "@/content/entity";
 import { isBuilt } from "@/lib/navigation";
-export function PersonCard({ person, showContact = true }: { person: Person; showContact?: boolean }) {
+export function PersonCard({ person, showContact = true, bio, showBio = true }: { person: Person; showContact?: boolean; bio?: string; showBio?: boolean }) {
   return (
     <article className="card person">
       {person.image && (
@@ -10,13 +10,13 @@ export function PersonCard({ person, showContact = true }: { person: Person; sho
       {!person.image && <div className="person-rule" aria-hidden="true" />}
       <p className="eyebrow">{person.jobTitle}</p>
       <h3>{person.name}</h3>
-      <p
-        {...(person.slug === "jon-wilson"
+      {showBio && <p
+        {...(person.slug === "jon-wilson" && !bio
           ? { "data-claim": "founded-2011" }
           : {})}
       >
-        {person.bio}
-      </p>
+        {bio ?? person.bio}
+      </p>}
       {person.expertise.length > 0 && (
         <ul
           className="person-topics"

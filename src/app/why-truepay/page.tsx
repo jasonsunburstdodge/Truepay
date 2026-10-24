@@ -21,8 +21,8 @@ export default function WhyTruePay() {
         aside={
           <div className="card">
             <p className="eyebrow">Read before you choose</p>
-            <h2>Start with a conversation.</h2>
-            <p>Let’s talk through what matters to your business.</p>
+            <h2>Check the markup and equipment terms.</h2>
+            <p>Ask how the rate lock and covered-equipment terms apply to your proposal.</p>
             <a href="#fine-print">Read the commitment scope</a>
           </div>
         }
@@ -74,7 +74,7 @@ export default function WhyTruePay() {
           <p>
             The lock concerns TruePay’s own pricing. Card-network costs can
             still change. Review the exact rate-lock scope above, including
-            monthly fees, and ask for written exceptions before relying on it.
+            monthly fees and ask for written exceptions before relying on it.
           </p>
         </QuestionSection>
         <QuestionSection question={route.questions[1]}>
@@ -104,7 +104,11 @@ export default function WhyTruePay() {
               particular, consider how your customers pay.
             </p>
           </QuestionSection>
-          <FitCheck {...dualPricingFit} />
+          <FitCheck {...dualPricingFit}
+            goodFit={["You want to separate TruePay’s markup promise from network costs.", "You need written boundaries for equipment coverage and service terms.", "You can bring your current agreement to the comparison."]}
+            notFit={["You need a promise about every future network charge.", "Your existing agreement already meets the conditions you value.", "You cannot yet compare the equipment and cancellation terms."]}
+            recommendationText="TruePay’s commitment is to explain whether its terms improve your situation, including when keeping your present provider makes more sense."
+          />
           <p>
             <a href="/pricing/membership/">
               Compare Membership for traditional card pricing

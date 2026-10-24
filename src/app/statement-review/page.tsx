@@ -1,6 +1,5 @@
 import { getRoute } from "@/content/routes";
 import { entity } from "@/content/entity";
-import { getClaim } from "@/lib/claims";
 import { buildMetadata } from "@/lib/seo";
 import { RouteHero } from "@/components/modules/RouteHero";
 import {
@@ -56,7 +55,7 @@ export default function StatementReview() {
           <article className="card">
             <h3>Get an honest recommendation</h3>
             <p data-claim="honest-recommendation">
-              {getClaim("honest-recommendation").copy}
+              The review may show that your current fees and setup already fit; TruePay will say so rather than recommend an unnecessary switch.
             </p>
           </article>
         </div>

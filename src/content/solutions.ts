@@ -298,7 +298,7 @@ export const solutions: Solution[] = [
     ],
     questions: [
       "Share your website platform, checkout tools and any existing gateway. Compatibility depends on the actual connection; the gateway names below are starting points for that conversation.",
-      "Start by talking with TruePay about your ecommerce needs. Agree the gateway, who makes each website change, and how checkout and reporting will be tested before launch.",
+      "Start by talking with TruePay about your ecommerce needs. Agree the gateway, who makes each website change and how checkout and reporting will be tested before launch.",
       "Ask for the processing, gateway and any setup charges together in your proposal. A transaction rate by itself does not describe the full cost of online payments.",
     ],
     setup: [

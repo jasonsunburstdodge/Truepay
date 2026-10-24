@@ -10,6 +10,22 @@ import {
   QuestionSection,
   RelatedLinks,
 } from "@/components/modules";
+const supportDetails: Record<string,string> = {
+  "/solutions/point-of-sale/": "Give support the POS name and explain whether order entry or the payment step has stopped.",
+  "/solutions/terminals/": "Report the terminal model, displayed error and whether the device still has power and a connection.",
+  "/solutions/mobile-payments/": "Tell support the portable device, current signal and whether a payment already shows an approval.",
+  "/solutions/online-payments/": "Share the gateway name and checkout error, keeping full card numbers out of the website-support message.",
+  "/solutions/integrations/": "Identify the software version and the part of the payment-to-record connection that is failing.",
+  "/solutions/billing-software/": "Bring the invoice reference and describe whether payment collection or QuickBooks posting is affected."
+};
+const ctaTitles: Record<string,string> = {
+  "/solutions/point-of-sale/": "Compare the order, kitchen and payment handoff.",
+  "/solutions/terminals/": "Choose the terminal for your payment counter.",
+  "/solutions/mobile-payments/": "Plan the connection for your portable payment device.",
+  "/solutions/online-payments/": "Check the gateway behind your website checkout.",
+  "/solutions/integrations/": "Check your current system before replacing its payment connection.",
+  "/solutions/billing-software/": "Trace the invoice payment back to QuickBooks."
+};
 export function SolutionPage({ solution: s }: { solution: Solution }) {
   const route = getRoute(s.path)!;
   return (
@@ -97,7 +113,7 @@ export function SolutionPage({ solution: s }: { solution: Solution }) {
           <p className="eyebrow">From choosing to using</p>
           <h2>Work through the setup together.</h2>
           {s.setupClaim && (
-            <p data-claim="setup-training">{getClaim("setup-training").copy}</p>
+            <p data-claim="setup-training">TruePay’s POS setup covers configuration, installation and staff instruction for the payment system you select.</p>
           )}
           <ol className="grid three setup-steps">
             {s.setup.map(([title, body], i) => (
@@ -142,13 +158,11 @@ export function SolutionPage({ solution: s }: { solution: Solution }) {
           <p className="eyebrow">Help after setup</p>
           <h2>What if something breaks?</h2>
           <p>
-            Call <a href={entity.phone.href}>{entity.phone.display}</a> with
-            your business name, device or software details and the error you
-            see. <a href="/support/">Get merchant support</a>.
+            {supportDetails[s.path]} Call <a href={entity.phone.href}>{entity.phone.display}</a>. <a href="/support/">Get merchant support</a>.
           </p>
           {s.equipmentCoverage && (
             <>
-              <p data-claim="truecare">{getClaim("truecare").copy}</p>
+              <p data-claim="truecare">TrueCare covers repair or replacement of eligible terminal equipment for as long as you are a customer.</p>
               <p>
                 <a href="/why-truepay/#fine-print">
                   Read the equipment coverage scope
@@ -161,7 +175,7 @@ export function SolutionPage({ solution: s }: { solution: Solution }) {
       </section>
       <CtaBand
         eyebrow="Talk through your setup"
-        title="Tell us how your business takes payment."
+        title={ctaTitles[s.path]}
         primary={route.primaryCta}
         secondary={route.secondaryCta ?? "none"}
       />

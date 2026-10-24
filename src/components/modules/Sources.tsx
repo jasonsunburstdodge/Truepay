@@ -1,3 +1,4 @@
+import { readableDate } from "./AuthorBox";
 export type Source = {
   title: string;
   url: string;
@@ -17,7 +18,7 @@ export function Sources({ sources }: { sources: Source[] }) {
               <span>
                 {" "}
                 · Accessed{" "}
-                <time dateTime={source.accessed}>{source.accessed}</time>
+                <time dateTime={source.accessed.slice(0, 10)}>{readableDate(source.accessed)}</time>
               </span>
             )}
           </li>

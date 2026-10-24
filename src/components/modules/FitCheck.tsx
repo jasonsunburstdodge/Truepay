@@ -3,10 +3,12 @@ export function FitCheck({
   goodFit,
   notFit,
   recommendation = true,
+  recommendationText,
 }: {
   goodFit: string[];
   notFit: string[];
   recommendation?: boolean;
+  recommendationText?: string;
 }) {
   return (
     <div className="grid two fit-grid">
@@ -26,7 +28,7 @@ export function FitCheck({
               className="fit-recommendation"
               data-claim="honest-recommendation"
             >
-              {getClaim("honest-recommendation").copy}
+              {recommendationText ?? getClaim("honest-recommendation").copy}
             </p>
           )}
         </article>

@@ -16,9 +16,9 @@ export const industries: Industry[] = [
     label: "Restaurants & Bars",
     icon: "🍽️",
     blurb:
-      "Table-side payments, tip handling, and weekend-volume support that doesn't buckle.",
+      "Table-side payments, tip handling and weekend-volume support that doesn't buckle.",
     calculatorNote:
-      "Tip adjustments and card-present rates often skew restaurant processing costs more than owners expect — enter your numbers below to see your actual effective rate.",
+      "Tip adjustments and card-present rates often skew restaurant processing costs more than owners expect - enter your numbers below to see your actual effective rate.",
   },
   {
     slug: "retail",
@@ -48,7 +48,7 @@ export const industries: Industry[] = [
     slug: "home-services",
     label: "Home Services",
     icon: "🔧",
-    blurb: "Take payment on-site the moment the job's done — no chasing invoices.",
+    blurb: "Take payment on-site the moment the job's done - no chasing invoices.",
     calculatorNote:
       "Mobile and on-site payments often carry different rates than in-store transactions. See where your costs are coming from.",
   },
@@ -66,7 +66,7 @@ export const industries: Industry[] = [
     icon: "💼",
     blurb: "Invoice-based billing with flexible ACH and card options.",
     calculatorNote:
-      "Invoice-based billing and ACH mix can lower — or raise — your effective rate depending on how it's set up. Find out where you stand.",
+      "Invoice-based billing and ACH mix can lower - or raise - your effective rate depending on how it's set up. Find out where you stand.",
   },
   {
     slug: "nonprofit",

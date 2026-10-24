@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { industryPages } from "@/content/industries";
 import { guides } from "@/content/guides";
 import { sitemapRoutes, SITE_URL } from "@/content/routes";
 // Update alongside reviewed content; do not substitute the time of the request.
@@ -25,6 +26,8 @@ const contentModified: Record<string, string> = {
   "/about/shane-spears/": "2026-10-24",
   "/customer-stories/": "2026-10-24",
   "/service-areas/": "2026-10-24",
+  "/industries/": "2026-10-24",
+  ...Object.fromEntries(industryPages.map(p => [`/industries/${p.slug}/`, "2026-10-24"])),
   "/resources/": "2026-10-24",
   ...Object.fromEntries(guides.map((g) => [`/resources/${g.slug}/`, g.dateModified])),
   "/thank-you/": "2026-10-23",

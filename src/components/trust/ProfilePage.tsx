@@ -18,8 +18,8 @@ export function ProfilePage({ slug }: { slug: string }) {
         aside={
           <div className="card profile-note">
             <p className="eyebrow">Part of the TruePay team</p>
-            <h2>Start with a conversation.</h2>
-            <p>Tell the team what your business needs.</p>
+            <h2>{jon ? "Ask about the markup on your statement." : "Discuss the equipment and onboarding handoff."}</h2>
+            <p>{jon ? "Bring the fee lines you want Jon’s team to explain." : "Name the POS, terminal or gateway involved in your setup question."}</p>
             <a href={entity.phone.href}>{entity.phone.display}</a>
           </div>
         }
@@ -42,7 +42,7 @@ export function ProfilePage({ slug }: { slug: string }) {
       <section className="container section">
         <p className="eyebrow">Background</p>
         <QuestionSection question={route.questions[0]}>
-          <p {...(jon ? { "data-claim": "founded-2011" } : {})}>{person.bio}</p>
+          <p>{jon ? "At TruePay, Jon’s merchant-pricing work includes processing statements, dual pricing and questions about rate increases." : "Shane’s TruePay responsibilities include onboarding, equipment and the coordination of merchant support."}</p>
           {jon && (
             <p data-claim="payments-since-2006">
               {getClaim("payments-since-2006").copy}
@@ -88,7 +88,7 @@ export function ProfilePage({ slug }: { slug: string }) {
       </section>
       <CtaBand
         eyebrow="Talk about your business"
-        title="Bring your questions to TruePay."
+        title={jon ? "Bring your statement’s markup questions to Jon’s team." : "Talk through your equipment handoff with Shane’s team."}
         primary={route.primaryCta}
         secondary="none"
       />

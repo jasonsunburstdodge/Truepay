@@ -65,7 +65,7 @@ export default function Membership() {
                   ].includes(c.id),
                 )
                 .map((c) => (
-                  <Commitment key={c.id} {...c} />
+                  <Commitment key={c.id} {...c} context="membership" />
                 ))}
             </div>
           </QuestionSection>

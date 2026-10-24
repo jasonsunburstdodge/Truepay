@@ -1,5 +1,4 @@
 import { getRoute } from "@/content/routes";
-import { getClaim } from "@/lib/claims";
 import { buildMetadata } from "@/lib/seo";
 import { RouteHero } from "@/components/modules/RouteHero";
 import {
@@ -32,7 +31,7 @@ export default function Pricing() {
             business profile matter. Bring your statement to a review so you can
             compare a proposal with what you pay today.
           </p>
-          <p data-claim="rate-lock">{getClaim("rate-lock").copy}</p>
+          <p data-claim="rate-lock">TruePay’s rate lock applies to its own markup, rather than the network-set part of a pricing comparison.</p>
           <p>
             <a href="/why-truepay/#fine-print">
               Read what the rate lock covers
@@ -108,7 +107,7 @@ export default function Pricing() {
                 ],
               ]}
             />
-            <p data-claim="cost-plus">{getClaim("cost-plus").copy}</p>
+            <p data-claim="cost-plus">In Membership, TruePay itemizes the network’s cost and its fixed processor markup so you can compare both parts of the proposal.</p>
           </QuestionSection>
         </div>
       </section>

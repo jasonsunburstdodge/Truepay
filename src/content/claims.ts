@@ -81,7 +81,7 @@ export const claims: Claim[] = [
     id: "free-terminal",
     status: "pending",
     copy: "A terminal is included with Membership.",
-    scope: "Which models, eligibility, and who owns it after cancellation.",
+    scope: "Which models, eligibility and who owns it after cancellation.",
     confirm: "Finance/ops: eligibility and ownership.",
     source: "live:/membership-program/, dev:/ ('Provided at no cost')",
   },
@@ -103,7 +103,7 @@ export const claims: Claim[] = [
     id: "support-hours",
     status: "pending",
     copy: "Merchant support is available 24/7.",
-    scope: "Distinguish merchant support availability from office hours (Mon–Fri 8am–6pm CT in pdf:p18).",
+    scope: "Distinguish merchant support availability from office hours (Mon-Fri 8 a.m.-6 p.m. CT in pdf:p18).",
     confirm: "Ops: actual channels and hours for support vs sales.",
     source: "live:/ ('available around the clock, 24/7'), pdf:p18",
   },
@@ -117,7 +117,7 @@ export const claims: Claim[] = [
   {
     id: "office-hours",
     status: "pending",
-    copy: "Office hours: Monday–Friday, 8am–6pm Central.",
+    copy: "Office hours: Monday-Friday, 8 a.m. to 6 p.m. Central.",
     source: "pdf:p18",
     confirm: "Ops.",
   },
@@ -162,7 +162,7 @@ export const claims: Claim[] = [
     copy: "With dual pricing, customers who pay by card pay the card price, which can offset most of your processing cost. Some costs, such as monthly fees, can still apply.",
     scope: "Use one worked example with stated assumptions.",
     confirm: "Finance: what the merchant still pays under dual pricing.",
-    source: "dev:/ ('lowers your bottom line 2–4%' and 'eliminates this expense entirely' replaced)",
+    source: "dev:/ ('lowers your bottom line 2-4%' and 'eliminates this expense entirely' replaced)",
   },
   {
     id: "coverage",
@@ -175,7 +175,7 @@ export const claims: Claim[] = [
   {
     id: "holt-quote",
     status: "published",
-    copy: "“…our business went from paying in excess of $50,000.00 a year in credit card fees and since switching to TruePay our credit card fees are $420.00.” — M. Holt",
+    copy: "“…our business went from paying in excess of $50,000.00 a year in credit card fees and since switching to TruePay our credit card fees are $420.00.” - M. Holt",
     scope: "Attributed quote only, labeled as one customer's experience. Never a headline, average or promise.",
     confirm: "Customer success: permission, business name, review source link; candidate for a full story.",
     source: "live:/reviews/",
@@ -191,7 +191,7 @@ export const claims: Claim[] = [
     id: "partner-estimator",
     status: "pending",
     copy: "Illustration only: volume × estimated TruePay profit margin × your share. Assumes accounts keep processing; real results vary and aren't guaranteed.",
-    scope: "Margin assumption (1%–1.75% for dual pricing) must be confirmed; add an attrition input; lead with the single-account example.",
+    scope: "Margin assumption (1%-1.75% for dual pricing) must be confirmed; add an attrition input; lead with the single-account example.",
     confirm: "Jon/finance + counsel review of earnings language.",
     source: "partner draft (chatgpt.site)",
   },
@@ -216,6 +216,9 @@ export const claims: Claim[] = [
  * (Case-insensitive regex sources.)
  */
 export const bannedPatterns: { pattern: string; why: string }[] = [
+  { pattern: "\\b(?:seamless|elevate|unlock|empower|robust|leverage|streamline|tailored|navigate|journey)\\b", why: "Client banned generic filler" },
+  { pattern: "\\b(?:game[- ]changer|cutting[- ]edge|state[- ]of[- ]the[- ]art|peace of mind|hassle[- ]free|one[- ]stop|best[- ]in[- ]class|world[- ]class)\\b", why: "Client banned generic filler" },
+  { pattern: "take your business to the next level|in today['’]s fast[- ]paced world|look no further|we['’]ve got you covered|whether you['’]re (?:a|an) [^.?!]{1,100} or (?:a|an) ", why: "Client banned interchangeable marketing phrase" },
   { pattern: "lorem ipsum", why: "Placeholder copy" },
   { pattern: "john doe", why: "Placeholder testimonial" },
   { pattern: "\\bTODO\\b|\\bTBD\\b|NEEDS:", why: "Internal note leaked into page" },
