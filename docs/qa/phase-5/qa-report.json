@@ -1,0 +1,312 @@
+{
+  "base": "http://127.0.0.1:4010",
+  "preview": false,
+  "findings": [
+    {
+      "level": "WARN",
+      "route": "/",
+      "check": "claims",
+      "message": "7× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/",
+      "check": "links",
+      "message": "Required contextual link to /industries/ missing from <main>"
+    },
+    {
+      "level": "WARN",
+      "route": "/statement-review/",
+      "check": "claims",
+      "message": "5× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "INFO",
+      "route": "/statement-review/",
+      "check": "claims",
+      "message": "Expected claim \"review-turnaround\" not marked on page"
+    },
+    {
+      "level": "WARN",
+      "route": "/effective-rate-calculator/",
+      "check": "claims",
+      "message": "5× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/support/",
+      "check": "claims",
+      "message": "2× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "INFO",
+      "route": "/support/",
+      "check": "claims",
+      "message": "Expected claim \"support-hours\" not marked on page"
+    },
+    {
+      "level": "INFO",
+      "route": "/support/",
+      "check": "claims",
+      "message": "Expected claim \"text-line\" not marked on page"
+    },
+    {
+      "level": "WARN",
+      "route": "/contact/",
+      "check": "claims",
+      "message": "4× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/thank-you/",
+      "check": "description",
+      "message": "55 chars (aim 110–160)"
+    },
+    {
+      "level": "WARN",
+      "route": "/thank-you/",
+      "check": "claims",
+      "message": "2× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/why-truepay/",
+      "check": "claims",
+      "message": "4× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/pricing/",
+      "check": "claims",
+      "message": "4× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/pricing/membership/",
+      "check": "claims",
+      "message": "4× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/pricing/dual-pricing/",
+      "check": "claims",
+      "message": "4× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/pricing/dual-pricing/",
+      "check": "links",
+      "message": "Required contextual link to /industries/restaurants/ missing from <main>"
+    },
+    {
+      "level": "WARN",
+      "route": "/solutions/",
+      "check": "claims",
+      "message": "4× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/solutions/point-of-sale/",
+      "check": "claims",
+      "message": "4× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/solutions/point-of-sale/",
+      "check": "links",
+      "message": "Required contextual link to /industries/restaurants/ missing from <main>"
+    },
+    {
+      "level": "WARN",
+      "route": "/solutions/point-of-sale/",
+      "check": "links",
+      "message": "Required contextual link to /industries/retail/ missing from <main>"
+    },
+    {
+      "level": "WARN",
+      "route": "/solutions/terminals/",
+      "check": "claims",
+      "message": "2× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/solutions/mobile-payments/",
+      "check": "claims",
+      "message": "2× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/solutions/mobile-payments/",
+      "check": "links",
+      "message": "Required contextual link to /industries/home-services/ missing from <main>"
+    },
+    {
+      "level": "WARN",
+      "route": "/solutions/online-payments/",
+      "check": "claims",
+      "message": "2× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/solutions/integrations/",
+      "check": "claims",
+      "message": "2× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/solutions/billing-software/",
+      "check": "claims",
+      "message": "2× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/solutions/billing-software/",
+      "check": "links",
+      "message": "Required contextual link to /industries/professional-services/ missing from <main>"
+    },
+    {
+      "level": "WARN",
+      "route": "/about/",
+      "check": "claims",
+      "message": "4× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "INFO",
+      "route": "/about/",
+      "check": "claims",
+      "message": "Expected claim \"payments-since-2006\" not marked on page"
+    },
+    {
+      "level": "WARN",
+      "route": "/about/team/",
+      "check": "claims",
+      "message": "1× \"never\": Absolute promise; confirm scope"
+    },
+    {
+      "level": "WARN",
+      "route": "/about/team/",
+      "check": "claims",
+      "message": "2× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/about/jon-wilson/",
+      "check": "claims",
+      "message": "2× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/about/shane-spears/",
+      "check": "claims",
+      "message": "2× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/customer-stories/",
+      "check": "claims",
+      "message": "4× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/customer-stories/",
+      "check": "links",
+      "message": "Required contextual link to /industries/ missing from <main>"
+    },
+    {
+      "level": "WARN",
+      "route": "/service-areas/",
+      "check": "claims",
+      "message": "2× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/resources/",
+      "check": "claims",
+      "message": "4× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/resources/how-to-read-your-processing-statement/",
+      "check": "claims",
+      "message": "3× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/resources/flat-rate-vs-tiered-vs-interchange-plus/",
+      "check": "claims",
+      "message": "2× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/resources/flat-rate-vs-tiered-vs-interchange-plus/",
+      "check": "claims",
+      "message": "1× \"cheapest\": Superlative needs evidence"
+    },
+    {
+      "level": "WARN",
+      "route": "/resources/flat-rate-vs-tiered-vs-interchange-plus/",
+      "check": "claims",
+      "message": "4× \"$0\": Zero-cost claim needs scope"
+    },
+    {
+      "level": "WARN",
+      "route": "/resources/dual-pricing-vs-surcharging-vs-cash-discount/",
+      "check": "claims",
+      "message": "2× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/resources/why-credit-card-processing-fees-go-up/",
+      "check": "claims",
+      "message": "3× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/resources/how-to-switch-payment-processors/",
+      "check": "claims",
+      "message": "3× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "WARN",
+      "route": "/resources/how-credit-card-processing-works/",
+      "check": "claims",
+      "message": "3× \"free\": Free what, for whom, under what conditions?"
+    },
+    {
+      "level": "INFO",
+      "route": "/referral/",
+      "check": "redirects",
+      "message": "Destination /partners/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/affiliate-program/",
+      "check": "redirects",
+      "message": "Destination /partners/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/employment-opportunity/",
+      "check": "redirects",
+      "message": "Destination /careers/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/employment-opportunity-backup/",
+      "check": "redirects",
+      "message": "Destination /careers/ not built yet"
+    },
+    {
+      "level": "INFO",
+      "route": "/careers/",
+      "check": "migration",
+      "message": "Existing live URL must keep working; got 404"
+    },
+    {
+      "level": "INFO",
+      "route": "/privacy-policy/",
+      "check": "migration",
+      "message": "Existing live URL must keep working; got 404"
+    }
+  ]
+}
