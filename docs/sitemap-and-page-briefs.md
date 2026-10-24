@@ -1,5 +1,7 @@
 # TruePay sitemap and page build brief
 
+> **Update October 23, 2026:** The governing model is now `docs/site-model.md`, with the site map as code in `src/content/routes.ts` (human-readable: `docs/site-map.md`) and the build plan in `docs/chatgpt-build-plan.md`. This brief remains the detailed reference for page content and evidence gaps. Where URLs or scope differ (for example `/about/jon-wilson/`, the new `/why-truepay/`, `/pricing/membership/` and `/partners/`, and the renamed guides), `routes.ts` wins.
+
 Prepared October 5, 2026. Updated October 5, 2026 after full review of the supplied Drive design PDF, receipt of two logo assets, and Jason's instruction to include industry and trust pages in the build. Status: proposed architecture and content briefs, not implemented website pages.
 
 ## Decisions that govern this plan
