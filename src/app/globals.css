@@ -1386,3 +1386,12 @@ caption {
 .partner-path .path-share { color:var(--color-ink); font-weight:800; font-size:64px; line-height:1; letter-spacing:-.05em; }
 .partner-reward { margin-top:32px; }
 @media(max-width:700px) { .projection-grid { grid-template-columns:minmax(0,1fr); } .partner-overlap dd { font-size:44px; } .single-results .result { padding:24px 16px; } }
+
+.legal-body { max-width:960px; }
+.legal-body > section, .legal-body [data-published-policy] > section { margin-top:48px; scroll-margin-top:120px; }
+.legal-body p, .legal-body li { line-height:1.75; }
+.legal-edition { margin-bottom:40px; }
+.legal-edition nav { display:flex; gap:12px 24px; flex-wrap:wrap; font-weight:700; }
+.legal-body address { font-style:normal; line-height:1.8; }
+.website-forms-policy h3 { margin-top:32px; }
+.legal-body .related { margin-top:56px; }

@@ -955,7 +955,7 @@ export const routes: RouteSpec[] = [
     path: "/privacy-policy/",
     template: "legal",
     phase: 7,
-    status: "planned",
+    status: "draft",
     label: "Privacy policy",
     title: "Privacy Policy | TruePay",
     description: "How TruePay collects, uses, stores and protects information submitted through this website, including processing statements.",

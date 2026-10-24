@@ -1,0 +1,36 @@
+/** Published July 16, 2024 policy, retrieved Oct. 24, 2026 from live:/privacy-policy/.
+ * Preserve substantive text; AP punctuation and sentence-case headings are editorial changes.
+ * Website-form additions are drafted separately in the page. Counsel must approve before launch.
+ */
+export const publishedPrivacyIntro = "TruePay (“we,” “us” or “our”) values your privacy. This Privacy Policy explains how we collect, use, disclose and safeguard your information when you visit our website [gotruepay.com] (the “Site”) and use our services. By using the Site, you agree to the terms of this Privacy Policy.";
+export const publishedPrivacySections = [
+  { id: "information-collected", title: "1. Information we collect", paragraphs: [
+    "Personal Information: We may collect personal information such as your name, email address, postal address, phone number and other identifiers you voluntarily provide when you register on our Site or use our services.",
+    "Log Data: Our servers automatically collect information when you access the Site. This may include your IP address, browser type, operating system, access times and the pages you have visited.",
+    "Cookies and Tracking Technologies: We may use cookies, web beacons and other tracking technologies to collect information about your activity on our Site. This helps us improve our services and customize your experience.",
+    "Mobile Device Information: If you access our Site via a mobile device, we may collect information about your device, including its ID, model and operating system."
+  ] },
+  { id: "information-use", title: "2. How we use your information", paragraphs: ["We use the information we collect for various purposes, including to:"], items: [
+    "Provide, operate and maintain our services.",
+    "Improve, personalize and expand our services.",
+    "Process transactions and send related information, such as transaction confirmations.",
+    "Communicate with you, including responding to your comments, questions and requests.",
+    "Provide customer support and assistance.",
+    "Monitor and analyze usage and trends to improve your experience with our Site.",
+    "Send you technical notices, updates, security alerts and support messages.",
+    "Detect and prevent fraudulent transactions and other illegal activities."
+  ] },
+  { id: "text-messages", title: "3. SMS/text messaging consent and opt-out information", paragraphs: [
+    "By providing your phone number, you expressly consent to receive SMS/text messages from GotruePay for purposes that may include account updates, promotions, notifications and other related information. The frequency of messages may vary, and standard message and data rates may apply as determined by your mobile carrier.",
+    "You have the right to opt out of receiving SMS/text messages at any time. To stop receiving messages, you can:"
+  ], items: [
+    "Reply “STOP” to any SMS/text message you receive from us. This will remove you from our messaging list and prevent further messages.",
+    "Contact our customer service team directly to request removal from our SMS/text messaging list."
+  ], after: [
+    "For additional help or information, you can reply “HELP” to any SMS/text message or contact our customer service team. We are committed to protecting your privacy, and your phone number will not be shared with third parties for marketing purposes.",
+    "For any further questions regarding SMS/text messaging or your privacy rights, please refer to the rest of our Privacy Policy or contact us directly."
+  ] },
+  { id: "information-security", title: "4. Security of your information", paragraphs: ["We use administrative, technical and physical security measures to protect your personal information."] },
+  { id: "privacy-rights", title: "5. Your privacy rights", paragraphs: ["Depending on your location, you may have certain rights regarding your personal information, including the right to access, correct or delete your data. To exercise these rights, please contact us at support@gotruepay.com."] },
+  { id: "policy-changes", title: "6. Changes to this privacy policy", paragraphs: ["We may update this Privacy Policy from time to time. We will let you know of any changes by posting the new Privacy Policy on our Site. You are advised to review this Privacy Policy periodically for any changes."] },
+];
