@@ -1,0 +1,14 @@
+{
+  "validator": "Google Rich Results Test",
+  "checked": "2026-10-24",
+  "mode": "CODE / smartphone",
+  "input": "how-to-read-your-processing-statement-validator-input.html",
+  "resultUrl": "https://search.google.com/test/rich-results/result?id=6g8hOLoTjFCIMXvnpCyIEw",
+  "articleResultUrl": "https://search.google.com/test/rich-results/result/r%2Farticles?id=6g8hOLoTjFCIMXvnpCyIEw",
+  "summary": "4 valid items detected; Articles: 1 valid item detected",
+  "criticalIssues": 0,
+  "articleNonCriticalIssues": [
+    "Missing field image (optional)"
+  ],
+  "scope": "Exact rendered shared graph from the statement guide; all six guide graphs pass local author/publisher/date binding checks. This is code-input validation, not a live deployment test."
+}

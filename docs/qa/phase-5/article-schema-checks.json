@@ -1,0 +1,197 @@
+[
+  {
+    "path": "/resources/how-to-read-your-processing-statement/",
+    "article": {
+      "@type": "Article",
+      "@id": "https://gotruepay.com/resources/how-to-read-your-processing-statement/#article",
+      "headline": "How to read your credit card processing statement",
+      "description": "A line-by-line guide to your merchant statement: interchange, assessments, markup and monthly fees, and how to find your real effective rate.",
+      "mainEntityOfPage": {
+        "@id": "https://gotruepay.com/resources/how-to-read-your-processing-statement/#webpage"
+      },
+      "author": {
+        "@id": "https://gotruepay.com/about/jon-wilson/#person"
+      },
+      "publisher": {
+        "@id": "https://gotruepay.com/#organization"
+      },
+      "datePublished": "2026-10-24T00:00:00-05:00",
+      "dateModified": "2026-10-24T00:00:00-05:00"
+    },
+    "author": {
+      "@type": "Person",
+      "@id": "https://gotruepay.com/about/jon-wilson/#person",
+      "name": "Jon Wilson",
+      "alternateName": "Jonathan Wilson",
+      "jobTitle": "Founder & Chief Executive Officer",
+      "description": "Jon founded TruePay in 2011 after watching business owners get burned by hidden fees, rate increases and processors who disappeared after the sale.",
+      "url": "https://gotruepay.com/about/jon-wilson/",
+      "worksFor": {
+        "@id": "https://gotruepay.com/#organization"
+      }
+    },
+    "checks": "PASS: actual rendered graph, registered author, worksFor, publisher and dates"
+  },
+  {
+    "path": "/resources/flat-rate-vs-tiered-vs-interchange-plus/",
+    "article": {
+      "@type": "Article",
+      "@id": "https://gotruepay.com/resources/flat-rate-vs-tiered-vs-interchange-plus/#article",
+      "headline": "Flat rate, tiered or interchange-plus: which costs less?",
+      "description": "How the three common card-processing pricing models work, what each costs at different sales volumes and which one fits your business.",
+      "mainEntityOfPage": {
+        "@id": "https://gotruepay.com/resources/flat-rate-vs-tiered-vs-interchange-plus/#webpage"
+      },
+      "author": {
+        "@id": "https://gotruepay.com/about/jon-wilson/#person"
+      },
+      "publisher": {
+        "@id": "https://gotruepay.com/#organization"
+      },
+      "datePublished": "2026-10-24T00:00:00-05:00",
+      "dateModified": "2026-10-24T00:00:00-05:00"
+    },
+    "author": {
+      "@type": "Person",
+      "@id": "https://gotruepay.com/about/jon-wilson/#person",
+      "name": "Jon Wilson",
+      "alternateName": "Jonathan Wilson",
+      "jobTitle": "Founder & Chief Executive Officer",
+      "description": "Jon founded TruePay in 2011 after watching business owners get burned by hidden fees, rate increases and processors who disappeared after the sale.",
+      "url": "https://gotruepay.com/about/jon-wilson/",
+      "worksFor": {
+        "@id": "https://gotruepay.com/#organization"
+      }
+    },
+    "checks": "PASS: actual rendered graph, registered author, worksFor, publisher and dates"
+  },
+  {
+    "path": "/resources/dual-pricing-vs-surcharging-vs-cash-discount/",
+    "article": {
+      "@type": "Article",
+      "@id": "https://gotruepay.com/resources/dual-pricing-vs-surcharging-vs-cash-discount/#article",
+      "headline": "Dual pricing, surcharging and cash discounts: what's the difference?",
+      "description": "Three ways to pass card costs to customers, side by side: how each works, debit card rules, signage and receipts, and which fits your checkout.",
+      "mainEntityOfPage": {
+        "@id": "https://gotruepay.com/resources/dual-pricing-vs-surcharging-vs-cash-discount/#webpage"
+      },
+      "author": {
+        "@id": "https://gotruepay.com/about/shane-spears/#person"
+      },
+      "publisher": {
+        "@id": "https://gotruepay.com/#organization"
+      },
+      "datePublished": "2026-10-24T00:00:00-05:00",
+      "dateModified": "2026-10-24T00:00:00-05:00"
+    },
+    "author": {
+      "@type": "Person",
+      "@id": "https://gotruepay.com/about/shane-spears/#person",
+      "name": "Shane Spears",
+      "jobTitle": "Chief Operating Officer",
+      "description": "Shane oversees TruePay's day-to-day operations, from onboarding and equipment to support, so merchants get what they need fast.",
+      "url": "https://gotruepay.com/about/shane-spears/",
+      "worksFor": {
+        "@id": "https://gotruepay.com/#organization"
+      }
+    },
+    "checks": "PASS: actual rendered graph, registered author, worksFor, publisher and dates"
+  },
+  {
+    "path": "/resources/why-credit-card-processing-fees-go-up/",
+    "article": {
+      "@type": "Article",
+      "@id": "https://gotruepay.com/resources/why-credit-card-processing-fees-go-up/#article",
+      "headline": "Why did my credit card processing fees go up?",
+      "description": "Card networks, processor markups and new monthly fees: the real reasons processing costs rise, how to spot them on your statement and what to do.",
+      "mainEntityOfPage": {
+        "@id": "https://gotruepay.com/resources/why-credit-card-processing-fees-go-up/#webpage"
+      },
+      "author": {
+        "@id": "https://gotruepay.com/about/jon-wilson/#person"
+      },
+      "publisher": {
+        "@id": "https://gotruepay.com/#organization"
+      },
+      "datePublished": "2026-10-24T00:00:00-05:00",
+      "dateModified": "2026-10-24T00:00:00-05:00"
+    },
+    "author": {
+      "@type": "Person",
+      "@id": "https://gotruepay.com/about/jon-wilson/#person",
+      "name": "Jon Wilson",
+      "alternateName": "Jonathan Wilson",
+      "jobTitle": "Founder & Chief Executive Officer",
+      "description": "Jon founded TruePay in 2011 after watching business owners get burned by hidden fees, rate increases and processors who disappeared after the sale.",
+      "url": "https://gotruepay.com/about/jon-wilson/",
+      "worksFor": {
+        "@id": "https://gotruepay.com/#organization"
+      }
+    },
+    "checks": "PASS: actual rendered graph, registered author, worksFor, publisher and dates"
+  },
+  {
+    "path": "/resources/how-to-switch-payment-processors/",
+    "article": {
+      "@type": "Article",
+      "@id": "https://gotruepay.com/resources/how-to-switch-payment-processors/#article",
+      "headline": "How to switch payment processors without the headaches",
+      "description": "What to check before you switch: contract and cancellation terms, equipment you own or lease, POS compatibility, timing and a day-one checklist.",
+      "mainEntityOfPage": {
+        "@id": "https://gotruepay.com/resources/how-to-switch-payment-processors/#webpage"
+      },
+      "author": {
+        "@id": "https://gotruepay.com/about/shane-spears/#person"
+      },
+      "publisher": {
+        "@id": "https://gotruepay.com/#organization"
+      },
+      "datePublished": "2026-10-24T00:00:00-05:00",
+      "dateModified": "2026-10-24T00:00:00-05:00"
+    },
+    "author": {
+      "@type": "Person",
+      "@id": "https://gotruepay.com/about/shane-spears/#person",
+      "name": "Shane Spears",
+      "jobTitle": "Chief Operating Officer",
+      "description": "Shane oversees TruePay's day-to-day operations, from onboarding and equipment to support, so merchants get what they need fast.",
+      "url": "https://gotruepay.com/about/shane-spears/",
+      "worksFor": {
+        "@id": "https://gotruepay.com/#organization"
+      }
+    },
+    "checks": "PASS: actual rendered graph, registered author, worksFor, publisher and dates"
+  },
+  {
+    "path": "/resources/how-credit-card-processing-works/",
+    "article": {
+      "@type": "Article",
+      "@id": "https://gotruepay.com/resources/how-credit-card-processing-works/#article",
+      "headline": "How credit card processing works",
+      "description": "What happens between a customer's tap and your deposit: who's involved, who takes which fee and why your money takes a day or two to arrive.",
+      "mainEntityOfPage": {
+        "@id": "https://gotruepay.com/resources/how-credit-card-processing-works/#webpage"
+      },
+      "author": {
+        "@id": "https://gotruepay.com/about/shane-spears/#person"
+      },
+      "publisher": {
+        "@id": "https://gotruepay.com/#organization"
+      },
+      "datePublished": "2026-10-24T00:00:00-05:00",
+      "dateModified": "2026-10-24T00:00:00-05:00"
+    },
+    "author": {
+      "@type": "Person",
+      "@id": "https://gotruepay.com/about/shane-spears/#person",
+      "name": "Shane Spears",
+      "jobTitle": "Chief Operating Officer",
+      "description": "Shane oversees TruePay's day-to-day operations, from onboarding and equipment to support, so merchants get what they need fast.",
+      "url": "https://gotruepay.com/about/shane-spears/",
+      "worksFor": {
+        "@id": "https://gotruepay.com/#organization"
+      }
+    },
+    "checks": "PASS: actual rendered graph, registered author, worksFor, publisher and dates"
+  }
+]

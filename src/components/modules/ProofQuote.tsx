@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { isBuilt } from "@/lib/navigation";
 import { testimonials } from "@/content/entity";
-export function ProofQuote({ id }: { id: string }) {
+export function ProofQuote({ id, linkToStories = true }: { id: string; linkToStories?: boolean }) {
   const quote = testimonials.find((q) => q.id === id);
   if (!quote) throw new Error(`Unknown testimonial: ${id}`);
   return (
@@ -22,7 +22,7 @@ export function ProofQuote({ id }: { id: string }) {
             {quote.archivedSourceUrl ? "archived source" : "source"}
           </a>
         )}
-        {isBuilt("/customer-stories/") && (
+        {linkToStories && isBuilt("/customer-stories/") && (
           <Link href="/customer-stories/">Read customer stories</Link>
         )}
       </figcaption>

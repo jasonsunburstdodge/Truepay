@@ -1,0 +1,112 @@
+{
+  "checkedAt": "2026-10-24T06:35:53.070437+00:00",
+  "checks": [
+    {
+      "url": "https://developer.visa.com/docs/visanet-connect-acceptance",
+      "status": 200,
+      "finalUrl": "https://developer.visa.com/docs/visanet-connect-acceptance",
+      "bytes": 487225,
+      "contentType": "text/html;charset=utf-8",
+      "loads": true
+    },
+    {
+      "url": "https://dos.ny.gov/system/files/documents/2024/04/2024-04-10-dos-dcp-credit-card-surcharge-one-page-reference-guide.pdf",
+      "status": 200,
+      "finalUrl": "https://dos.ny.gov/system/files/documents/2024/04/2024-04-10-dos-dcp-credit-card-surcharge-one-page-reference-guide.pdf",
+      "bytes": 219551,
+      "contentType": "application/pdf",
+      "loads": true
+    },
+    {
+      "url": "https://fiscal.treasury.gov/payments-to-government/card-acquiring-service-cas/how-cas-works",
+      "status": 200,
+      "finalUrl": "https://fiscal.treasury.gov/payments-to-government/card-acquiring-service-cas/how-cas-works",
+      "bytes": 112859,
+      "contentType": "text/html; charset=UTF-8",
+      "loads": true
+    },
+    {
+      "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXX/Chapter140d/Section28a",
+      "status": 200,
+      "finalUrl": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXX/Chapter140d/Section28a",
+      "bytes": 74244,
+      "contentType": "text/html; charset=utf-8",
+      "loads": true
+    },
+    {
+      "url": "https://support.authorize.net/knowledgebase/Knowledgearticle/?code=000001990",
+      "status": 200,
+      "finalUrl": "https://support.authorize.net/knowledgebase/Knowledgearticle/?code=000001990",
+      "bytes": 115455,
+      "contentType": "text/html; charset=utf-8",
+      "loads": true
+    },
+    {
+      "url": "https://usa.visa.com/content/dam/VCOM/global/support-legal/documents/merchant-surcharging-qa-for-web.pdf",
+      "status": 200,
+      "finalUrl": "https://usa.visa.com/content/dam/VCOM/global/support-legal/documents/merchant-surcharging-qa-for-web.pdf",
+      "bytes": 221989,
+      "contentType": "application/pdf",
+      "loads": true
+    },
+    {
+      "url": "https://www.kansascityfed.org/research/interchange-fees-us/",
+      "status": 200,
+      "finalUrl": "https://www.kansascityfed.org/research/interchange-fees-us/",
+      "bytes": 601536,
+      "contentType": "text/html; charset=utf-8",
+      "loads": true
+    },
+    {
+      "url": "https://www.mastercard.com/us/en/business/support/merchant-interchange-rates.html",
+      "status": 200,
+      "finalUrl": "https://www.mastercard.com/us/en/business/support/merchant-interchange-rates.html",
+      "bytes": 147852,
+      "contentType": "text/html;charset=utf-8",
+      "loads": true
+    },
+    {
+      "url": "https://www.mastercard.com/us/en/business/support/merchant-surcharge-rules.html",
+      "status": 200,
+      "finalUrl": "https://www.mastercard.com/us/en/business/support/merchant-surcharge-rules.html",
+      "bytes": 150965,
+      "contentType": "text/html;charset=utf-8",
+      "loads": true
+    },
+    {
+      "url": "https://www.visa.com/en-us/support/business/regulation-fees",
+      "status": 200,
+      "finalUrl": "https://www.visa.com/en-us/support/business/regulation-fees",
+      "bytes": 477100,
+      "contentType": "text/html; charset=utf-8",
+      "loads": true
+    }
+  ],
+  "guides": [
+    {
+      "path": "/resources/how-to-read-your-processing-statement/",
+      "verifiedLoadingPrimarySources": 3
+    },
+    {
+      "path": "/resources/flat-rate-vs-tiered-vs-interchange-plus/",
+      "verifiedLoadingPrimarySources": 3
+    },
+    {
+      "path": "/resources/dual-pricing-vs-surcharging-vs-cash-discount/",
+      "verifiedLoadingPrimarySources": 4
+    },
+    {
+      "path": "/resources/why-credit-card-processing-fees-go-up/",
+      "verifiedLoadingPrimarySources": 3
+    },
+    {
+      "path": "/resources/how-to-switch-payment-processors/",
+      "verifiedLoadingPrimarySources": 2
+    },
+    {
+      "path": "/resources/how-credit-card-processing-works/",
+      "verifiedLoadingPrimarySources": 3
+    }
+  ],
+  "note": "All sources were also read for relevance through web retrieval. Only successful HTTP 200 responses with nonempty content count toward the two-link minimum."
+}

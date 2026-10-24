@@ -109,9 +109,12 @@ test("schema graph connects the business, people, services, breadcrumbs and arti
   const article = articleNode(
     getRoute("/resources/how-to-read-your-processing-statement/")!,
     people[0],
-    { datePublished: "2026-10-23", dateModified: "2026-10-23" },
+    // A guide record is structurally compatible with the dates argument. Its
+    // author slug must not overwrite the graph's registered Person reference.
+    { ...{ author: "jon-wilson", publisher: "untrusted record field" }, datePublished: "2026-10-23", dateModified: "2026-10-23" },
   );
   assert.deepEqual(article.author, { "@id": person["@id"] });
+  assert.deepEqual(article.publisher, { "@id": org["@id"] });
   assert.deepEqual(
     breadcrumbNode("/pricing/membership/").itemListElement.map((n) => n.item),
     [SITE_URL + "/", SITE_URL + "/pricing/", SITE_URL + "/pricing/membership/"],
