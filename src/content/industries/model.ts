@@ -6,6 +6,8 @@ export type IndustryPageContent = {
   workflowTitle: string;
   workflow: [string, string][];
   setups: { path: string; title: string; reason: string; check: string }[];
+  setupComparisonTitle: string;
+  pricingTitle: string;
   membership: string;
   dual: string;
   decision: string;

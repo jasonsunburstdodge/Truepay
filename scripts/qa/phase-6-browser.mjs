@@ -60,7 +60,7 @@ try{
  assert.equal(errors.length,0,errors.join('\n'));
  writeFileSync(`${dir}/originality-results.json`,JSON.stringify({sitewideDuplicateSentences:duplicateSentences(copy),threshold:'more than 8 words',exclusions:['verbatim blockquotes','shared commitment fine print'],industryPairs:pairs},null,2)+'\n');
  writeFileSync(`${dir}/guide-review-fixes.json`,JSON.stringify(guideEvidence,null,2)+'\n');
- writeFileSync(`${dir}/industry-checks.json`,JSON.stringify(industryEvidence.map(({sentences,...rest})=>rest),null,2)+'\n');
+ writeFileSync(`${dir}/industry-checks.json`,JSON.stringify(industryEvidence.map(record=>Object.fromEntries(Object.entries(record).filter(([key])=>key!=="sentences"))),null,2)+'\n');
  writeFileSync(`${dir}/browser-results.json`,JSON.stringify({summary:`PASS: ${records.length} page/viewport checks, 18 new-page screenshots + 2 guide screenshots, all required links, AP copy, truthful review/date display and originality gates`,records,errors},null,2)+'\n');
  console.log(`PASS: ${records.length} page/viewport checks; 20 screenshots; 0 duplicate long sentences; ${pairs.length} industry pairs checked; 0 runtime errors`);
 }finally{await browser?.close();server.kill();}

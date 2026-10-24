@@ -23,10 +23,10 @@ export function IndustryPage({ content: c }: { content: IndustryPageContent }) {
         {c.workflow.map(([title, body]) => <li className="card" key={title}><h3>{title}</h3><p>{body}</p></li>)}
       </ol></div>
     </section>
-    <section className="band section"><div className="container" data-industry-copy><p className="eyebrow">Choose around the work</p><h2>Setups worth comparing.</h2>
+    <section className="band section"><div className="container" data-industry-copy><p className="eyebrow">Choose around the work</p><h2>{c.setupComparisonTitle}</h2>
       <div className={`grid ${c.setups.length === 3 ? "three" : "two"}`}>{c.setups.map(option => <article className="card" key={option.path}><h3><a href={option.path}>{option.title}</a></h3><p>{option.reason}</p><p className="note">{option.check}</p></article>)}</div>
     </div></section>
-    <section className="container section" data-industry-copy><p className="eyebrow">The checkout conversation</p><h2>Membership or dual pricing?</h2>
+    <section className="container section" data-industry-copy><p className="eyebrow">The checkout conversation</p><h2>{c.pricingTitle}</h2>
       <div className="grid two"><article className="card"><h3>Membership</h3><p data-claim="cost-plus">{c.membership}</p><a href="/pricing/membership/">Explore Membership</a></article>
         <article className="card"><h3>Dual pricing</h3><p>{c.dual}</p><a href="/pricing/dual-pricing/">Explore dual pricing</a></article></div>
       <p className="industry-decision">{c.decision}</p><p>{c.fit}</p>
