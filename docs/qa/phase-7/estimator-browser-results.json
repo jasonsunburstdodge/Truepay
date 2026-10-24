@@ -1,0 +1,29 @@
+{
+  "singleAccountServerRendered": true,
+  "scenarios": [
+    {
+      "width": 390,
+      "defaultRep": 250,
+      "defaultReferral": 100,
+      "editedVolume": 100000,
+      "editedMargin": 1.75,
+      "editedReferral": 350,
+      "noAttritionYear": 54600,
+      "fullAttritionYear": 8400,
+      "zeroAccounts": 0,
+      "invalidInputs": "no result"
+    },
+    {
+      "width": 1440,
+      "defaultRep": 250,
+      "defaultReferral": 100,
+      "editedVolume": 100000,
+      "editedMargin": 1.75,
+      "editedReferral": 350,
+      "noAttritionYear": 54600,
+      "fullAttritionYear": 8400,
+      "zeroAccounts": 0,
+      "invalidInputs": "no result"
+    }
+  ]
+}

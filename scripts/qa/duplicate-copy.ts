@@ -29,3 +29,11 @@ export function duplicateSentences(pages: { path: string; sentences: string[] }[
   }
   return [...owners].filter(([, paths]) => paths.size > 1).map(([sentence, paths]) => ({ sentence, paths: [...paths] }));
 }
+
+/** Section headings and editorial eyebrows must identify their page's subject. */
+export function headingTexts(html: string): string[] {
+  const $ = cheerio.load(html);
+  const main = $("main").clone();
+  main.find("blockquote, #fine-print, [data-commitment-fine-print], script, style, noscript").remove();
+  return [...new Set(main.find("h2, .eyebrow").map((_, node) => $(node).text().toLowerCase().replace(/[‘’]/g, "'").replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim()).get().filter(Boolean))];
+}

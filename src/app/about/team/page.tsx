@@ -52,6 +52,7 @@ export default function Team() {
               existing account.
             </p>
           </QuestionSection>
+          <p>Want to introduce business owners to this team? Compare the <a href="/partners/">rep and referral paths</a>, or share your work background through <a href="/careers/">career interest</a>.</p>
           <RelatedLinks route={route} />
         </div>
       </section>

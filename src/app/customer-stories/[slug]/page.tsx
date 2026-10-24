@@ -77,7 +77,7 @@ export default async function Story({
             <p>{answer}</p>
           </QuestionSection>
         ))}
-        <Sources sources={story.sources} />
+        <Sources sources={story.sources} title={`${story.business}: story sources`} />
         <Link href="/customer-stories/">Back to customer stories</Link>
       </section>
       <CtaBand

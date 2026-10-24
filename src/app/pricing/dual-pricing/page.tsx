@@ -122,7 +122,7 @@ export default function DualPricing() {
       </section>
       <section className="dark-band section">
         <div className="container">
-          <p className="eyebrow">Find your fit</p>
+          <p className="eyebrow">Would two prices suit your checkout?</p>
           <QuestionSection question={route.questions[2]}>
             <p>
               Start with how your customers pay and whether separate prices suit

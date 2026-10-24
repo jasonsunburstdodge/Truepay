@@ -8,7 +8,7 @@ export function PersonCard({ person, showContact = true, bio, showBio = true }: 
         <Image src={person.image} alt={person.name} width={240} height={240} />
       )}
       {!person.image && <div className="person-rule" aria-hidden="true" />}
-      <p className="eyebrow">{person.jobTitle}</p>
+      <p className="person-role">{person.jobTitle}</p>
       <h3>{person.name}</h3>
       {showBio && <p
         {...(person.slug === "jon-wilson" && !bio

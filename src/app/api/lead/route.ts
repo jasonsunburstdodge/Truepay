@@ -93,6 +93,9 @@ export async function POST(request: Request) {
       path: "/thank-you/",
       maxAge: 300,
     });
+    response.cookies.set("truepay-request-type", lead.formType, {
+      httpOnly: true, sameSite: "lax", secure: process.env.NODE_ENV === "production", path: "/thank-you/", maxAge: 300,
+    });
     return response;
   } catch {
     return failure(502);

@@ -1,0 +1,38 @@
+[
+  {
+    "width": 390,
+    "type": "partner",
+    "formType": "partner",
+    "status": 503,
+    "phoneFallback": true,
+    "successCookie": false,
+    "redirected": false
+  },
+  {
+    "width": 390,
+    "type": "careers",
+    "formType": "careers",
+    "status": 503,
+    "phoneFallback": true,
+    "successCookie": false,
+    "redirected": false
+  },
+  {
+    "width": 1440,
+    "type": "partner",
+    "formType": "partner",
+    "status": 503,
+    "phoneFallback": true,
+    "successCookie": false,
+    "redirected": false
+  },
+  {
+    "width": 1440,
+    "type": "careers",
+    "formType": "careers",
+    "status": 503,
+    "phoneFallback": true,
+    "successCookie": false,
+    "redirected": false
+  }
+]

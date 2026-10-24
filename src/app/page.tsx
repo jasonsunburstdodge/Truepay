@@ -180,7 +180,7 @@ export default function Home() {
       </section>
       <section className="dark-band section">
         <div className="container">
-          <p className="eyebrow">Find your fit</p>
+          <p className="eyebrow">Check the fit before changing processors</p>
           <h2>Is dual pricing right for you?</h2>
           <p>
             <a href="/pricing/dual-pricing/">
@@ -207,7 +207,7 @@ export default function Home() {
       </section>
       <section id="calculator" className="band section">
         <div className="container">
-          <p className="eyebrow">Your numbers, in plain sight</p>
+          <p className="eyebrow">Put a percentage on the processing bill</p>
           <h2>What are you really paying?</h2>
           <p className="section-intro">
             Your effective rate is your total processing fees divided by your
@@ -222,7 +222,7 @@ export default function Home() {
         </div>
       </section>
       <section className="container section">
-        <p className="eyebrow">In their own words</p>
+        <p className="eyebrow">From published TruePay reviews</p>
         <h2>Support is a relationship.</h2>
         <div className="grid two">
           <ProofQuote id="e-springfield" />
@@ -231,7 +231,7 @@ export default function Home() {
       </section>
       <section className="band section">
         <div className="container coverage">
-          <p className="eyebrow">A Texas home base</p>
+          <p className="eyebrow">Josephine is where TruePay starts</p>
           <h2>Check service options for your payment location.</h2>
           <p className="section-intro" data-claim="coverage">
             TruePay’s home base is Josephine, Texas, with business coverage across the U.S.

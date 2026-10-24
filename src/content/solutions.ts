@@ -102,7 +102,7 @@ export const solutions: Solution[] = [
       },
     ],
     questions: [
-      "Start with the orders, inventory and staff tasks you handle each day. Compare the systems below in a demo using your own workflow, rather than choosing on a feature list alone.",
+      "Start with the orders, inventory and staff tasks you handle each day. Demo the systems below with a sample order, split check or returned item.",
       "Possibly. Share the system name, version and current processing arrangement so the team can check the connection before recommending a change.",
       "TruePay’s setup process covers learning your business, a demo and quote, configuration, installation and training, launch support and ongoing support. Discuss whether your installation is on-site or remote with the team.",
       "Contact merchant support with your business name, device model and the exact error. Explain what stopped working and when it started so the team can help you work through it.",
@@ -175,10 +175,10 @@ export const solutions: Solution[] = [
       },
     ],
     questions: [
-      "Start with where you take payment. A fixed counter and a moving checkout have different connection needs; compare the specific device rather than assuming every model is wireless.",
+      "Start with where you take payment. A fixed counter and a moving checkout have different connection needs; choose the connection for the place where the device will sit.",
       "Compare Membership with the device you need for your checkout. The equipment details sit with the other commitments.",
       "TrueCare concerns covered equipment while you remain a customer. The equipment scope and questions about coverage are collected in the commitment terms.",
-      "The table identifies the payment methods actually listed for each model. NFC means contactless payment; do not assume a feature on one terminal is present on all of them.",
+      "The table lists each model’s supported payment methods. NFC means contactless payment, such as a card tap or a supported digital wallet.",
     ],
     setup: [
       [
@@ -322,7 +322,7 @@ export const solutions: Solution[] = [
     hero: "You may be able to keep your current POS when changing processors. Share your system details so TruePay can check the connection first.",
     fit: "Your team likes the system it uses, and you want to explore a different processing arrangement.",
     notFit:
-      "A product name alone does not establish compatibility; your version and current connection matter.",
+      "If your software requires its existing payment provider, keeping that connection may make more sense.",
     workflow: [
       [
         "Map the sale",

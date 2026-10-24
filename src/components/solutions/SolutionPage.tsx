@@ -26,8 +26,10 @@ const ctaTitles: Record<string,string> = {
   "/solutions/integrations/": "Check your current system before replacing its payment connection.",
   "/solutions/billing-software/": "Trace the invoice payment back to QuickBooks."
 };
+const sectionLabels: Record<string, string[]> = {"/solutions/point-of-sale/": ["Orders, inventory and the counter", "When a full POS earns its space", "When a terminal is enough", "Clover, SkyTab and other systems", "Compare POS features around your service.", "From order entry to batch close", "Keep the sale connected to the shift.", "Menu, hardware and staff practice", "Prepare the POS before opening day.", "POS troubleshooting", "When order entry or payment stops.", "Bring the menu and counter plan"], "/solutions/terminals/": ["The device beside your register", "For a focused card-payment task", "When payments need more than a terminal", "VL100, VL110, VL500 and alternatives", "Compare the terminal at your counter.", "Amount, approval and receipt", "Follow one transaction through the device.", "Connection and device settings", "Get the terminal ready for its first sale.", "Terminal power and connection", "Start with the model and error screen.", "Bring the terminal model"], "/solutions/mobile-payments/": ["Payments away from the counter", "When checkout needs to move", "When the location has no connection", "Portable devices and phone apps", "Compare what travels with you.", "From the job to the receipt", "Keep the payment record with the work.", "Signal, receipt and device checks", "Test the mobile setup where you collect.", "Mobile payment status", "Before retrying a payment on the road.", "Bring your collection locations"], "/solutions/online-payments/": ["The payment step on your website", "For a website that collects payments", "When the platform fixes your choices", "Gateways and the checkout connection", "Compare the gateway behind the pay button.", "From checkout to order record", "Connect the website order to its payment.", "Website, gateway and test order", "Run a checkout before replacing the live link.", "Website checkout support", "Find the gateway behind the error.", "Bring your ecommerce platform"], "/solutions/integrations/": ["Keep the system your staff knows", "When an existing system matters", "When its payment connection is fixed", "Software and payment connections", "Compare the handoff between your systems.", "From payment to software record", "Follow the amount into your existing records.", "Version, provider and mapping", "Test the connection in the software you use.", "Integration troubleshooting", "Locate the handoff that stopped.", "Bring the software version"], "/solutions/billing-software/": ["Invoices and the payment record", "For a QuickBooks invoice workflow", "When the invoice lives elsewhere", "Biller Genie and MantaPay", "Compare how an invoice reaches collection.", "From open balance to paid invoice", "Bring the receipt back to the books.", "Accounting edition and invoice tests", "Prepare billing before sending payment links.", "Invoice and posting support", "Locate the invoice that has not reconciled.", "Bring a sample invoice"]};
 export function SolutionPage({ solution: s }: { solution: Solution }) {
   const route = getRoute(s.path)!;
+  const labels = sectionLabels[s.path];
   return (
     <>
       <RouteHero
@@ -38,14 +40,14 @@ export function SolutionPage({ solution: s }: { solution: Solution }) {
         <p>{s.hero}</p>
       </RouteHero>
       <section className="container section">
-        <p className="eyebrow">Start with the fit</p>
+        <p className="eyebrow">{labels[0]}</p>
         <div className="grid two">
           <article className="card">
-            <h2 className="section-heading">A good starting point if…</h2>
+            <h2 className="section-heading">{labels[1]}</h2>
             <p>{s.fit}</p>
           </article>
           <article className="card">
-            <h2 className="section-heading">Think it through if…</h2>
+            <h2 className="section-heading">{labels[2]}</h2>
             <p>{s.notFit}</p>
           </article>
         </div>
@@ -58,8 +60,8 @@ export function SolutionPage({ solution: s }: { solution: Solution }) {
       </section>
       <section className="band section">
         <div className="container">
-          <p className="eyebrow">Compare your options</p>
-          <h2>Start with what your team needs.</h2>
+          <p className="eyebrow">{labels[3]}</p>
+          <h2>{labels[4]}</h2>
           <p className="table-hint">
             Scroll across the table to compare every column.
           </p>
@@ -97,8 +99,8 @@ export function SolutionPage({ solution: s }: { solution: Solution }) {
         </div>
       </section>
       <section className="container section">
-        <p className="eyebrow">In the working day</p>
-        <h2>A payment is part of a bigger workflow.</h2>
+        <p className="eyebrow">{labels[5]}</p>
+        <h2>{labels[6]}</h2>
         <div className="grid three">
           {s.workflow.map(([title, body]) => (
             <article key={title}>
@@ -110,8 +112,8 @@ export function SolutionPage({ solution: s }: { solution: Solution }) {
       </section>
       <section className="band section">
         <div className="container">
-          <p className="eyebrow">From choosing to using</p>
-          <h2>Work through the setup together.</h2>
+          <p className="eyebrow">{labels[7]}</p>
+          <h2>{labels[8]}</h2>
           {s.setupClaim && (
             <p data-claim="setup-training">TruePay’s POS setup covers configuration, installation and staff instruction for the payment system you select.</p>
           )}
@@ -132,12 +134,6 @@ export function SolutionPage({ solution: s }: { solution: Solution }) {
         {route.questions.slice(1).map((q, i) => (
           <QuestionSection key={q} question={q}>
             <p>{s.questions[i + 1]}</p>
-            {s.path === "/solutions/point-of-sale/" && (
-              <p className="contact-page-link">
-                Looking for SkyTab Mobile or SkyTab Glass? Tell us which model
-                you use so we can talk through your setup.
-              </p>
-            )}
             {s.path === "/solutions/terminals/" && i === 0 && (
               <p data-claim="free-terminal">{getClaim("free-terminal").copy}</p>
             )}
@@ -155,8 +151,8 @@ export function SolutionPage({ solution: s }: { solution: Solution }) {
       </section>
       <section className="dark-band section">
         <div className="container">
-          <p className="eyebrow">Help after setup</p>
-          <h2>What if something breaks?</h2>
+          <p className="eyebrow">{labels[9]}</p>
+          <h2>{labels[10]}</h2>
           <p>
             {supportDetails[s.path]} Call <a href={entity.phone.href}>{entity.phone.display}</a>. <a href="/support/">Get merchant support</a>.
           </p>
@@ -174,7 +170,7 @@ export function SolutionPage({ solution: s }: { solution: Solution }) {
         </div>
       </section>
       <CtaBand
-        eyebrow="Talk through your setup"
+        eyebrow={labels[11]}
         title={ctaTitles[s.path]}
         primary={route.primaryCta}
         secondary={route.secondaryCta ?? "none"}

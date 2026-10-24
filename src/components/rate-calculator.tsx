@@ -59,7 +59,7 @@ export function RateCalculator({ context }: { context?: "home" }) {
         )}
       </div>
       <div className="result" aria-live="polite" aria-atomic="true">
-        <p className="eyebrow">Your effective rate</p>
+        <p className="eyebrow">{context === "home" ? "The rate behind this month’s bill" : "Your statement’s effective rate"}</p>
         <p className="big-number">
           {rate === null ? "Not yet" : `${rate.toFixed(2)}%`}
         </p>

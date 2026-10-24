@@ -1351,3 +1351,47 @@ caption {
 .industry-questions [data-sources] { margin-top: 48px; }
 .industry-questions [data-sources] h2 { font-size: 32px; }
 @media(max-width:760px) { .industry-intro-grid { grid-template-columns: 1fr; gap: 24px; } }
+
+.person-role { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--color-slate); }
+
+/* Partner program: the original navy/gold page, with assumptions beside its math. */
+.partner-overlap dl { margin: 24px 0; }
+.partner-overlap dl > div { display:flex; justify-content:space-between; align-items:center; padding:16px 0; border-bottom:1px solid var(--color-border); }
+.partner-overlap dd { color:var(--color-ink); font-size:52px; font-weight:800; letter-spacing:-.05em; margin:0; line-height:1; }
+.partner-overlap dt { font-weight:700; }
+.partner-overlap h2 { font-size:32px; }
+.partner-estimate-link { display:inline-block; margin-top:20px; color:var(--color-gold); font-weight:700; }
+.partner-estimator h2, .legal-body h2 { font-size:clamp(32px,3vw,40px); line-height:1.1; }
+.partner-estimator { display:grid; gap:48px; }
+.single-account { padding:clamp(24px,4vw,48px); }
+.estimator-inputs label { display:block; font-size:15px; font-weight:700; margin-bottom:20px; }
+.estimator-inputs input, .estimator-inputs select { display:block; width:100%; min-width:0; margin-top:8px; border:2px solid var(--color-border); border-radius:var(--radius-control); padding:12px 14px; background:var(--color-paper); color:var(--color-ink); font-size:24px; font-weight:700; }
+.estimator-inputs select { font-size:17px; }
+.single-results { margin:24px 0; }
+.single-results .result { padding:28px; }
+.single-results .big-number { font-size:clamp(36px,5vw,60px); overflow-wrap:anywhere; }
+.result-label { font-size:14px; font-weight:700; }
+.result-light { background:var(--color-surface-alt); color:var(--color-text); }
+.result-light .big-number { color:var(--color-ink); }
+.estimate-disclaimer { font-size:14px; line-height:1.65; margin:20px 0 0; padding-top:20px; border-top:1px solid var(--color-border); }
+.partner-projection { border-radius:var(--radius-card); padding:clamp(24px,4vw,48px); }
+.projection-grid { display:grid; grid-template-columns: minmax(0,.85fr) minmax(0,1.15fr); gap:24px; }
+.projection-results dl { margin:0 0 24px; }
+.projection-results dl > div { padding:16px 0; border-bottom:1px solid var(--color-border); }
+.projection-results dt { font-size:14px; font-weight:700; }
+.projection-results dd { margin:8px 0 0; color:var(--color-ink); font-size:36px; font-weight:800; letter-spacing:-.04em; overflow-wrap:anywhere; line-height:1.1; }
+.projection-assumptions { font-size:15px; }
+.partner-projection details { margin-top:28px; }
+.partner-projection summary { cursor:pointer; font-weight:700; }
+.partner-path .path-share { color:var(--color-ink); font-weight:800; font-size:64px; line-height:1; letter-spacing:-.05em; }
+.partner-reward { margin-top:32px; }
+@media(max-width:700px) { .projection-grid { grid-template-columns:minmax(0,1fr); } .partner-overlap dd { font-size:44px; } .single-results .result { padding:24px 16px; } }
+
+.legal-body { max-width:960px; }
+.legal-body > section, .legal-body [data-published-policy] > section { margin-top:48px; scroll-margin-top:120px; }
+.legal-body p, .legal-body li { line-height:1.75; }
+.legal-edition { margin-bottom:40px; }
+.legal-edition nav { display:flex; gap:12px 24px; flex-wrap:wrap; font-weight:700; }
+.legal-body address { font-style:normal; line-height:1.8; }
+.website-forms-policy h3 { margin-top:32px; }
+.legal-body .related { margin-top:56px; }

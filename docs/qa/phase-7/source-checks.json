@@ -1,0 +1,35 @@
+{
+  "checked": "2026-10-24",
+  "results": [
+    {
+      "url": "https://gotruepay.com/privacy-policy/",
+      "status": 200,
+      "finalUrl": "https://gotruepay.com/privacy-policy/",
+      "bytes": 160454
+    },
+    {
+      "url": "https://gotruepay.com/careers/",
+      "status": 200,
+      "finalUrl": "https://gotruepay.com/careers/",
+      "bytes": 211520
+    },
+    {
+      "url": "https://truepaydev.wpenginepowered.com/work-with-us/",
+      "status": 200,
+      "finalUrl": "https://truepaydev.wpenginepowered.com/work-with-us/",
+      "bytes": 136431
+    },
+    {
+      "url": "https://truepaytraining.com/",
+      "status": 200,
+      "finalUrl": "https://truepaytraining.com/",
+      "bytes": 327420
+    },
+    {
+      "url": "https://gotruepay.com/referral/",
+      "status": 200,
+      "finalUrl": "https://gotruepay.com/referral/",
+      "bytes": 202671
+    }
+  ]
+}
