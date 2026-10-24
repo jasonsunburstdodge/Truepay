@@ -1,0 +1,20 @@
+export type IndustryPageContent = {
+  slug: string;
+  eyebrow: string;
+  hero: string;
+  answer: string;
+  workflowTitle: string;
+  workflow: [string, string][];
+  setups: { path: string; title: string; reason: string; check: string }[];
+  membership: string;
+  dual: string;
+  decision: string;
+  setupTitle: string;
+  setup: [string, string][];
+  support: string;
+  fit: string;
+  questions: string[];
+  contact: string;
+  ctaTitle: string;
+  sources?: { title: string; url: string; publisher: string }[];
+};

@@ -1336,3 +1336,18 @@ caption {
 
 .guide-hero-summary { max-width: 680px; color: var(--color-mist); font-size: 19px; line-height: 1.6; margin: 28px 0; }
 .guide-body > .answer-first { margin-bottom: 40px; color: var(--color-ink); font-size: 19px; }
+
+.industry-hero-summary { max-width: 660px; margin: 28px 0; color: var(--color-mist); font-size: 19px; line-height: 1.6; }
+.industry-intro-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; align-items: center; margin-bottom: 56px; }
+.industry-intro-grid .answer-first { font-size: 20px; color: var(--color-ink); }
+.industry-intro-grid h2 { font-size: 28px; }
+.industry-intro-grid a { display: block; margin-top: 12px; }
+.industry-workflow { list-style: none; counter-reset: workflow; padding: 0; margin: 32px 0 0; }
+.industry-workflow li { counter-increment: workflow; }
+.industry-workflow li::before { content: counter(workflow, decimal-leading-zero); display: block; font-size: 48px; font-weight: 800; letter-spacing: -.05em; color: var(--color-slate); margin-bottom: 16px; }
+.industry-decision { margin-top: 32px; font-weight: 700; }
+.industry-support { margin: 32px 0 16px; max-width: 800px; }
+.industry-questions .question > h2 { font-size: clamp(2rem, 3vw, 2.5rem); }
+.industry-questions [data-sources] { margin-top: 48px; }
+.industry-questions [data-sources] h2 { font-size: 32px; }
+@media(max-width:760px) { .industry-intro-grid { grid-template-columns: 1fr; gap: 24px; } }
