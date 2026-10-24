@@ -97,6 +97,65 @@ export type RouteSpec = {
 
 const R = (spec: RouteSpec) => spec;
 
+export const industryQuestions: Record<string, string[]> = {
+  "restaurants": [
+    "How do tips and open tabs fit into checkout?",
+    "Can guests split a check or pay at the table?",
+    "How should takeout and dining-room payments stay organized?",
+    "Would dual pricing suit a tipping-heavy restaurant?",
+    "What should we test before a busy service?"
+  ],
+  "retail": [
+    "Can counter and website sales use the same inventory workflow?",
+    "What happens when a customer returns an item?",
+    "Do I need a full POS or just a card terminal?",
+    "How would two displayed prices affect shelf labels?",
+    "What should staff practice before opening the new checkout?"
+  ],
+  "salons-spas": [
+    "How should appointment deposits be handled at the final visit?",
+    "Can clients add a tip when paying for a service?",
+    "Will my booking software connect to a new processor?",
+    "Would dual pricing feel right at my salon?",
+    "How do I prepare the front desk for a checkout change?"
+  ],
+  "medical-dental": [
+    "How do we separate a visit payment from a later patient balance?",
+    "Can we keep our practice-management software?",
+    "What should we check before offering scheduled patient payments?",
+    "Which pricing approach is easier to explain at the front desk?",
+    "What belongs in a payment-support request?"
+  ],
+  "home-services": [
+    "Can I take a card payment at the job site?",
+    "What if there is no reliable signal at the property?",
+    "How do I connect a deposit and final invoice?",
+    "Should a contractor consider dual pricing for larger jobs?",
+    "What should a technician test before leaving the office?"
+  ],
+  "auto-services": [
+    "How do we connect the repair order to the final payment?",
+    "Can customers pay a parts deposit before repairs begin?",
+    "Should payments happen at the service desk or beside the vehicle?",
+    "How should we explain card and cash prices on an estimate?",
+    "What should the shop test before changing terminals?"
+  ],
+  "professional-services": [
+    "How do invoice payments reach our accounting records?",
+    "Can clients pay retainers or recurring invoices?",
+    "Should we offer ACH alongside cards?",
+    "How does dual pricing affect an agreed project fee?",
+    "What should we verify before moving open invoices?"
+  ],
+  "nonprofits": [
+    "How can we take gifts online and at an event?",
+    "What should we check before setting up recurring giving?",
+    "Is a payment receipt the same as a donation acknowledgment?",
+    "Should a nonprofit use dual pricing for donations?",
+    "How do we prepare volunteers to take payments?"
+  ]
+};
+
 export const routes: RouteSpec[] = [
   // ───────────────────────── Phase 0 — Home ─────────────────────────
   R({
@@ -804,7 +863,7 @@ export const routes: RouteSpec[] = [
     path: "/industries/",
     template: "hub",
     phase: 6,
-    status: "planned",
+    status: "draft",
     label: "Industries",
     title: "Payment Processing by Industry | TruePay",
     description:
@@ -835,25 +894,20 @@ export const routes: RouteSpec[] = [
       path: `/industries/${slug}/`,
       template: "industry",
       phase: 6,
-      status: "planned",
+      status: "draft",
       parent: "/industries/",
       label,
       title,
       description,
       h1,
       intent,
-      questions: [
-        `How do payments typically work for ${label.toLowerCase()}?`,
-        "Which equipment or software fits?",
-        "Is dual pricing or membership the better fit?",
-        "What does setup and support look like?",
-      ],
+      questions: industryQuestions[slug],
       primaryCta: "statement-review",
       secondaryCta: "talk-to-person",
       schema: ["WebPage", "Service", "BreadcrumbList"],
       indexable: true,
-      links: [...links, "/statement-review/"],
-      sources: ["gh:industries.ts", "pdf:p10 (restaurant/retail use cases)"],
+      links: [...new Set([...links, ...(slug === "restaurants" ? ["/solutions/terminals/"] : slug === "salons-spas" || slug === "auto-services" ? ["/solutions/billing-software/"] : slug === "medical-dental" ? ["/solutions/online-payments/"] : slug === "nonprofits" ? ["/solutions/mobile-payments/"] : []), "/pricing/membership/", "/pricing/dual-pricing/", "/statement-review/", "/support/", "/why-truepay/"])],
+      sources: ["gh:src/lib/industries.ts (proposed categories; not verified promises)", "gh:src/content/solutions.ts (approved product scope)", "pdf:p10-13 (setup, equipment and software)", ...(slug === "restaurants" ? ["https://www.skytab.com/restaurant-types/table-service-restaurants"] : slug === "retail" ? ["https://www.clover.com/pos-solutions/retail"] : slug === "salons-spas" ? ["https://www.clover.com/pos-solutions/salons"] : slug === "professional-services" ? ["https://helpcenter.billergenie.com/en_US/accounting-software/syncing-with-quickbooks-online", "https://www.authorize.net/resources/our-features/payment-methods.html"] : slug === "nonprofits" ? ["https://www.authorize.net/resources/our-features/recurring-payments.html"] : [])],
       notes: "Each page: distinct workflow, verified solution options, pricing-model fit and tradeoffs, setup/support, real proof if it exists, 3–5 industry questions. No invented examples.",
     }),
   ),
