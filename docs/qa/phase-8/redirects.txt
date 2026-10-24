@@ -1,0 +1,48 @@
+OK   /about-us/ 308 -> /about/ 200
+OK   /company/ 308 -> /about/ 200
+OK   /reviews/ 308 -> /customer-stories/ 200
+OK   /coast-to-coast-customer-network/ 308 -> /service-areas/ 200
+OK   /referral/ 308 -> /partners/ 200
+OK   /affiliate-program/ 308 -> /partners/ 200
+OK   /employment-opportunity/ 308 -> /careers/ 200
+OK   /employment-opportunity-backup/ 308 -> /careers/ 200
+OK   /blog/ 308 -> /resources/ 200
+OK   /category/truepay/ 308 -> /resources/ 200
+OK   /get-started/ 308 -> /statement-review/ 200
+OK   /cost-analysis/ 308 -> /statement-review/ 200
+OK   /welcome/ 308 -> /support/ 200
+OK   /dual-pricing-program/ 308 -> /pricing/dual-pricing/ 200
+OK   /membership-program/ 308 -> /pricing/membership/ 200
+OK   /equipment/ 308 -> /solutions/ 200
+OK   /point-of-sale/ 308 -> /solutions/point-of-sale/ 200
+OK   /pos-system/ 308 -> /solutions/point-of-sale/ 200
+OK   /skytab-mobile/ 308 -> /solutions/point-of-sale/ 200
+OK   /skytab-glass/ 308 -> /solutions/point-of-sale/ 200
+OK   /paradise-pos/ 308 -> /solutions/point-of-sale/ 200
+OK   /mobile-bytes/ 308 -> /solutions/point-of-sale/ 200
+OK   /rckt-mobile-pos/ 308 -> /solutions/mobile-payments/ 200
+OK   /terminals/ 308 -> /solutions/terminals/ 200
+OK   /valor/ 308 -> /solutions/terminals/ 200
+OK   /vl-100/ 308 -> /solutions/terminals/ 200
+OK   /vl-110/ 308 -> /solutions/terminals/ 200
+OK   /vl-500/ 308 -> /solutions/terminals/ 200
+OK   /dejavoo-qd4/ 308 -> /solutions/terminals/ 200
+OK   /clover-flex/ 308 -> /solutions/terminals/ 200
+OK   /mini/ 308 -> /solutions/terminals/ 200
+OK   /duo/ 308 -> /solutions/terminals/ 200
+OK   /valor-pay-app/ 308 -> /solutions/mobile-payments/ 200
+OK   /online-check-out/ 308 -> /solutions/online-payments/ 200
+OK   /the-dual-pricing-advantage-how-it-benefits-both-businesses-and-consumers/ 308 -> /resources/dual-pricing-vs-surcharging-vs-cash-discount/ 200
+OK   /discover-the-top-5-benefits-of-flat-rate-payment-processing/ 308 -> /resources/flat-rate-vs-tiered-vs-interchange-plus/ 200
+OK   /the-anatomy-of-a-credit-card-payment-understanding-the-process/ 308 -> /resources/how-credit-card-processing-works/ 200
+OK   /5-benefits-of-an-evm-compliant-chip-terminal/ 308 -> /solutions/terminals/ 200
+OK   /the-evolution-of-pos-systems-from-cash-registers-to-smart-terminals/ 308 -> /solutions/point-of-sale/ 200
+OK   /streamlining-transactions-for-smbs-a-closer-look-at-modern-pos-systems/ 308 -> /solutions/point-of-sale/ 200
+OK   /the-future-of-payments-in-2026-what-merchants-really-need-to-know/ 308 -> /resources/ 200
+OK   / 200
+OK   /contact/ 200
+OK   /careers/ 200
+OK   /privacy-policy/ 200
+OK   /resources/ 200
+OK   /solutions/ 200
+checked 47, failures 0

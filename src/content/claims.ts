@@ -192,11 +192,11 @@ export const claims: Claim[] = [
   },
   {
     id: "partner-estimator",
-    values: { defaultMarginPercent: 1, defaultAttritionPercent: 2 },
+    values: { defaultMarginPercent: 1, defaultAttritionPercent: 2, defaultVolume: 25000 },
     status: "pending",
     copy: "Illustration only: volume × estimated TruePay profit margin × your share. Assumes accounts keep processing; real results vary and aren't guaranteed.",
     scope: "Margin assumption (1%-1.75% for dual pricing) must be confirmed; add an attrition input; lead with the single-account example.",
-    confirm: "Jon/finance + counsel review of earnings language.",
+    confirm: "Jon/finance + counsel review of earnings language. Jon: typical monthly card volume of a TruePay merchant for defaultVolume (placeholder $25,000).",
     source: "partner draft (chatgpt.site)",
   },
   {

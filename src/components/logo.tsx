@@ -1,7 +1,7 @@
 import Link from "next/link";
 export function Logo() {
   return (
-    <Link href="/" className="logo" aria-label="TruePay home">
+    <Link href="/" className="logo">
       <svg
         width="37"
         height="43"
@@ -25,6 +25,7 @@ export function Logo() {
       <span>
         <strong>True</strong> <span className="logo-pay">pay</span>
       </span>
+      <span className="sr-only"> home</span>
     </Link>
   );
 }

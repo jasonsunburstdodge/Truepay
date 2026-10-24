@@ -42,10 +42,10 @@ try {
   }
   console.log(`PASS: ${width}px checks for ${built.length} pages`);
   await page.goto(base+'/partners/');
-  assert.equal(await page.locator('[data-single-rep]').innerText(),'$250.00');assert.equal(await page.locator('[data-single-referral]').innerText(),'$100.00');
+  assert.equal(await page.locator('[data-single-rep]').innerText(),'$125.00');assert.equal(await page.locator('[data-single-referral]').innerText(),'$50.00');
   assert.ok(await page.locator('.single-account').evaluate(el=>el.getBoundingClientRect().top < document.querySelector('.partner-projection').getBoundingClientRect().top));
-  const defaultActive=(1-.98**12)/.02, defaultTotal=250*Array.from({length:12},(_,i)=>(1-.98**(i+1))/.02).reduce((a,b)=>a+b,0);
-  assert.equal(await page.locator('[data-month12]').innerText(),money(defaultActive*250));assert.equal(await page.locator('[data-year-total]').innerText(),money(defaultTotal));
+  const defaultActive=(1-.98**12)/.02, defaultTotal=125*Array.from({length:12},(_,i)=>(1-.98**(i+1))/.02).reduce((a,b)=>a+b,0);
+  assert.equal(await page.locator('[data-month12]').innerText(),money(defaultActive*125));assert.equal(await page.locator('[data-year-total]').innerText(),money(defaultTotal));
   await page.locator('#partner-volume').fill('100000');await page.locator('#partner-margin').fill('1.75');
   assert.equal(await page.locator('[data-single-rep]').innerText(),'$875.00');assert.equal(await page.locator('[data-single-referral]').innerText(),'$350.00');
   await page.locator('#partner-path').selectOption('referral-partner');await page.locator('#partner-accounts').fill('2');await page.locator('#partner-attrition').fill('0');
@@ -54,7 +54,7 @@ try {
   await page.locator('#partner-accounts').fill('0');assert.equal(await page.locator('[data-year-total]').innerText(),'$0.00');
   await page.locator('#partner-accounts').fill('1.5');assert.equal(await page.locator('.projection-results [role="alert"]').count(),1);
   await page.locator('#partner-volume').fill('');assert.equal(await page.locator('[data-single-rep]').innerText(),'Enter valid inputs');
-  estimator.push({width,defaultRep:250,defaultReferral:100,editedVolume:100000,editedMargin:1.75,editedReferral:350,noAttritionYear:54600,fullAttritionYear:8400,zeroAccounts:0,invalidInputs:'no result'});
+  estimator.push({width,defaultRep:125,defaultReferral:50,editedVolume:100000,editedMargin:1.75,editedReferral:350,noAttritionYear:54600,fullAttritionYear:8400,zeroAccounts:0,invalidInputs:'no result'});
   for(const type of ['partner','careers']){
    const path=type==='partner'?'/partners/':'/careers/';await page.goto(base+path);
    await page.locator(`#${type}-name`).fill('QA Test');await page.locator(`#${type}-email`).fill('qa@example.com');
@@ -71,7 +71,7 @@ try {
  }
  assert.deepEqual(duplicateSentences(copies),[]);assert.deepEqual(duplicateSentences(headings),[]);
  const pairs=[];for(let i=0;i<industry.length;i++)for(let j=i+1;j<industry.length;j++){const shared=industry[i].sentences.filter(s=>industry[j].sentences.includes(s));assert.ok(shared.length<=1);pairs.push({a:industry[i].path,b:industry[j].path,shared});}
- const noJs=await browser.newContext({javaScriptEnabled:false});const staticPage=await noJs.newPage();await staticPage.goto(base+'/partners/');assert.equal(await staticPage.locator('[data-single-rep]').innerText(),'$250.00');assert.equal(await staticPage.locator('[data-single-referral]').innerText(),'$100.00');await noJs.close();
+ const noJs=await browser.newContext({javaScriptEnabled:false});const staticPage=await noJs.newPage();await staticPage.goto(base+'/partners/');assert.equal(await staticPage.locator('[data-single-rep]').innerText(),'$125.00');assert.equal(await staticPage.locator('[data-single-referral]').innerText(),'$50.00');await noJs.close();
  assert.equal((await fetch(base+'/industries/unknown-industry/')).status,404);assert.equal((await fetch(base+'/customer-stories/unpublished-story/')).status,404);
  for(const [old,target]of [['/referral/','/partners/'],['/affiliate-program/','/partners/'],['/employment-opportunity/','/careers/']]){const r=await fetch(base+old,{redirect:'manual'});assert.ok([301,308].includes(r.status));assert.equal(new URL(r.headers.get('location'),base).pathname,target);}
  assert.equal(errors.length,0,errors.join('\n'));

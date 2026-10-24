@@ -5,7 +5,7 @@ import { estimatePartnerResiduals } from "@/lib/partner-estimator";
 const money = (n: number) => new Intl.NumberFormat("en-US", {style:"currency",currency:"USD",minimumFractionDigits:2,maximumFractionDigits:2}).format(n);
 const number = (s: string) => s.trim() === "" ? NaN : Number(s);
 export function ResidualEstimator() {
-  const [volume,setVolume] = useState("50000");
+  const [volume,setVolume] = useState(String(partnerProgram.defaultVolume));
   const [margin,setMargin] = useState(String(partnerProgram.defaultMarginPercent));
   const [accounts,setAccounts] = useState("1");
   const [attrition,setAttrition] = useState(String(partnerProgram.defaultAttritionPercent));
@@ -42,7 +42,7 @@ export function ResidualEstimator() {
         <div className="card projection-results" aria-live="polite" aria-atomic="true">
           {result ? <>
             <dl><div><dt>Estimated month 12 residual</dt><dd data-month12>{money(result.lastMonth.residual)}</dd></div><div><dt>Estimated total paid over months 1-12</dt><dd data-year-total>{money(result.total)}</dd></div><div><dt>Expected active accounts in month 12</dt><dd data-active>{result.lastMonth.activeAccounts.toFixed(2)}</dd></div></dl>
-            <p className="projection-assumptions">Assumptions: {money(inputs.monthlyVolume)} per account each month; {inputs.marginPercent}% estimated TruePay profit margin; {share}% partner share; {inputs.accountsPerMonth} new accounts monthly; {inputs.attritionPercent}% monthly attrition.</p>
+            <p className="projection-assumptions">Assumptions: {money(inputs.monthlyVolume)} per account each month; {inputs.marginPercent}% estimated TruePay profit margin; {share}% partner share; {inputs.accountsPerMonth} new {inputs.accountsPerMonth === 1 ? "account" : "accounts"} monthly; {inputs.attritionPercent}% monthly attrition.</p>
             <p className="note">Each new account contributes a full month immediately. Attrition reduces prior accounts before new ones are added; fractional accounts are expected values. Volume and margin stay constant. These figures do not subtract your expenses or taxes.</p>
           </> : <p role="alert">Use whole numbers from 0 to 100 for new accounts and 0%-100% attrition. Complete the volume and margin above to calculate this scenario.</p>}
           <p className="estimate-disclaimer">A model cannot predict which owners will sign or keep processing. Real residuals can be lower or absent; review the definition of applicable profit and payment conditions with TruePay. <a href="/terms/#calculator-illustrations">Read the website illustration terms</a>.</p>
