@@ -1,0 +1,69 @@
+{
+  "checked": "2026-10-24",
+  "note": "Manufacturer/government source text read through web retrieval and tested here. Approved-design product scope was retained from the reviewed solutions register. An HTTP access error is recorded as such, not a validation success.",
+  "results": [
+    {
+      "title": "SkyTab check splitting, tip tools and preauthorization release notes",
+      "url": "https://releasenotes.shift4.com/announcements/skytab-winter-release-is-coming-faster-order-entry-easier-splits-smarter-tips",
+      "publisher": "SkyTab",
+      "path": "/industries/restaurants/",
+      "status": 200,
+      "finalUrl": "https://releasenotes.shift4.com/announcements/skytab-winter-release-is-coming-faster-order-entry-easier-splits-smarter-tips",
+      "bytes": 43215
+    },
+    {
+      "title": "Retail POS and inventory workflows",
+      "url": "https://www.clover.com/pos-solutions/retail",
+      "publisher": "Clover",
+      "path": "/industries/retail/",
+      "status": 200,
+      "finalUrl": "https://www.clover.com/pos-solutions/retail",
+      "bytes": 7854
+    },
+    {
+      "title": "Salon payments, tips and handheld checkout",
+      "url": "https://www.clover.com/pos-solutions/salons",
+      "publisher": "Clover",
+      "path": "/industries/salons-spas/",
+      "status": 200,
+      "finalUrl": "https://www.clover.com/pos-solutions/salons",
+      "bytes": 7854
+    },
+    {
+      "title": "QuickBooks Online invoice and payment connection",
+      "url": "https://helpcenter.billergenie.com/en_US/accounting-software/syncing-with-quickbooks-online",
+      "publisher": "Biller Genie",
+      "path": "/industries/professional-services/",
+      "status": 200,
+      "finalUrl": "https://helpcenter.billergenie.com/en_US/accounting-software/syncing-with-quickbooks-online",
+      "bytes": 85373
+    },
+    {
+      "title": "Supported cards, wallets and eChecks",
+      "url": "https://www.authorize.net/resources/our-features/payment-methods.html",
+      "publisher": "Authorize.net",
+      "path": "/industries/professional-services/",
+      "status": 200,
+      "finalUrl": "https://www.authorize.net/resources/our-features/payment-methods.html",
+      "bytes": 111632
+    },
+    {
+      "title": "Recurring billing and nonprofit donation use cases",
+      "url": "https://www.authorize.net/resources/our-features/recurring-payments.html",
+      "publisher": "Authorize.net",
+      "path": "/industries/nonprofits/",
+      "status": 200,
+      "finalUrl": "https://www.authorize.net/resources/our-features/recurring-payments.html",
+      "bytes": 137556
+    },
+    {
+      "title": "Charitable contributions: written acknowledgments",
+      "url": "https://www.irs.gov/charities-non-profits/charitable-organizations/charitable-contributions-written-acknowledgments",
+      "publisher": "Internal Revenue Service",
+      "path": "/industries/nonprofits/",
+      "status": 200,
+      "finalUrl": "https://www.irs.gov/charities-non-profits/charitable-organizations/charitable-contributions-written-acknowledgments",
+      "bytes": 102899
+    }
+  ]
+}

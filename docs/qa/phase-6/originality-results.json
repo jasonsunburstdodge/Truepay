@@ -1,0 +1,150 @@
+{
+  "sitewideDuplicateSentences": [],
+  "threshold": "more than 8 words",
+  "exclusions": [
+    "verbatim blockquotes",
+    "shared commitment fine print"
+  ],
+  "industryPairs": [
+    {
+      "a": "/industries/restaurants/",
+      "b": "/industries/retail/",
+      "shared": []
+    },
+    {
+      "a": "/industries/restaurants/",
+      "b": "/industries/salons-spas/",
+      "shared": []
+    },
+    {
+      "a": "/industries/restaurants/",
+      "b": "/industries/medical-dental/",
+      "shared": []
+    },
+    {
+      "a": "/industries/restaurants/",
+      "b": "/industries/home-services/",
+      "shared": []
+    },
+    {
+      "a": "/industries/restaurants/",
+      "b": "/industries/auto-services/",
+      "shared": []
+    },
+    {
+      "a": "/industries/restaurants/",
+      "b": "/industries/professional-services/",
+      "shared": []
+    },
+    {
+      "a": "/industries/restaurants/",
+      "b": "/industries/nonprofits/",
+      "shared": []
+    },
+    {
+      "a": "/industries/retail/",
+      "b": "/industries/salons-spas/",
+      "shared": []
+    },
+    {
+      "a": "/industries/retail/",
+      "b": "/industries/medical-dental/",
+      "shared": []
+    },
+    {
+      "a": "/industries/retail/",
+      "b": "/industries/home-services/",
+      "shared": []
+    },
+    {
+      "a": "/industries/retail/",
+      "b": "/industries/auto-services/",
+      "shared": []
+    },
+    {
+      "a": "/industries/retail/",
+      "b": "/industries/professional-services/",
+      "shared": []
+    },
+    {
+      "a": "/industries/retail/",
+      "b": "/industries/nonprofits/",
+      "shared": []
+    },
+    {
+      "a": "/industries/salons-spas/",
+      "b": "/industries/medical-dental/",
+      "shared": []
+    },
+    {
+      "a": "/industries/salons-spas/",
+      "b": "/industries/home-services/",
+      "shared": []
+    },
+    {
+      "a": "/industries/salons-spas/",
+      "b": "/industries/auto-services/",
+      "shared": []
+    },
+    {
+      "a": "/industries/salons-spas/",
+      "b": "/industries/professional-services/",
+      "shared": []
+    },
+    {
+      "a": "/industries/salons-spas/",
+      "b": "/industries/nonprofits/",
+      "shared": []
+    },
+    {
+      "a": "/industries/medical-dental/",
+      "b": "/industries/home-services/",
+      "shared": []
+    },
+    {
+      "a": "/industries/medical-dental/",
+      "b": "/industries/auto-services/",
+      "shared": []
+    },
+    {
+      "a": "/industries/medical-dental/",
+      "b": "/industries/professional-services/",
+      "shared": []
+    },
+    {
+      "a": "/industries/medical-dental/",
+      "b": "/industries/nonprofits/",
+      "shared": []
+    },
+    {
+      "a": "/industries/home-services/",
+      "b": "/industries/auto-services/",
+      "shared": []
+    },
+    {
+      "a": "/industries/home-services/",
+      "b": "/industries/professional-services/",
+      "shared": []
+    },
+    {
+      "a": "/industries/home-services/",
+      "b": "/industries/nonprofits/",
+      "shared": []
+    },
+    {
+      "a": "/industries/auto-services/",
+      "b": "/industries/professional-services/",
+      "shared": []
+    },
+    {
+      "a": "/industries/auto-services/",
+      "b": "/industries/nonprofits/",
+      "shared": []
+    },
+    {
+      "a": "/industries/professional-services/",
+      "b": "/industries/nonprofits/",
+      "shared": []
+    }
+  ]
+}

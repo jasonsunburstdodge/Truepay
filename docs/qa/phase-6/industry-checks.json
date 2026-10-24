@@ -1,0 +1,146 @@
+[
+  {
+    "path": "/industries/restaurants/",
+    "questions": [
+      "How do tips and open tabs fit into checkout?",
+      "Can guests split a check or pay at the table?",
+      "How should takeout and dining-room payments stay organized?",
+      "Would dual pricing suit a tipping-heavy restaurant?",
+      "What should we test before a busy service?"
+    ],
+    "workflow": "How payments work in a restaurant",
+    "setups": [
+      "/solutions/point-of-sale/",
+      "/solutions/terminals/"
+    ],
+    "schema": "WebPage + Service + BreadcrumbList",
+    "status": "draft",
+    "quoteCount": 0
+  },
+  {
+    "path": "/industries/retail/",
+    "questions": [
+      "Can counter and website sales use the same inventory workflow?",
+      "What happens when a customer returns an item?",
+      "Do I need a full POS or just a card terminal?",
+      "How would two displayed prices affect shelf labels?",
+      "What should staff practice before opening the new checkout?"
+    ],
+    "workflow": "How payments work in a retail store",
+    "setups": [
+      "/solutions/point-of-sale/",
+      "/solutions/online-payments/"
+    ],
+    "schema": "WebPage + Service + BreadcrumbList",
+    "status": "draft",
+    "quoteCount": 0
+  },
+  {
+    "path": "/industries/salons-spas/",
+    "questions": [
+      "How should appointment deposits be handled at the final visit?",
+      "Can clients add a tip when paying for a service?",
+      "Will my booking software connect to a new processor?",
+      "Would dual pricing feel right at my salon?",
+      "How do I prepare the front desk for a checkout change?"
+    ],
+    "workflow": "How payments work in a salon or spa",
+    "setups": [
+      "/solutions/terminals/",
+      "/solutions/billing-software/"
+    ],
+    "schema": "WebPage + Service + BreadcrumbList",
+    "status": "draft",
+    "quoteCount": 0
+  },
+  {
+    "path": "/industries/medical-dental/",
+    "questions": [
+      "How do we separate a visit payment from a later patient balance?",
+      "Can we keep our practice-management software?",
+      "What should we check before offering scheduled patient payments?",
+      "Which pricing approach is easier to explain at the front desk?",
+      "What belongs in a payment-support request?"
+    ],
+    "workflow": "How payments work in a medical or dental office",
+    "setups": [
+      "/solutions/billing-software/",
+      "/solutions/online-payments/"
+    ],
+    "schema": "WebPage + Service + BreadcrumbList",
+    "status": "draft",
+    "quoteCount": 0
+  },
+  {
+    "path": "/industries/home-services/",
+    "questions": [
+      "Can I take a card payment at the job site?",
+      "What if there is no reliable signal at the property?",
+      "How do I connect a deposit and final invoice?",
+      "Should a contractor consider dual pricing for larger jobs?",
+      "What should a technician test before leaving the office?"
+    ],
+    "workflow": "How payments work in a home-service business",
+    "setups": [
+      "/solutions/mobile-payments/",
+      "/solutions/billing-software/"
+    ],
+    "schema": "WebPage + Service + BreadcrumbList",
+    "status": "draft",
+    "quoteCount": 0
+  },
+  {
+    "path": "/industries/auto-services/",
+    "questions": [
+      "How do we connect the repair order to the final payment?",
+      "Can customers pay a parts deposit before repairs begin?",
+      "Should payments happen at the service desk or beside the vehicle?",
+      "How should we explain card and cash prices on an estimate?",
+      "What should the shop test before changing terminals?"
+    ],
+    "workflow": "How payments work in an auto-service shop",
+    "setups": [
+      "/solutions/terminals/",
+      "/solutions/billing-software/"
+    ],
+    "schema": "WebPage + Service + BreadcrumbList",
+    "status": "draft",
+    "quoteCount": 0
+  },
+  {
+    "path": "/industries/professional-services/",
+    "questions": [
+      "How do invoice payments reach our accounting records?",
+      "Can clients pay retainers or recurring invoices?",
+      "Should we offer ACH alongside cards?",
+      "How does dual pricing affect an agreed project fee?",
+      "What should we verify before moving open invoices?"
+    ],
+    "workflow": "How payments work in a professional-services firm",
+    "setups": [
+      "/solutions/billing-software/",
+      "/solutions/online-payments/"
+    ],
+    "schema": "WebPage + Service + BreadcrumbList",
+    "status": "draft",
+    "quoteCount": 0
+  },
+  {
+    "path": "/industries/nonprofits/",
+    "questions": [
+      "How can we take gifts online and at an event?",
+      "What should we check before setting up recurring giving?",
+      "Is a payment receipt the same as a donation acknowledgment?",
+      "Should a nonprofit use dual pricing for donations?",
+      "How do we prepare volunteers to take payments?"
+    ],
+    "workflow": "How payments work in a nonprofit",
+    "setups": [
+      "/solutions/online-payments/",
+      "/solutions/mobile-payments/"
+    ],
+    "schema": "WebPage + Service + BreadcrumbList",
+    "status": "draft",
+    "quoteCount": 0
+  }
+]
