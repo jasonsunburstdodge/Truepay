@@ -462,6 +462,8 @@ function finish(): never {
       lines.push(`| ${id} | ${c.status} | ${[...set].join(", ")} | ${c.confirm ?? ""} |`);
     }
     const guidePaths = pages.filter((page) => page.route.template === "guide").map((page) => page.route.path);
+    const legalPaths = pages.filter(page => page.route.template === "legal").map(page => page.route.path);
+    if (legalPaths.length) lines.push(`| Website legal drafts | Legal review required | ${legalPaths.join(", ")} | Counsel: approve migrated privacy policy, SMS consent clarification, intake providers, retention, rights handling and drafted website/calculator terms before launch. |`);
     if (guidePaths.length) lines.push(`| E-E-A-T authorship | Owner sign-off required | ${guidePaths.join(", ")} | Named author must read and approve each guide; reviewer must actually review before reviewedAt is set or Reviewed by is shown. |`);
   }
 

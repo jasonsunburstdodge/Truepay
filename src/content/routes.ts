@@ -973,7 +973,7 @@ export const routes: RouteSpec[] = [
     path: "/terms/",
     template: "legal",
     phase: 7,
-    status: "planned",
+    status: "draft",
     label: "Terms of use",
     title: "Website Terms of Use | TruePay",
     description: "Terms for using the TruePay website and its calculators, including how illustrative figures and program descriptions should be read.",

@@ -9,7 +9,7 @@ export default function PrivacyPolicy() {
   const route = getRoute("/privacy-policy/")!;
   return <>
     <RouteHero path={route.path} eyebrow="Information you share with TruePay"><p>Read TruePay’s published privacy policy and the added details for this website’s forms. Send privacy questions to support@gotruepay.com.</p></RouteHero>
-    <article className="container section legal-body">
+    <article className="container section legal-body" data-legal-review="required">
       <aside className="card legal-edition"><p>Published policy: <time dateTime="2024-07-16">July 16, 2024</time>. Website-forms addition drafted <time dateTime="2026-10-24">Oct. 24, 2026</time>.</p><p className="note">The website-forms section supplements the published policy below. Its contact-permission rules apply to the review, contact, partner and career-interest forms on this site.</p><nav aria-label="Privacy policy sections"><a href="#information-collected">Information collected</a><a href="#text-messages">Text messaging</a><a href="#website-forms">Website forms</a><a href="#privacy-contact">Privacy contact</a></nav></aside>
       <div data-published-policy><p>{publishedPrivacyIntro}</p>
         {publishedPrivacySections.map(s=><section key={s.id} id={s.id}><h2>{s.title}</h2>{s.paragraphs.map(p=><p key={p}>{p}</p>)}{"items" in s && <ul>{s.items?.map(i=><li key={i}>{i}</li>)}</ul>}{"after" in s && s.after?.map(p=><p key={p}>{p}</p>)}{s.id === "text-messages" && <p className="policy-forms-clarification">For these website forms, the <a href="#website-forms">website-forms section</a> controls contact permission. Providing an optional phone number here is not an enrollment in promotional text messaging.</p>}</section>)}
