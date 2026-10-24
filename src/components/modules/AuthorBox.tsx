@@ -2,11 +2,13 @@ import { type Person } from "@/content/entity";
 export function AuthorBox({
   author,
   reviewer,
+  reviewPending = false,
   datePublished,
   dateModified,
 }: {
   author: Person;
   reviewer?: Person;
+  reviewPending?: boolean;
   datePublished: string;
   dateModified: string;
 }) {
@@ -20,15 +22,15 @@ export function AuthorBox({
       </p>
       {reviewer && (
         <p data-reviewed>
-          Reviewed by{" "}
+          {reviewPending ? "Review assigned to" : "Reviewed by"}{" "}
           <a href={reviewer.profilePath ?? `/about/${reviewer.slug}/`}>
             {reviewer.name}
           </a>
         </p>
       )}
       <p>
-        Published <time dateTime={datePublished}>{datePublished}</time> ·
-        Updated <time dateTime={dateModified}>{dateModified}</time>
+        Published <time dateTime={datePublished}>{datePublished.slice(0, 10)}</time> ·
+        Updated <time dateTime={dateModified}>{dateModified.slice(0, 10)}</time>
       </p>
     </aside>
   );
