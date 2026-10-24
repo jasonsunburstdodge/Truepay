@@ -100,24 +100,6 @@ export const solutions: Solution[] = [
         ],
         ...pdf(10),
       },
-      {
-        cells: [
-          "SkyTab Mobile",
-          "Mobile ordering and a built-in customer survey.",
-          "Would tableside or curbside ordering help your team?",
-        ],
-        source: "https://gotruepay.com/skytab-mobile/",
-        sourceLabel: "Published SkyTab Mobile page",
-      },
-      {
-        cells: [
-          "SkyTab Glass",
-          "Mobile POS with an 8-inch screen.",
-          "Where would staff use a larger mobile screen?",
-        ],
-        source: "https://gotruepay.com/skytab-glass/",
-        sourceLabel: "Published SkyTab Glass page",
-      },
     ],
     questions: [
       "Start with the orders, inventory and staff tasks you handle each day. Compare the systems below in a demo using your own workflow, rather than choosing on a feature list alone.",
@@ -209,7 +191,7 @@ export const solutions: Solution[] = [
       ],
       [
         "Walk through checkout",
-        "Use the programmed terminal to practise a payment and receipt before your team relies on it.",
+        "Use the programmed terminal to practice a payment and receipt before your team relies on it.",
       ],
     ],
     equipmentCoverage: true,
@@ -252,15 +234,6 @@ export const solutions: Solution[] = [
           "Your payment and receipt workflow.",
         ],
         ...pdf(11),
-      },
-      {
-        cells: [
-          "Valor Pay app",
-          "Virtual terminal transactions, signature capture, real-time transactions and email/SMS invoicing.",
-          "Your phone, account and any reader needed for your payment method.",
-        ],
-        source: "https://gotruepay.com/valor-pay-app/",
-        sourceLabel: "Published Valor Pay app page",
       },
     ],
     questions: [
