@@ -1222,3 +1222,68 @@ caption {
     gap: 16px;
   }
 }
+
+/* Trust pages: names and roles carry the no-photo treatment. */
+.person-rule {
+  width: 64px;
+  height: 5px;
+  background: var(--color-gold);
+  border-radius: var(--radius-control);
+  margin-bottom: 28px;
+}
+.person-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 20px 0;
+  list-style: none;
+}
+.person-topics li {
+  font-size: 13px;
+  border-radius: var(--radius-control);
+  background: var(--color-surface-alt);
+  padding: 7px 10px;
+  margin: 0;
+}
+.person > a {
+  display: block;
+  margin-top: 14px;
+}
+.person .eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+}
+.team-grid .person {
+  align-self: stretch;
+}
+.trust-number {
+  display: block;
+  color: var(--color-ink);
+  font-size: 64px;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  margin: 24px 0;
+}
+.profile-responsibilities {
+  margin-block: 36px;
+}
+.profile-guides {
+  margin-block: 40px;
+}
+.coverage-illustration {
+  margin: 36px 0 0;
+}
+.coverage-illustration img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin-inline: auto;
+  display: block;
+}
+.coverage-illustration figcaption {
+  color: var(--color-text-muted);
+  font-size: 14px;
+  margin-top: 24px;
+}

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { isBuilt } from "@/lib/navigation";
 import { testimonials } from "@/content/entity";
 export function ProofQuote({ id }: { id: string }) {
@@ -15,8 +16,14 @@ export function ProofQuote({ id }: { id: string }) {
         <strong>{quote.name}</strong>
         {quote.business && <span> · {quote.business}</span>}
         {quote.city && <span> · {quote.city}</span>}
+        {(quote.archivedSourceUrl || quote.sourceUrl) && (
+          <a href={quote.archivedSourceUrl || quote.sourceUrl}>
+            Published on TruePay ·{" "}
+            {quote.archivedSourceUrl ? "archived source" : "source"}
+          </a>
+        )}
         {isBuilt("/customer-stories/") && (
-          <a href="/customer-stories/">Read customer stories</a>
+          <Link href="/customer-stories/">Read customer stories</Link>
         )}
       </figcaption>
       {id === "m-holt" && (

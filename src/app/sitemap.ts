@@ -18,6 +18,12 @@ const contentModified: Record<string, string> = {
   "/solutions/online-payments/": "2026-10-24",
   "/solutions/integrations/": "2026-10-24",
   "/solutions/billing-software/": "2026-10-24",
+  "/about/": "2026-10-24",
+  "/about/team/": "2026-10-24",
+  "/about/jon-wilson/": "2026-10-24",
+  "/about/shane-spears/": "2026-10-24",
+  "/customer-stories/": "2026-10-24",
+  "/service-areas/": "2026-10-24",
   "/thank-you/": "2026-10-23",
 };
 export default function sitemap(): MetadataRoute.Sitemap {
